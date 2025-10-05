@@ -12,11 +12,77 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Animated Icons',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      title: 'Flutter Icons Animated',
+      theme: _buildLightTheme(),
+      darkTheme: _buildDarkTheme(),
+      themeMode: ThemeMode.system,
+      home: const MyHomePage(title: 'Flutter Icons Animated'),
+    );
+  }
+
+  ThemeData _buildLightTheme() {
+    return ThemeData(
+      useMaterial3: true,
+      brightness: Brightness.light,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.blue,
+        brightness: Brightness.light,
       ),
-      home: const MyHomePage(title: 'Flutter Animated Icons'),
+      appBarTheme: const AppBarTheme(
+        centerTitle: false,
+        elevation: 0,
+        scrolledUnderElevation: 1,
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: Colors.grey[100],
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide.none,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide.none,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(color: Colors.blue, width: 2),
+        ),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      ),
+    );
+  }
+
+  ThemeData _buildDarkTheme() {
+    return ThemeData(
+      useMaterial3: true,
+      brightness: Brightness.dark,
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.blue,
+        brightness: Brightness.dark,
+      ),
+      appBarTheme: const AppBarTheme(
+        centerTitle: false,
+        elevation: 0,
+        scrolledUnderElevation: 1,
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: Colors.grey[800],
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide.none,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide.none,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(color: Colors.blue, width: 2),
+        ),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      ),
     );
   }
 }
@@ -294,34 +360,53 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: TextField(
-          controller: _searchController,
-          onChanged: (value) {
-            setState(() {
-              _searchQuery = value;
-            });
-            _restartAutoPlayIfActive();
-          },
-          style: const TextStyle(color: Colors.white),
-          decoration: InputDecoration(
-            hintText: 'Search icons...',
-            hintStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
-            border: InputBorder.none,
-            prefixIcon:
-                Icon(Icons.search, color: Colors.white.withOpacity(0.7)),
-            suffixIcon: _searchQuery.isNotEmpty
-                ? IconButton(
-                    icon:
-                        Icon(Icons.clear, color: Colors.white.withOpacity(0.7)),
-                    onPressed: () {
-                      _searchController.clear();
-                      setState(() {
-                        _searchQuery = '';
-                      });
-                      _restartAutoPlayIfActive();
-                    },
-                  )
-                : null,
+        title: Container(
+          height: 40,
+          decoration: BoxDecoration(
+            color: Theme.of(context).inputDecorationTheme.fillColor,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: TextField(
+            controller: _searchController,
+            onChanged: (value) {
+              setState(() {
+                _searchQuery = value;
+              });
+              _restartAutoPlayIfActive();
+            },
+            style: TextStyle(
+              color: Theme.of(context).textTheme.bodyLarge?.color,
+              fontSize: 16,
+            ),
+            decoration: InputDecoration(
+              hintText: 'Search icons...',
+              hintStyle: TextStyle(
+                color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.6),
+              ),
+              border: InputBorder.none,
+              prefixIcon: Icon(
+                Icons.search,
+                color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.6),
+                size: 20,
+              ),
+              suffixIcon: _searchQuery.isNotEmpty
+                  ? IconButton(
+                      icon: Icon(
+                        Icons.clear,
+                        color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.6),
+                        size: 20,
+                      ),
+                      onPressed: () {
+                        _searchController.clear();
+                        setState(() {
+                          _searchQuery = '';
+                        });
+                        _restartAutoPlayIfActive();
+                      },
+                    )
+                  : null,
+              contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            ),
           ),
         ),
         actions: [
@@ -330,21 +415,40 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               margin: const EdgeInsets.only(right: 8),
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: const Text(
+              child: Text(
                 'AUTO',
                 style: TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.primary,
                 ),
               ),
             ),
           IconButton(
             onPressed: _toggleAutoPlay,
             icon: Icon(_autoPlay ? Icons.pause : Icons.play_arrow),
+          ),
+          IconButton(
+            onPressed: () {
+              // Toggle theme mode
+              final brightness = Theme.of(context).brightness;
+              // This would require a state management solution for full theme switching
+              // For now, we'll just show a snackbar
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Theme: ${brightness == Brightness.dark ? 'Dark' : 'Light'}'),
+                  duration: const Duration(seconds: 1),
+                ),
+              );
+            },
+            icon: Icon(
+              Theme.of(context).brightness == Brightness.dark 
+                  ? Icons.light_mode 
+                  : Icons.dark_mode,
+            ),
           ),
         ],
       ),
@@ -377,7 +481,15 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                         padding:
                                             const EdgeInsets.only(right: 8),
                                         child: FilterChip(
-                                          label: Text(library),
+                                          label: Text(
+                                            library,
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: library == _selectedLibrary 
+                                                  ? FontWeight.w600 
+                                                  : FontWeight.w500,
+                                            ),
+                                          ),
                                           selected: library == _selectedLibrary,
                                           onSelected: (selected) {
                                             setState(() {
@@ -385,6 +497,17 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                             });
                                             _restartAutoPlayIfActive();
                                           },
+                                          backgroundColor: Theme.of(context).colorScheme.surface,
+                                          selectedColor: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+                                          checkmarkColor: Theme.of(context).colorScheme.primary,
+                                          side: BorderSide(
+                                            color: library == _selectedLibrary 
+                                                ? Theme.of(context).colorScheme.primary
+                                                : Theme.of(context).colorScheme.outline.withOpacity(0.3),
+                                            width: 1,
+                                          ),
+                                          elevation: library == _selectedLibrary ? 2 : 0,
+                                          shadowColor: Theme.of(context).colorScheme.primary.withOpacity(0.3),
                                         ),
                                       );
                                     }).toList(),
@@ -410,15 +533,33 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                         padding:
                                             const EdgeInsets.only(right: 8),
                                         child: FilterChip(
-                                          label: Text(category),
-                                          selected:
-                                              category == _selectedCategory,
+                                          label: Text(
+                                            category,
+                                            style: TextStyle(
+                                              fontSize: 12,
+                                              fontWeight: category == _selectedCategory 
+                                                  ? FontWeight.w600 
+                                                  : FontWeight.w500,
+                                            ),
+                                          ),
+                                          selected: category == _selectedCategory,
                                           onSelected: (selected) {
                                             setState(() {
                                               _selectedCategory = category;
                                             });
                                             _restartAutoPlayIfActive();
                                           },
+                                          backgroundColor: Theme.of(context).colorScheme.surface,
+                                          selectedColor: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+                                          checkmarkColor: Theme.of(context).colorScheme.primary,
+                                          side: BorderSide(
+                                            color: category == _selectedCategory 
+                                                ? Theme.of(context).colorScheme.primary
+                                                : Theme.of(context).colorScheme.outline.withOpacity(0.3),
+                                            width: 1,
+                                          ),
+                                          elevation: category == _selectedCategory ? 2 : 0,
+                                          shadowColor: Theme.of(context).colorScheme.primary.withOpacity(0.3),
                                         ),
                                       );
                                     }).toList(),
@@ -430,16 +571,24 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                             const SizedBox(height: 16),
 
                             // Stats
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text('Total: ${_allIcons.length}'),
-                                Text('Filtered: ${_filteredIcons.length}'),
-                                Text(
-                                    'Libraries: ${_availableLibraries.length}'),
-                                Text(
-                                    'Categories: ${_availableCategories.length}'),
-                              ],
+                            Container(
+                              padding: const EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).colorScheme.surface,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: Theme.of(context).colorScheme.outline.withOpacity(0.2),
+                                ),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  _buildStatItem('Total', '${_allIcons.length}', Icons.inventory_2),
+                                  _buildStatItem('Filtered', '${_filteredIcons.length}', Icons.filter_list),
+                                  _buildStatItem('Libraries', '${_availableLibraries.length}', Icons.library_books),
+                                  _buildStatItem('Categories', '${_availableCategories.length}', Icons.category),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -498,13 +647,47 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     );
   }
 
+  Widget _buildStatItem(String label, String value, IconData icon) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(
+          icon,
+          size: 16,
+          color: Theme.of(context).colorScheme.primary,
+        ),
+        const SizedBox(height: 4),
+        Text(
+          value,
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: Theme.of(context).colorScheme.primary,
+          ),
+        ),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 10,
+            color: Theme.of(context).textTheme.bodySmall?.color,
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _buildIconCard(IconItem icon) {
     final iconKey = icon.key;
     final isAnimating = _animatingIcons.contains(iconKey);
 
     return Card(
+      elevation: isAnimating ? 4 : 2,
+      shadowColor: isAnimating 
+          ? Theme.of(context).colorScheme.primary.withOpacity(0.3)
+          : Theme.of(context).colorScheme.shadow.withOpacity(0.1),
       child: InkWell(
         onTap: () => _animateIcon(iconKey),
+        borderRadius: BorderRadius.circular(12),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -517,16 +700,22 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: isAnimating
-                        ? Colors.blue.withOpacity(0.2)
-                        : Colors.grey[100],
+                        ? Theme.of(context).colorScheme.primary.withOpacity(0.1)
+                        : Theme.of(context).colorScheme.surface,
                     borderRadius: BorderRadius.circular(8),
                     border: isAnimating
-                        ? Border.all(color: Colors.blue, width: 2)
-                        : null,
+                        ? Border.all(
+                            color: Theme.of(context).colorScheme.primary, 
+                            width: 2,
+                          )
+                        : Border.all(
+                            color: Theme.of(context).colorScheme.outline.withOpacity(0.2),
+                            width: 1,
+                          ),
                     boxShadow: isAnimating
                         ? [
                             BoxShadow(
-                              color: Colors.blue.withOpacity(0.3),
+                              color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
                               blurRadius: 8,
                               spreadRadius: 2,
                             ),
@@ -559,8 +748,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   children: [
                     Text(
                       icon.name,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 12),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold, 
+                        fontSize: 12,
+                        color: Theme.of(context).textTheme.bodyLarge?.color,
+                      ),
                       textAlign: TextAlign.center,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
@@ -570,13 +762,16 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       icon.library,
                       style: TextStyle(
                         fontSize: 10,
-                        color: Colors.blue[700],
-                        fontWeight: FontWeight.w500,
+                        color: Theme.of(context).colorScheme.primary,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                     Text(
                       icon.category,
-                      style: const TextStyle(fontSize: 10, color: Colors.grey),
+                      style: TextStyle(
+                        fontSize: 10, 
+                        color: Theme.of(context).textTheme.bodySmall?.color,
+                      ),
                       textAlign: TextAlign.center,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
