@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   ThemeMode _themeMode = ThemeMode.system;
 
-  void _toggleTheme() {
+  void _toggleTheme(BuildContext context) {
     setState(() {
       if (_themeMode == ThemeMode.light) {
         _themeMode = ThemeMode.dark;
@@ -26,6 +26,17 @@ class _MyAppState extends State<MyApp> {
         _themeMode = ThemeMode.light;
       }
     });
+    
+    // Show feedback
+    String themeName = _themeMode == ThemeMode.light ? 'Light' : 
+                      _themeMode == ThemeMode.dark ? 'Dark' : 'System';
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Theme changed to $themeName Mode'),
+        duration: const Duration(seconds: 1),
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
   }
 
   @override
@@ -35,30 +46,36 @@ class _MyAppState extends State<MyApp> {
       theme: _buildLightTheme(),
       darkTheme: _buildDarkTheme(),
       themeMode: _themeMode,
-      home: MyHomePage(
-        title: 'Flutter Icons Animated',
-        onToggleTheme: _toggleTheme,
-        currentThemeMode: _themeMode,
+      home: Builder(
+        builder: (context) => MyHomePage(
+          title: 'Flutter Icons Animated',
+          onToggleTheme: () => _toggleTheme(context),
+          currentThemeMode: _themeMode,
+        ),
       ),
     );
   }
 
   ThemeData _buildLightTheme() {
+    final colorScheme = ColorScheme.fromSeed(
+      seedColor: Colors.blue,
+      brightness: Brightness.light,
+    );
+    
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: Colors.blue,
-        brightness: Brightness.light,
-      ),
-      appBarTheme: const AppBarTheme(
+      colorScheme: colorScheme,
+      appBarTheme: AppBarTheme(
         centerTitle: false,
         elevation: 0,
         scrolledUnderElevation: 1,
+        backgroundColor: colorScheme.surface,
+        foregroundColor: colorScheme.onSurface,
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: Colors.grey[100],
+        fillColor: colorScheme.surfaceContainerHighest,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
@@ -69,30 +86,41 @@ class _MyAppState extends State<MyApp> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Colors.blue, width: 2),
+          borderSide: BorderSide(color: colorScheme.primary, width: 2),
         ),
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      ),
+      cardTheme: CardThemeData(
+        elevation: 2,
+        shadowColor: colorScheme.shadow.withOpacity(0.1),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
     );
   }
 
   ThemeData _buildDarkTheme() {
+    final colorScheme = ColorScheme.fromSeed(
+      seedColor: Colors.blue,
+      brightness: Brightness.dark,
+    );
+    
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: Colors.blue,
-        brightness: Brightness.dark,
-      ),
-      appBarTheme: const AppBarTheme(
+      colorScheme: colorScheme,
+      appBarTheme: AppBarTheme(
         centerTitle: false,
         elevation: 0,
         scrolledUnderElevation: 1,
+        backgroundColor: colorScheme.surface,
+        foregroundColor: colorScheme.onSurface,
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: Colors.grey[800],
+        fillColor: colorScheme.surfaceContainerHighest,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
@@ -103,10 +131,17 @@ class _MyAppState extends State<MyApp> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Colors.blue, width: 2),
+          borderSide: BorderSide(color: colorScheme.primary, width: 2),
         ),
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      ),
+      cardTheme: CardThemeData(
+        elevation: 2,
+        shadowColor: colorScheme.shadow.withOpacity(0.1),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
     );
   }
@@ -114,7 +149,7 @@ class _MyAppState extends State<MyApp> {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
-    Key? key, 
+    Key? key,
     required this.title,
     required this.onToggleTheme,
     required this.currentThemeMode,
@@ -841,8 +876,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       height: isAnimating ? 60 : 50,
                       fit: BoxFit.contain,
                       errorBuilder: (context, error, stackTrace) {
-                        return const Icon(Icons.error_outline,
-                            color: Colors.grey);
+                        return Icon(
+                          Icons.error_outline,
+                          color: Theme.of(context).colorScheme.error,
+                        );
                       },
                     ),
                   ),
