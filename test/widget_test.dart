@@ -39,7 +39,7 @@ void main() {
 
     // Find the first IconButton
     final firstIconButton = find.byType(IconButton).first;
-    
+
     // Verify it exists
     expect(firstIconButton, findsOneWidget);
 
