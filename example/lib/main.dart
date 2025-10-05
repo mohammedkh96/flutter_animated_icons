@@ -350,10 +350,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     ),
 
                     // Filter Chips
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
+                    Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Row(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           // Library Filter
                           Column(
@@ -384,7 +384,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                             ],
                           ),
 
-                          const SizedBox(width: 16),
+                          const SizedBox(height: 16),
 
                           // Category Filter
                           Column(
