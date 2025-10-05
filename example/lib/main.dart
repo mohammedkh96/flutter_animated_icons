@@ -206,11 +206,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   void _startAutoPlay() {
     if (_autoPlay && _filteredIcons.isNotEmpty) {
-      _animateNextIcon(0);
+      _animateAllIcons();
     }
   }
 
-  void _animateNextIcon(int index) {
+  void _animateAllIcons() {
     if (!_autoPlay || !mounted || _filteredIcons.isEmpty) return;
 
     // Stop all current animations
@@ -219,21 +219,20 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     }
     _animatingIcons.clear();
 
-    // Animate the current icon
-    final currentIndex = index % _filteredIcons.length;
-    final iconKey = _filteredIcons[currentIndex].key;
-    
-    // Reset and animate the icon
-    final controller = _getController(iconKey);
-    controller.reset();
-    controller.forward();
-    _animatingIcons.add(iconKey);
+    // Animate all visible icons at once
+    for (var icon in _filteredIcons) {
+      final iconKey = icon.key;
+      final controller = _getController(iconKey);
+      controller.reset();
+      controller.forward();
+      _animatingIcons.add(iconKey);
+    }
     setState(() {});
 
-    // Schedule next icon animation with better timing
-    Future.delayed(const Duration(milliseconds: 2500), () {
+    // Schedule next animation cycle
+    Future.delayed(const Duration(milliseconds: 3000), () {
       if (_autoPlay && mounted) {
-        _animateNextIcon(currentIndex + 1);
+        _animateAllIcons();
       }
     });
   }
@@ -262,8 +261,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         _getController(iconKey).stop();
       }
       _animatingIcons.clear();
-      // Restart with new filtered icons
-      _startAutoPlay();
+      // Restart with all filtered icons
+      _animateAllIcons();
     }
   }
 
