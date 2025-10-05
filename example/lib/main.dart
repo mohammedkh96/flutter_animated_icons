@@ -184,7 +184,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   AnimationController _getController(String iconKey) {
     if (!_controllers.containsKey(iconKey)) {
       _controllers[iconKey] = AnimationController(
-        duration: const Duration(seconds: 2),
+        duration: const Duration(milliseconds: 1500),
         vsync: this,
       );
     }
@@ -197,7 +197,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       controller.stop();
       _animatingIcons.remove(iconKey);
     } else {
-      controller.repeat();
+      controller.reset();
+      controller.forward();
       _animatingIcons.add(iconKey);
     }
     setState(() {});
@@ -221,10 +222,16 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     // Animate the current icon
     final currentIndex = index % _filteredIcons.length;
     final iconKey = _filteredIcons[currentIndex].key;
-    _animateIcon(iconKey);
+    
+    // Reset and animate the icon
+    final controller = _getController(iconKey);
+    controller.reset();
+    controller.forward();
+    _animatingIcons.add(iconKey);
+    setState(() {});
 
-    // Schedule next icon animation
-    Future.delayed(const Duration(seconds: 2), () {
+    // Schedule next icon animation with better timing
+    Future.delayed(const Duration(milliseconds: 2500), () {
       if (_autoPlay && mounted) {
         _animateNextIcon(currentIndex + 1);
       }
@@ -288,7 +295,29 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Row(
+          children: [
+            Text(widget.title),
+            if (_autoPlay) ...[
+              const SizedBox(width: 8),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Text(
+                  'AUTO',
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
+          ],
+        ),
         actions: [
           IconButton(
             onPressed: _toggleAutoPlay,
@@ -474,16 +503,28 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: isAnimating
-                        ? Colors.blue.withOpacity(0.1)
+                        ? Colors.blue.withOpacity(0.2)
                         : Colors.grey[100],
                     borderRadius: BorderRadius.circular(8),
+                    border: isAnimating
+                        ? Border.all(color: Colors.blue, width: 2)
+                        : null,
+                    boxShadow: isAnimating
+                        ? [
+                            BoxShadow(
+                              color: Colors.blue.withOpacity(0.3),
+                              blurRadius: 8,
+                              spreadRadius: 2,
+                            ),
+                          ]
+                        : null,
                   ),
                   child: Center(
                     child: Lottie.asset(
                       icon.path,
                       controller: _getController(iconKey),
-                      width: 50,
-                      height: 50,
+                      width: isAnimating ? 60 : 50,
+                      height: isAnimating ? 60 : 50,
                       fit: BoxFit.contain,
                       errorBuilder: (context, error, stackTrace) {
                         return const Icon(Icons.error_outline,
