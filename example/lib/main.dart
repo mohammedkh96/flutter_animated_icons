@@ -32,11 +32,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   final TextEditingController _searchController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
   String _searchQuery = '';
   String _selectedLibrary = 'All';
   String _selectedCategory = 'All';
   bool _autoPlay = true;
   bool _isLoading = true;
+  bool _showScrollToTop = false;
 
   Map<String, AnimationController> _controllers = {};
   Set<String> _animatingIcons = {};
@@ -46,15 +48,41 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _loadIconCatalog();
+    _scrollController.addListener(_scrollListener);
   }
 
   @override
   void dispose() {
     _searchController.dispose();
+    _scrollController.dispose();
     for (var controller in _controllers.values) {
       controller.dispose();
     }
     super.dispose();
+  }
+
+  void _scrollListener() {
+    if (_scrollController.offset >= 200) {
+      if (!_showScrollToTop) {
+        setState(() {
+          _showScrollToTop = true;
+        });
+      }
+    } else {
+      if (_showScrollToTop) {
+        setState(() {
+          _showScrollToTop = false;
+        });
+      }
+    }
+  }
+
+  void _scrollToTop() {
+    _scrollController.animateTo(
+      0,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.easeInOut,
+    );
   }
 
   Future<void> _loadIconCatalog() async {
@@ -183,18 +211,18 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   void _animateNextIcon(int index) {
     if (!_autoPlay || !mounted || _filteredIcons.isEmpty) return;
-    
+
     // Stop all current animations
     for (var iconKey in _animatingIcons.toList()) {
       _getController(iconKey).stop();
     }
     _animatingIcons.clear();
-    
+
     // Animate the current icon
     final currentIndex = index % _filteredIcons.length;
     final iconKey = _filteredIcons[currentIndex].key;
     _animateIcon(iconKey);
-    
+
     // Schedule next icon animation
     Future.delayed(const Duration(seconds: 2), () {
       if (_autoPlay && mounted) {
@@ -268,10 +296,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           ),
         ],
       ),
-      body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : Column(
-              children: [
+      body: Stack(
+        children: [
+          _isLoading
+              ? const Center(child: CircularProgressIndicator())
+              : Column(
+                  children: [
                 // Search Bar
                 Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -386,6 +416,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               'No icons found. Try adjusting your search or filters.'),
                         )
                       : GridView.builder(
+                          controller: _scrollController,
                           padding: const EdgeInsets.all(16),
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
@@ -401,8 +432,25 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                           },
                         ),
                 ),
-              ],
+                  ],
+                ),
+          // Floating Scroll to Top Button
+          if (_showScrollToTop)
+            Positioned(
+              bottom: 20,
+              right: 20,
+              child: FloatingActionButton(
+                onPressed: _scrollToTop,
+                mini: true,
+                backgroundColor: Colors.blue,
+                child: const Icon(
+                  Icons.keyboard_arrow_up,
+                  color: Colors.white,
+                ),
+              ),
             ),
+        ],
+      ),
     );
   }
 
