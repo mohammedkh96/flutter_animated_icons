@@ -6,8 +6,27 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  ThemeMode _themeMode = ThemeMode.system;
+
+  void _toggleTheme() {
+    setState(() {
+      if (_themeMode == ThemeMode.light) {
+        _themeMode = ThemeMode.dark;
+      } else if (_themeMode == ThemeMode.dark) {
+        _themeMode = ThemeMode.system;
+      } else {
+        _themeMode = ThemeMode.light;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +34,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Icons Animated',
       theme: _buildLightTheme(),
       darkTheme: _buildDarkTheme(),
-      themeMode: ThemeMode.system,
-      home: const MyHomePage(title: 'Flutter Icons Animated'),
+      themeMode: _themeMode,
+      home: MyHomePage(
+        title: 'Flutter Icons Animated',
+        onToggleTheme: _toggleTheme,
+        currentThemeMode: _themeMode,
+      ),
     );
   }
 
@@ -90,9 +113,16 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({
+    Key? key, 
+    required this.title,
+    required this.onToggleTheme,
+    required this.currentThemeMode,
+  }) : super(key: key);
 
   final String title;
+  final VoidCallback onToggleTheme;
+  final ThemeMode currentThemeMode;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -447,24 +477,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             icon: Icon(_autoPlay ? Icons.pause : Icons.play_arrow),
           ),
           IconButton(
-            onPressed: () {
-              // Toggle theme mode
-              final brightness = Theme.of(context).brightness;
-              // This would require a state management solution for full theme switching
-              // For now, we'll just show a snackbar
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text(
-                      'Theme: ${brightness == Brightness.dark ? 'Dark' : 'Light'}'),
-                  duration: const Duration(seconds: 1),
-                ),
-              );
-            },
-            icon: Icon(
-              Theme.of(context).brightness == Brightness.dark
-                  ? Icons.light_mode
-                  : Icons.dark_mode,
-            ),
+            onPressed: widget.onToggleTheme,
+            icon: Icon(_getThemeIcon()),
+            tooltip: _getThemeTooltip(),
           ),
         ],
       ),
@@ -713,6 +728,28 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               ],
             ),
     );
+  }
+
+  IconData _getThemeIcon() {
+    switch (widget.currentThemeMode) {
+      case ThemeMode.light:
+        return Icons.light_mode;
+      case ThemeMode.dark:
+        return Icons.dark_mode;
+      case ThemeMode.system:
+        return Icons.brightness_auto;
+    }
+  }
+
+  String _getThemeTooltip() {
+    switch (widget.currentThemeMode) {
+      case ThemeMode.light:
+        return 'Switch to Dark Mode';
+      case ThemeMode.dark:
+        return 'Switch to System Theme';
+      case ThemeMode.system:
+        return 'Switch to Light Mode';
+    }
   }
 
   Widget _buildStatItem(String label, String value, IconData icon) {
