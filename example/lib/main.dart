@@ -48,7 +48,8 @@ class MyApp extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: Colors.blue, width: 2),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       ),
     );
   }
@@ -81,7 +82,8 @@ class MyApp extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: Colors.blue, width: 2),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       ),
     );
   }
@@ -381,19 +383,31 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             decoration: InputDecoration(
               hintText: 'Search icons...',
               hintStyle: TextStyle(
-                color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.6),
+                color: Theme.of(context)
+                    .textTheme
+                    .bodyLarge
+                    ?.color
+                    ?.withOpacity(0.6),
               ),
               border: InputBorder.none,
               prefixIcon: Icon(
                 Icons.search,
-                color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.6),
+                color: Theme.of(context)
+                    .textTheme
+                    .bodyLarge
+                    ?.color
+                    ?.withOpacity(0.6),
                 size: 20,
               ),
               suffixIcon: _searchQuery.isNotEmpty
                   ? IconButton(
                       icon: Icon(
                         Icons.clear,
-                        color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.6),
+                        color: Theme.of(context)
+                            .textTheme
+                            .bodyLarge
+                            ?.color
+                            ?.withOpacity(0.6),
                         size: 20,
                       ),
                       onPressed: () {
@@ -405,7 +419,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       },
                     )
                   : null,
-              contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             ),
           ),
         ),
@@ -439,14 +454,15 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               // For now, we'll just show a snackbar
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text('Theme: ${brightness == Brightness.dark ? 'Dark' : 'Light'}'),
+                  content: Text(
+                      'Theme: ${brightness == Brightness.dark ? 'Dark' : 'Light'}'),
                   duration: const Duration(seconds: 1),
                 ),
               );
             },
             icon: Icon(
-              Theme.of(context).brightness == Brightness.dark 
-                  ? Icons.light_mode 
+              Theme.of(context).brightness == Brightness.dark
+                  ? Icons.light_mode
                   : Icons.dark_mode,
             ),
           ),
@@ -485,9 +501,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                             library,
                                             style: TextStyle(
                                               fontSize: 12,
-                                              fontWeight: library == _selectedLibrary 
-                                                  ? FontWeight.w600 
-                                                  : FontWeight.w500,
+                                              fontWeight:
+                                                  library == _selectedLibrary
+                                                      ? FontWeight.w600
+                                                      : FontWeight.w500,
                                             ),
                                           ),
                                           selected: library == _selectedLibrary,
@@ -497,17 +514,34 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                             });
                                             _restartAutoPlayIfActive();
                                           },
-                                          backgroundColor: Theme.of(context).colorScheme.surface,
-                                          selectedColor: Theme.of(context).colorScheme.primary.withOpacity(0.2),
-                                          checkmarkColor: Theme.of(context).colorScheme.primary,
+                                          backgroundColor: Theme.of(context)
+                                              .colorScheme
+                                              .surface,
+                                          selectedColor: Theme.of(context)
+                                              .colorScheme
+                                              .primary
+                                              .withOpacity(0.2),
+                                          checkmarkColor: Theme.of(context)
+                                              .colorScheme
+                                              .primary,
                                           side: BorderSide(
-                                            color: library == _selectedLibrary 
-                                                ? Theme.of(context).colorScheme.primary
-                                                : Theme.of(context).colorScheme.outline.withOpacity(0.3),
+                                            color: library == _selectedLibrary
+                                                ? Theme.of(context)
+                                                    .colorScheme
+                                                    .primary
+                                                : Theme.of(context)
+                                                    .colorScheme
+                                                    .outline
+                                                    .withOpacity(0.3),
                                             width: 1,
                                           ),
-                                          elevation: library == _selectedLibrary ? 2 : 0,
-                                          shadowColor: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+                                          elevation: library == _selectedLibrary
+                                              ? 2
+                                              : 0,
+                                          shadowColor: Theme.of(context)
+                                              .colorScheme
+                                              .primary
+                                              .withOpacity(0.3),
                                         ),
                                       );
                                     }).toList(),
@@ -537,29 +571,49 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                             category,
                                             style: TextStyle(
                                               fontSize: 12,
-                                              fontWeight: category == _selectedCategory 
-                                                  ? FontWeight.w600 
-                                                  : FontWeight.w500,
+                                              fontWeight:
+                                                  category == _selectedCategory
+                                                      ? FontWeight.w600
+                                                      : FontWeight.w500,
                                             ),
                                           ),
-                                          selected: category == _selectedCategory,
+                                          selected:
+                                              category == _selectedCategory,
                                           onSelected: (selected) {
                                             setState(() {
                                               _selectedCategory = category;
                                             });
                                             _restartAutoPlayIfActive();
                                           },
-                                          backgroundColor: Theme.of(context).colorScheme.surface,
-                                          selectedColor: Theme.of(context).colorScheme.primary.withOpacity(0.2),
-                                          checkmarkColor: Theme.of(context).colorScheme.primary,
+                                          backgroundColor: Theme.of(context)
+                                              .colorScheme
+                                              .surface,
+                                          selectedColor: Theme.of(context)
+                                              .colorScheme
+                                              .primary
+                                              .withOpacity(0.2),
+                                          checkmarkColor: Theme.of(context)
+                                              .colorScheme
+                                              .primary,
                                           side: BorderSide(
-                                            color: category == _selectedCategory 
-                                                ? Theme.of(context).colorScheme.primary
-                                                : Theme.of(context).colorScheme.outline.withOpacity(0.3),
+                                            color: category == _selectedCategory
+                                                ? Theme.of(context)
+                                                    .colorScheme
+                                                    .primary
+                                                : Theme.of(context)
+                                                    .colorScheme
+                                                    .outline
+                                                    .withOpacity(0.3),
                                             width: 1,
                                           ),
-                                          elevation: category == _selectedCategory ? 2 : 0,
-                                          shadowColor: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+                                          elevation:
+                                              category == _selectedCategory
+                                                  ? 2
+                                                  : 0,
+                                          shadowColor: Theme.of(context)
+                                              .colorScheme
+                                              .primary
+                                              .withOpacity(0.3),
                                         ),
                                       );
                                     }).toList(),
@@ -577,16 +631,30 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                 color: Theme.of(context).colorScheme.surface,
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(
-                                  color: Theme.of(context).colorScheme.outline.withOpacity(0.2),
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .outline
+                                      .withOpacity(0.2),
                                 ),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: [
-                                  _buildStatItem('Total', '${_allIcons.length}', Icons.inventory_2),
-                                  _buildStatItem('Filtered', '${_filteredIcons.length}', Icons.filter_list),
-                                  _buildStatItem('Libraries', '${_availableLibraries.length}', Icons.library_books),
-                                  _buildStatItem('Categories', '${_availableCategories.length}', Icons.category),
+                                  _buildStatItem('Total', '${_allIcons.length}',
+                                      Icons.inventory_2),
+                                  _buildStatItem(
+                                      'Filtered',
+                                      '${_filteredIcons.length}',
+                                      Icons.filter_list),
+                                  _buildStatItem(
+                                      'Libraries',
+                                      '${_availableLibraries.length}',
+                                      Icons.library_books),
+                                  _buildStatItem(
+                                      'Categories',
+                                      '${_availableCategories.length}',
+                                      Icons.category),
                                 ],
                               ),
                             ),
@@ -682,7 +750,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
     return Card(
       elevation: isAnimating ? 4 : 2,
-      shadowColor: isAnimating 
+      shadowColor: isAnimating
           ? Theme.of(context).colorScheme.primary.withOpacity(0.3)
           : Theme.of(context).colorScheme.shadow.withOpacity(0.1),
       child: InkWell(
@@ -705,17 +773,23 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     borderRadius: BorderRadius.circular(8),
                     border: isAnimating
                         ? Border.all(
-                            color: Theme.of(context).colorScheme.primary, 
+                            color: Theme.of(context).colorScheme.primary,
                             width: 2,
                           )
                         : Border.all(
-                            color: Theme.of(context).colorScheme.outline.withOpacity(0.2),
+                            color: Theme.of(context)
+                                .colorScheme
+                                .outline
+                                .withOpacity(0.2),
                             width: 1,
                           ),
                     boxShadow: isAnimating
                         ? [
                             BoxShadow(
-                              color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .primary
+                                  .withOpacity(0.3),
                               blurRadius: 8,
                               spreadRadius: 2,
                             ),
@@ -749,7 +823,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     Text(
                       icon.name,
                       style: TextStyle(
-                        fontWeight: FontWeight.bold, 
+                        fontWeight: FontWeight.bold,
                         fontSize: 12,
                         color: Theme.of(context).textTheme.bodyLarge?.color,
                       ),
@@ -769,7 +843,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     Text(
                       icon.category,
                       style: TextStyle(
-                        fontSize: 10, 
+                        fontSize: 10,
                         color: Theme.of(context).textTheme.bodySmall?.color,
                       ),
                       textAlign: TextAlign.center,
