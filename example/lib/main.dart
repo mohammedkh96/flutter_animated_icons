@@ -26,10 +26,13 @@ class _MyAppState extends State<MyApp> {
         _themeMode = ThemeMode.light;
       }
     });
-    
+
     // Show feedback
-    String themeName = _themeMode == ThemeMode.light ? 'Light' : 
-                      _themeMode == ThemeMode.dark ? 'Dark' : 'System';
+    String themeName = _themeMode == ThemeMode.light
+        ? 'Light'
+        : _themeMode == ThemeMode.dark
+            ? 'Dark'
+            : 'System';
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Theme changed to $themeName Mode'),
@@ -61,7 +64,7 @@ class _MyAppState extends State<MyApp> {
       seedColor: Colors.blue,
       brightness: Brightness.light,
     );
-    
+
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
@@ -106,7 +109,7 @@ class _MyAppState extends State<MyApp> {
       seedColor: Colors.blue,
       brightness: Brightness.dark,
     );
-    
+
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.dark,
@@ -787,6 +790,28 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     }
   }
 
+  ColorFilter _getIconColorFilter(BuildContext context) {
+    final brightness = Theme.of(context).brightness;
+    
+    if (brightness == Brightness.dark) {
+      // For dark theme, apply a lightening filter to make icons more visible
+      return const ColorFilter.matrix([
+        1.2, 0, 0, 0, 30,  // Red channel - slightly brighter
+        0, 1.2, 0, 0, 30,  // Green channel - slightly brighter  
+        0, 0, 1.2, 0, 30,  // Blue channel - slightly brighter
+        0, 0, 0, 1, 0,     // Alpha channel - unchanged
+      ]);
+    } else {
+      // For light theme, apply a darkening filter to make icons more visible
+      return const ColorFilter.matrix([
+        0.8, 0, 0, 0, -20,  // Red channel - slightly darker
+        0, 0.8, 0, 0, -20,  // Green channel - slightly darker
+        0, 0, 0.8, 0, -20,  // Blue channel - slightly darker
+        0, 0, 0, 1, 0,      // Alpha channel - unchanged
+      ]);
+    }
+  }
+
   Widget _buildStatItem(String label, String value, IconData icon) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -869,18 +894,21 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                         : null,
                   ),
                   child: Center(
-                    child: Lottie.asset(
-                      icon.path,
-                      controller: _getController(iconKey),
-                      width: isAnimating ? 60 : 50,
-                      height: isAnimating ? 60 : 50,
-                      fit: BoxFit.contain,
-                      errorBuilder: (context, error, stackTrace) {
-                        return Icon(
-                          Icons.error_outline,
-                          color: Theme.of(context).colorScheme.error,
-                        );
-                      },
+                    child: ColorFiltered(
+                      colorFilter: _getIconColorFilter(context),
+                      child: Lottie.asset(
+                        icon.path,
+                        controller: _getController(iconKey),
+                        width: isAnimating ? 60 : 50,
+                        height: isAnimating ? 60 : 50,
+                        fit: BoxFit.contain,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Icon(
+                            Icons.error_outline,
+                            color: Theme.of(context).colorScheme.error,
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),
