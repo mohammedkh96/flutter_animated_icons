@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'icons8.dart';
+import 'lottiefiles.dart';
+import 'useanimations.dart';
+import 'lordicon.dart';
+import 'lottieflow.dart';
 
 // Export all library classes
 export 'icons8.dart';
