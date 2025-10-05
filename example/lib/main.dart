@@ -294,159 +294,163 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: [
-            Text(widget.title),
-            if (_autoPlay) ...[
-              const SizedBox(width: 8),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Text(
-                  'AUTO',
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ],
-          ],
+        title: TextField(
+          controller: _searchController,
+          onChanged: (value) {
+            setState(() {
+              _searchQuery = value;
+            });
+            _restartAutoPlayIfActive();
+          },
+          style: const TextStyle(color: Colors.white),
+          decoration: InputDecoration(
+            hintText: 'Search icons...',
+            hintStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
+            border: InputBorder.none,
+            prefixIcon: Icon(Icons.search, color: Colors.white.withOpacity(0.7)),
+            suffixIcon: _searchQuery.isNotEmpty
+                ? IconButton(
+                    icon: Icon(Icons.clear, color: Colors.white.withOpacity(0.7)),
+                    onPressed: () {
+                      _searchController.clear();
+                      setState(() {
+                        _searchQuery = '';
+                      });
+                      _restartAutoPlayIfActive();
+                    },
+                  )
+                : null,
+          ),
         ),
         actions: [
+          if (_autoPlay)
+            Container(
+              margin: const EdgeInsets.only(right: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.2),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: const Text(
+                'AUTO',
+                style: TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
           IconButton(
             onPressed: _toggleAutoPlay,
             icon: Icon(_autoPlay ? Icons.pause : Icons.play_arrow),
           ),
         ],
       ),
-      body: Stack(
-        children: [
-          _isLoading
-              ? const Center(child: CircularProgressIndicator())
-              : Column(
-                  children: [
-                    // Search Bar
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: TextField(
-                        controller: _searchController,
-                        onChanged: (value) {
-                          setState(() {
-                            _searchQuery = value;
-                          });
-                          _restartAutoPlayIfActive();
-                        },
-                        decoration: const InputDecoration(
-                          labelText: 'Search icons...',
-                          prefixIcon: Icon(Icons.search),
-                          border: OutlineInputBorder(),
+      body: _isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : Stack(
+              children: [
+                CustomScrollView(
+                  controller: _scrollController,
+                  slivers: [
+                    // Filter Chips
+                    SliverToBoxAdapter(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Library Filter
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text('Library:'),
+                                const SizedBox(height: 4),
+                                SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    children: _availableLibraries.map((library) {
+                                      return Padding(
+                                        padding: const EdgeInsets.only(right: 8),
+                                        child: FilterChip(
+                                          label: Text(library),
+                                          selected: library == _selectedLibrary,
+                                          onSelected: (selected) {
+                                            setState(() {
+                                              _selectedLibrary = library;
+                                            });
+                                            _restartAutoPlayIfActive();
+                                          },
+                                        ),
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            const SizedBox(height: 16),
+
+                            // Category Filter
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text('Category:'),
+                                const SizedBox(height: 4),
+                                SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    children: _availableCategories.map((category) {
+                                      return Padding(
+                                        padding: const EdgeInsets.only(right: 8),
+                                        child: FilterChip(
+                                          label: Text(category),
+                                          selected: category == _selectedCategory,
+                                          onSelected: (selected) {
+                                            setState(() {
+                                              _selectedCategory = category;
+                                            });
+                                            _restartAutoPlayIfActive();
+                                          },
+                                        ),
+                                      );
+                                    }).toList(),
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            const SizedBox(height: 16),
+
+                            // Stats
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text('Total: ${_allIcons.length}'),
+                                Text('Filtered: ${_filteredIcons.length}'),
+                                Text('Libraries: ${_availableLibraries.length}'),
+                                Text('Categories: ${_availableCategories.length}'),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
 
-                    // Filter Chips
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // Library Filter
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text('Library:'),
-                              const SizedBox(height: 4),
-                              SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Row(
-                                  children: _availableLibraries.map((library) {
-                                    return Padding(
-                                      padding: const EdgeInsets.only(right: 8),
-                                      child: FilterChip(
-                                        label: Text(library),
-                                        selected: library == _selectedLibrary,
-                                        onSelected: (selected) {
-                                          setState(() {
-                                            _selectedLibrary = library;
-                                          });
-                                          _restartAutoPlayIfActive();
-                                        },
-                                      ),
-                                    );
-                                  }).toList(),
-                                ),
-                              ),
-                            ],
-                          ),
-
-                          const SizedBox(height: 16),
-
-                          // Category Filter
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text('Category:'),
-                              const SizedBox(height: 4),
-                              SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Row(
-                                  children:
-                                      _availableCategories.map((category) {
-                                    return Padding(
-                                      padding: const EdgeInsets.only(right: 8),
-                                      child: FilterChip(
-                                        label: Text(category),
-                                        selected: category == _selectedCategory,
-                                        onSelected: (selected) {
-                                          setState(() {
-                                            _selectedCategory = category;
-                                          });
-                                          _restartAutoPlayIfActive();
-                                        },
-                                      ),
-                                    );
-                                  }).toList(),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    const SizedBox(height: 16),
-
-                    // Stats
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text('Total: ${_allIcons.length}'),
-                          Text('Filtered: ${_filteredIcons.length}'),
-                          Text('Libraries: ${_availableLibraries.length}'),
-                          Text('Categories: ${_availableCategories.length}'),
-                        ],
-                      ),
-                    ),
-
-                    const SizedBox(height: 16),
-
                     // Icon Grid
-                    Expanded(
-                      child: _filteredIcons.isEmpty
-                          ? const Center(
-                              child: Text(
-                                  'No icons found. Try adjusting your search or filters.'),
-                            )
-                          : GridView.builder(
-                              controller: _scrollController,
-                              padding: const EdgeInsets.all(16),
+                    _filteredIcons.isEmpty
+                        ? const SliverToBoxAdapter(
+                            child: Center(
+                              child: Padding(
+                                padding: EdgeInsets.all(32.0),
+                                child: Text(
+                                    'No icons found. Try adjusting your search or filters.'),
+                              ),
+                            ),
+                          )
+                        : SliverPadding(
+                            padding: const EdgeInsets.all(16),
+                            sliver: SliverGrid(
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
@@ -454,32 +458,34 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                 crossAxisSpacing: 8,
                                 mainAxisSpacing: 8,
                               ),
-                              itemCount: _filteredIcons.length,
-                              itemBuilder: (context, index) {
-                                final icon = _filteredIcons[index];
-                                return _buildIconCard(icon);
-                              },
+                              delegate: SliverChildBuilderDelegate(
+                                (context, index) {
+                                  final icon = _filteredIcons[index];
+                                  return _buildIconCard(icon);
+                                },
+                                childCount: _filteredIcons.length,
+                              ),
                             ),
-                    ),
+                          ),
                   ],
                 ),
-          // Floating Scroll to Top Button
-          if (_showScrollToTop)
-            Positioned(
-              bottom: 20,
-              right: 20,
-              child: FloatingActionButton(
-                onPressed: _scrollToTop,
-                mini: true,
-                backgroundColor: Colors.blue,
-                child: const Icon(
-                  Icons.keyboard_arrow_up,
-                  color: Colors.white,
-                ),
-              ),
+                // Floating Scroll to Top Button
+                if (_showScrollToTop)
+                  Positioned(
+                    bottom: 20,
+                    right: 20,
+                    child: FloatingActionButton(
+                      onPressed: _scrollToTop,
+                      mini: true,
+                      backgroundColor: Colors.blue,
+                      child: const Icon(
+                        Icons.keyboard_arrow_up,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+              ],
             ),
-        ],
-      ),
     );
   }
 
