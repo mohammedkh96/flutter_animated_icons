@@ -792,22 +792,22 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   ColorFilter _getIconColorFilter(BuildContext context) {
     final brightness = Theme.of(context).brightness;
-    
+
     if (brightness == Brightness.dark) {
       // For dark theme, apply a lightening filter to make icons more visible
       return const ColorFilter.matrix([
-        1.2, 0, 0, 0, 30,  // Red channel - slightly brighter
-        0, 1.2, 0, 0, 30,  // Green channel - slightly brighter  
-        0, 0, 1.2, 0, 30,  // Blue channel - slightly brighter
-        0, 0, 0, 1, 0,     // Alpha channel - unchanged
+        1.2, 0, 0, 0, 30, // Red channel - slightly brighter
+        0, 1.2, 0, 0, 30, // Green channel - slightly brighter
+        0, 0, 1.2, 0, 30, // Blue channel - slightly brighter
+        0, 0, 0, 1, 0, // Alpha channel - unchanged
       ]);
     } else {
       // For light theme, apply a darkening filter to make icons more visible
       return const ColorFilter.matrix([
-        0.8, 0, 0, 0, -20,  // Red channel - slightly darker
-        0, 0.8, 0, 0, -20,  // Green channel - slightly darker
-        0, 0, 0.8, 0, -20,  // Blue channel - slightly darker
-        0, 0, 0, 1, 0,      // Alpha channel - unchanged
+        0.8, 0, 0, 0, -20, // Red channel - slightly darker
+        0, 0.8, 0, 0, -20, // Green channel - slightly darker
+        0, 0, 0.8, 0, -20, // Blue channel - slightly darker
+        0, 0, 0, 1, 0, // Alpha channel - unchanged
       ]);
     }
   }
