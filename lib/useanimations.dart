@@ -3,7 +3,7 @@
 class Useanimations {
   Useanimations._();
 
-  static const String _path = 'packages/flutter_animated_icons/assets/useanimations.com';
+  static const String _path = 'packages/flutter_icons_animated/assets/useanimations.com';
 
   /// map activity to Lottie activity
   static const String activity = '$_path/activity.json';

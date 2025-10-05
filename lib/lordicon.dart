@@ -3,7 +3,7 @@
 class Lordicon {
   Lordicon._();
 
-  static const String _path = 'packages/flutter_animated_icons/assets/lordicon.com';
+  static const String _path = 'packages/flutter_icons_animated/assets/lordicon.com';
 
   /// map $1_share_outline to Lottie 1-share_outline
   static const String $1_share_outline = '$_path/1-share_outline.json';

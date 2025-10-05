@@ -3,7 +3,7 @@
 class Icons8 {
   Icons8._();
 
-  static const String _path = 'packages/flutter_animated_icons/assets/icons8.com';
+  static const String _path = 'packages/flutter_icons_animated/assets/icons8.com';
 
   /// map \$100_percent to Lottie 100-percent
   static const String $100_percent = '$_path/100-percent.json';

@@ -3,7 +3,7 @@
 class LottieFlow {
   LottieFlow._();
 
-  static const String _path = 'packages/flutter_animated_icons/assets/lottieflow.com';
+  static const String _path = 'packages/flutter_icons_animated/assets/lottieflow.com';
 
   /// map lottieflow_404_12_1_000000_easey to Lottie lottieflow-404-12-1-000000-easey
   static const String lottieflow_404_12_1_000000_easey = '$_path/lottieflow-404-12-1-000000-easey.json.json';

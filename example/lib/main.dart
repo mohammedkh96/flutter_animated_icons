@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animated_icons/icons8.dart';
-import 'package:flutter_animated_icons/lottiefiles.dart';
-import 'package:flutter_animated_icons/useanimations.dart';
 import 'package:lottie/lottie.dart';
+import 'dart:convert';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Animated Icons',
+      title: 'Flutter Animated Icons',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Animated Icons'),
+      home: const MyHomePage(title: 'Flutter Animated Icons'),
     );
   }
 }
@@ -33,32 +31,199 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
-  late AnimationController _settingController;
-  late AnimationController _favoriteController;
-  late AnimationController _menuController;
-  late AnimationController _bellController;
-  late AnimationController _bookController;
+  final TextEditingController _searchController = TextEditingController();
+  String _searchQuery = '';
+  String _selectedLibrary = 'All';
+  String _selectedCategory = 'All';
+  bool _autoPlay = true;
+  bool _isLoading = true;
+
+  Map<String, AnimationController> _controllers = {};
+  Set<String> _animatingIcons = {};
+  List<IconItem> _allIcons = [];
 
   @override
   void initState() {
     super.initState();
-
-    _settingController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _favoriteController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _menuController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _bellController = AnimationController(vsync: this, duration: const Duration(seconds: 1))..repeat();
-    _bookController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    _loadIconCatalog();
   }
 
   @override
   void dispose() {
-    _settingController.dispose();
-    _favoriteController.dispose();
-    _menuController.dispose();
-    _bellController.dispose();
-    _bookController.dispose();
-
+    _searchController.dispose();
+    for (var controller in _controllers.values) {
+      controller.dispose();
+    }
     super.dispose();
+  }
+
+  Future<void> _loadIconCatalog() async {
+    try {
+      final String jsonString = await DefaultAssetBundle.of(context)
+          .loadString('assets/icon_catalog.json');
+      final Map<String, dynamic> catalog = json.decode(jsonString);
+
+      setState(() {
+        _allIcons = _parseIconsFromCatalog(catalog);
+        _isLoading = false;
+      });
+    } catch (e) {
+      setState(() {
+        _isLoading = false;
+      });
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error loading icons: $e')),
+        );
+      }
+    }
+  }
+
+  List<IconItem> _parseIconsFromCatalog(Map<String, dynamic> catalog) {
+    List<IconItem> icons = [];
+
+    // Handle the actual JSON structure: {libraries: {library: {categories: {category: [icons]}}}}
+    if (catalog.containsKey('libraries')) {
+      final libraries = catalog['libraries'] as Map<String, dynamic>;
+      libraries.forEach((libraryName, libraryData) {
+        if (libraryData is Map<String, dynamic> &&
+            libraryData.containsKey('categories')) {
+          final categories = libraryData['categories'] as Map<String, dynamic>;
+          categories.forEach((categoryName, iconList) {
+            if (iconList is List) {
+              for (var iconName in iconList) {
+                if (iconName is String) {
+                  icons.add(IconItem(
+                    name: iconName,
+                    library: libraryName,
+                    category: categoryName,
+                    path: _getIconPath(libraryName, iconName),
+                  ));
+                }
+              }
+            }
+          });
+        }
+      });
+    }
+
+    return icons;
+  }
+
+  List<IconItem> get _filteredIcons {
+    List<IconItem> filtered = _allIcons;
+
+    if (_searchQuery.isNotEmpty) {
+      filtered = filtered
+          .where((icon) =>
+              icon.name.toLowerCase().contains(_searchQuery.toLowerCase()) ||
+              icon.category
+                  .toLowerCase()
+                  .contains(_searchQuery.toLowerCase()) ||
+              icon.library.toLowerCase().contains(_searchQuery.toLowerCase()))
+          .toList();
+    }
+
+    if (_selectedLibrary != 'All') {
+      filtered =
+          filtered.where((icon) => icon.library == _selectedLibrary).toList();
+    }
+
+    if (_selectedCategory != 'All') {
+      filtered =
+          filtered.where((icon) => icon.category == _selectedCategory).toList();
+    }
+
+    return filtered;
+  }
+
+  List<String> get _availableLibraries {
+    Set<String> libraries = {'All'};
+    for (var icon in _allIcons) {
+      libraries.add(icon.library);
+    }
+    return libraries.toList()..sort();
+  }
+
+  List<String> get _availableCategories {
+    Set<String> categories = {'All'};
+    for (var icon in _allIcons) {
+      categories.add(icon.category);
+    }
+    return categories.toList()..sort();
+  }
+
+  AnimationController _getController(String iconKey) {
+    if (!_controllers.containsKey(iconKey)) {
+      _controllers[iconKey] = AnimationController(
+        duration: const Duration(seconds: 2),
+        vsync: this,
+      );
+    }
+    return _controllers[iconKey]!;
+  }
+
+  void _animateIcon(String iconKey) {
+    final controller = _getController(iconKey);
+    if (_animatingIcons.contains(iconKey)) {
+      controller.stop();
+      _animatingIcons.remove(iconKey);
+    } else {
+      controller.repeat();
+      _animatingIcons.add(iconKey);
+    }
+    setState(() {});
+  }
+
+  void _startAutoPlay() {
+    if (_autoPlay && _filteredIcons.isNotEmpty) {
+      for (int i = 0; i < _filteredIcons.length; i++) {
+        Future.delayed(Duration(milliseconds: i * 100), () {
+          if (mounted && _autoPlay) {
+            _animateIcon(_filteredIcons[i].key);
+          }
+        });
+      }
+    }
+  }
+
+  void _toggleAutoPlay() {
+    setState(() {
+      _autoPlay = !_autoPlay;
+    });
+
+    if (_autoPlay) {
+      _startAutoPlay();
+    } else {
+      for (var iconKey in _animatingIcons.toList()) {
+        _getController(iconKey).stop();
+      }
+      _animatingIcons.clear();
+    }
+  }
+
+  String _getIconPath(String library, String iconName) {
+    // Convert library name to the correct folder name
+    String folderName = library.toLowerCase();
+    if (folderName == 'icons8') {
+      folderName = 'icons8.com';
+    } else if (folderName == 'lordicon') {
+      folderName = 'lordicon.com';
+    } else if (folderName == 'lottiefiles') {
+      folderName = 'lottiefiles.com';
+    } else if (folderName == 'lottieflow') {
+      folderName = 'lottieflow.com';
+    } else if (folderName == 'useanimations') {
+      folderName = 'useanimations.com';
+    }
+
+    // Add .json extension if not present
+    String fileName = iconName;
+    if (!fileName.endsWith('.json')) {
+      fileName = '$iconName.json';
+    }
+
+    return 'packages/flutter_icons_animated/assets/$folderName/$fileName';
   }
 
   @override
@@ -66,154 +231,221 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          IconButton(
+            onPressed: _toggleAutoPlay,
+            icon: Icon(_autoPlay ? Icons.pause : Icons.play_arrow),
+          ),
+        ],
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              /// Tap with animation example
-              Column(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text('Tap'),
-                  ),
-                  IconButton(
-                    splashRadius: 50,
-                    iconSize: 100,
-                    onPressed: () {
-                      _settingController.reset();
-                      _settingController.forward();
+      body: _isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : Column(
+              children: [
+                // Search Bar
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: TextField(
+                    controller: _searchController,
+                    onChanged: (value) {
+                      setState(() {
+                        _searchQuery = value;
+                      });
                     },
-                    icon: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Lottie.asset(Icons8.adjust, controller: _settingController),
+                    decoration: const InputDecoration(
+                      labelText: 'Search icons...',
+                      prefixIcon: Icon(Icons.search),
+                      border: OutlineInputBorder(),
                     ),
                   ),
-                ],
-              ),
+                ),
 
-              /// Toggle example
-              Column(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text('Toggle'),
-                  ),
-                  IconButton(
-                    splashRadius: 50,
-                    iconSize: 100,
-                    onPressed: () {
-                      if (_favoriteController.status == AnimationStatus.dismissed) {
-                        _favoriteController.reset();
-                        _favoriteController.animateTo(0.6);
-                      } else {
-                        _favoriteController.reverse();
-                      }
-                    },
-                    icon: Lottie.asset(Icons8.heart_color, controller: _favoriteController),
-                  ),
-                ],
-              ),
-
-              /// Hover example
-              Column(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text('Hover'),
-                  ),
-                  MouseRegion(
-                    onEnter: (event) {
-                      _bookController.repeat();
-                    },
-                    onExit: (event) {
-                      _bookController.stop();
-                    },
-                    child: IconButton(
-                      splashRadius: 50,
-                      iconSize: 100,
-                      onPressed: () {
-                        if (_bookController.status == AnimationStatus.dismissed) {
-                          _bookController.reset();
-                          _bookController.animateTo(1);
-                        } else {
-                          _bookController.reverse();
-                        }
-                      },
-                      icon: Lottie.asset(Icons8.book, controller: _bookController, height: 60, fit: BoxFit.fitHeight),
-                    ),
-                  ),
-                ],
-              ),
-
-              /// repeat example
-              Column(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text('Repeat'),
-                  ),
-                  IconButton(
-                    splashRadius: 50,
-                    iconSize: 100,
-                    onPressed: () {
-                      print(_bellController.status);
-                      if (_bellController.isAnimating) {
-                        // _bellController.stop();
-                        _bellController.reset();
-                      } else {
-                        _bellController.repeat();
-                      }
-                    },
-                    icon: Lottie.asset(LottieFiles.$63128_bell_icon, controller: _bellController, height: 60, fit: BoxFit.cover),
-                  ),
-                ],
-              ),
-
-              /// change color example
-              // To change color, goto https://lottiefiles.com/editor
-              // original color
-              // changed color
-              Column(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text('Edited animation color\nblack → blue', textAlign: TextAlign.center),
-                  ),
-                  Row(
+                // Filter Chips
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
                     children: [
-                      IconButton(
-                        splashRadius: 50,
-                        iconSize: 100,
-                        onPressed: () {
-                          if (_menuController.status == AnimationStatus.dismissed) {
-                            _menuController.reset();
-                            _menuController.animateTo(0.6);
-                          } else {
-                            _menuController.reverse();
-                          }
-                        },
-                        icon: Lottie.asset(Useanimations.menuV3, controller: _menuController, height: 60, fit: BoxFit.fitHeight),
+                      // Library Filter
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('Library:'),
+                          const SizedBox(height: 4),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: _availableLibraries.map((library) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(right: 8),
+                                  child: FilterChip(
+                                    label: Text(library),
+                                    selected: library == _selectedLibrary,
+                                    onSelected: (selected) {
+                                      setState(() {
+                                        _selectedLibrary = library;
+                                      });
+                                    },
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                        ],
                       ),
-                      IconButton(
-                        splashRadius: 50,
-                        iconSize: 100,
-                        onPressed: () {
-                          if (_menuController.status == AnimationStatus.dismissed) {
-                            _menuController.reset();
-                            _menuController.animateTo(0.6);
-                          } else {
-                            _menuController.reverse();
-                          }
-                        },
-                        icon: Lottie.asset(Useanimations.menuV3Blue, controller: _menuController, height: 60, fit: BoxFit.fitHeight),
+
+                      const SizedBox(width: 16),
+
+                      // Category Filter
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text('Category:'),
+                          const SizedBox(height: 4),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: _availableCategories.map((category) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(right: 8),
+                                  child: FilterChip(
+                                    label: Text(category),
+                                    selected: category == _selectedCategory,
+                                    onSelected: (selected) {
+                                      setState(() {
+                                        _selectedCategory = category;
+                                      });
+                                    },
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ],
+                ),
+
+                const SizedBox(height: 16),
+
+                // Stats
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text('Total: ${_allIcons.length}'),
+                      Text('Filtered: ${_filteredIcons.length}'),
+                      Text('Libraries: ${_availableLibraries.length}'),
+                      Text('Categories: ${_availableCategories.length}'),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 16),
+
+                // Icon Grid
+                Expanded(
+                  child: _filteredIcons.isEmpty
+                      ? const Center(
+                          child: Text(
+                              'No icons found. Try adjusting your search or filters.'),
+                        )
+                      : GridView.builder(
+                          padding: const EdgeInsets.all(16),
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            childAspectRatio: 0.8,
+                            crossAxisSpacing: 8,
+                            mainAxisSpacing: 8,
+                          ),
+                          itemCount: _filteredIcons.length,
+                          itemBuilder: (context, index) {
+                            final icon = _filteredIcons[index];
+                            return _buildIconCard(icon);
+                          },
+                        ),
+                ),
+              ],
+            ),
+    );
+  }
+
+  Widget _buildIconCard(IconItem icon) {
+    final iconKey = icon.key;
+    final isAnimating = _animatingIcons.contains(iconKey);
+
+    return Card(
+      child: InkWell(
+        onTap: () => _animateIcon(iconKey),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Icon Animation
+              Expanded(
+                flex: 3,
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: isAnimating
+                        ? Colors.blue.withOpacity(0.1)
+                        : Colors.grey[100],
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Center(
+                    child: Lottie.asset(
+                      _getIconPath(icon.library, icon.path),
+                      controller: _getController(iconKey),
+                      width: 50,
+                      height: 50,
+                      fit: BoxFit.contain,
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Icon(Icons.error_outline,
+                            color: Colors.grey);
+                      },
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 8),
+
+              // Icon Info
+              Expanded(
+                flex: 2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      icon.name,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 12),
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      icon.library,
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: Colors.blue[700],
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      icon.category,
+                      style: const TextStyle(fontSize: 10, color: Colors.grey),
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -221,4 +453,20 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       ),
     );
   }
+}
+
+class IconItem {
+  final String name;
+  final String library;
+  final String category;
+  final String path;
+
+  IconItem({
+    required this.name,
+    required this.library,
+    required this.category,
+    required this.path,
+  });
+
+  String get key => '${library}_${name}';
 }

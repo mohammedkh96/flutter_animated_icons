@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animated_icons/icons8.dart';
-import 'package:flutter_animated_icons/lottiefiles.dart';
-import 'package:flutter_animated_icons/useanimations.dart';
+import 'package:flutter_icons_animated/icons8.dart';
+import 'package:flutter_icons_animated/lottiefiles.dart';
+import 'package:flutter_icons_animated/useanimations.dart';
 import 'package:lottie/lottie.dart';
 
 void main() {

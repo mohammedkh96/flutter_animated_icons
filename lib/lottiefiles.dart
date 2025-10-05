@@ -3,7 +3,7 @@
 class LottieFiles {
   LottieFiles._();
 
-  static const String _path = 'packages/flutter_animated_icons/assets/lottiefiles.com';
+  static const String _path = 'packages/flutter_icons_animated/assets/lottiefiles.com';
 
   /// map $33262_icons_bell_notification to Lottie 33262-icons-bell-notification
   static const String $33262_icons_bell_notification = '$_path/33262-icons-bell-notification.json';
