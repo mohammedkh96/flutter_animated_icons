@@ -177,14 +177,30 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   void _startAutoPlay() {
     if (_autoPlay && _filteredIcons.isNotEmpty) {
-      for (int i = 0; i < _filteredIcons.length; i++) {
-        Future.delayed(Duration(milliseconds: i * 100), () {
-          if (mounted && _autoPlay) {
-            _animateIcon(_filteredIcons[i].key);
-          }
-        });
-      }
+      _animateNextIcon(0);
     }
+  }
+
+  void _animateNextIcon(int index) {
+    if (!_autoPlay || !mounted || _filteredIcons.isEmpty) return;
+    
+    // Stop all current animations
+    for (var iconKey in _animatingIcons.toList()) {
+      _getController(iconKey).stop();
+    }
+    _animatingIcons.clear();
+    
+    // Animate the current icon
+    final currentIndex = index % _filteredIcons.length;
+    final iconKey = _filteredIcons[currentIndex].key;
+    _animateIcon(iconKey);
+    
+    // Schedule next icon animation
+    Future.delayed(const Duration(seconds: 2), () {
+      if (_autoPlay && mounted) {
+        _animateNextIcon(currentIndex + 1);
+      }
+    });
   }
 
   void _toggleAutoPlay() {
@@ -195,10 +211,24 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     if (_autoPlay) {
       _startAutoPlay();
     } else {
+      // Stop all animations and clear the animating icons list
       for (var iconKey in _animatingIcons.toList()) {
         _getController(iconKey).stop();
       }
       _animatingIcons.clear();
+      setState(() {}); // Update UI to remove animation highlights
+    }
+  }
+
+  void _restartAutoPlayIfActive() {
+    if (_autoPlay) {
+      // Stop current autoplay
+      for (var iconKey in _animatingIcons.toList()) {
+        _getController(iconKey).stop();
+      }
+      _animatingIcons.clear();
+      // Restart with new filtered icons
+      _startAutoPlay();
     }
   }
 
@@ -251,6 +281,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       setState(() {
                         _searchQuery = value;
                       });
+                      _restartAutoPlayIfActive();
                     },
                     decoration: const InputDecoration(
                       labelText: 'Search icons...',
@@ -285,6 +316,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                       setState(() {
                                         _selectedLibrary = library;
                                       });
+                                      _restartAutoPlayIfActive();
                                     },
                                   ),
                                 );
@@ -315,6 +347,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                       setState(() {
                                         _selectedCategory = category;
                                       });
+                                      _restartAutoPlayIfActive();
                                     },
                                   ),
                                 );
