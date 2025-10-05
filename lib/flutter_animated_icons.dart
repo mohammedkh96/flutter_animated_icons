@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons_animated/icons8.dart';
-import 'package:flutter_icons_animated/lottiefiles.dart';
-import 'package:flutter_icons_animated/useanimations.dart';
+import 'icons8.dart';
+import 'lottiefiles.dart';
+import 'useanimations.dart';
 import 'package:lottie/lottie.dart';
 
 void main() {
@@ -43,11 +43,17 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
 
-    _settingController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _favoriteController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _menuController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    _bellController = AnimationController(vsync: this, duration: const Duration(seconds: 1))..repeat();
-    _bookController = AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    _settingController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    _favoriteController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    _menuController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    _bellController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1))
+          ..repeat();
+    _bookController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
   }
 
   @override
@@ -68,9 +74,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
             /// Tap with animation example
             IconButton(
               splashRadius: 50,
@@ -81,7 +89,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               },
               icon: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Lottie.asset(Icons8.adjust, controller: _settingController),
+                child:
+                    Lottie.asset(Icons8.adjust, controller: _settingController),
               ),
             ),
 
@@ -97,7 +106,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   _favoriteController.reverse();
                 }
               },
-              icon: Lottie.asset(Icons8.heart_color, controller: _favoriteController),
+              icon: Lottie.asset(Icons8.heart_color,
+                  controller: _favoriteController),
             ),
 
             /// Hover example
@@ -119,7 +129,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     _bookController.reverse();
                   }
                 },
-                icon: Lottie.asset(Icons8.book, controller: _bookController, height: 60, fit: BoxFit.fitHeight),
+                icon: Lottie.asset(Icons8.book,
+                    controller: _bookController,
+                    height: 60,
+                    fit: BoxFit.fitHeight),
               ),
             ),
 
@@ -136,7 +149,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   _bellController.repeat();
                 }
               },
-              icon: Lottie.asset(LottieFiles.$63128_bell_icon, controller: _bellController, height: 60, fit: BoxFit.cover),
+              icon: Lottie.asset(LottieFiles.$63128_bell_icon,
+                  controller: _bellController, height: 60, fit: BoxFit.cover),
             ),
 
             /// animation edited color example
@@ -153,7 +167,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   _menuController.reverse();
                 }
               },
-              icon: Lottie.asset(Useanimations.menuV3, controller: _menuController, height: 60, fit: BoxFit.fitHeight),
+              icon: Lottie.asset(Useanimations.menuV3,
+                  controller: _menuController,
+                  height: 60,
+                  fit: BoxFit.fitHeight),
             ),
             // changed color
             IconButton(
@@ -167,9 +184,13 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   _menuController.reverse();
                 }
               },
-              icon: Lottie.asset(Useanimations.menuV3Blue, controller: _menuController, height: 60, fit: BoxFit.fitHeight),
+              icon: Lottie.asset(Useanimations.menuV3Blue,
+                  controller: _menuController,
+                  height: 60,
+                  fit: BoxFit.fitHeight),
             ),
-          ],
+            ],
+          ),
         ),
       ),
     );
