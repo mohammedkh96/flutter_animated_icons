@@ -398,7 +398,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   ),
                   child: Center(
                     child: Lottie.asset(
-                      _getIconPath(icon.library, icon.path),
+                      icon.path,
                       controller: _getController(iconKey),
                       width: 50,
                       height: 50,
