@@ -307,10 +307,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             hintText: 'Search icons...',
             hintStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
             border: InputBorder.none,
-            prefixIcon: Icon(Icons.search, color: Colors.white.withOpacity(0.7)),
+            prefixIcon:
+                Icon(Icons.search, color: Colors.white.withOpacity(0.7)),
             suffixIcon: _searchQuery.isNotEmpty
                 ? IconButton(
-                    icon: Icon(Icons.clear, color: Colors.white.withOpacity(0.7)),
+                    icon:
+                        Icon(Icons.clear, color: Colors.white.withOpacity(0.7)),
                     onPressed: () {
                       _searchController.clear();
                       setState(() {
@@ -369,9 +371,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                 SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
                                   child: Row(
-                                    children: _availableLibraries.map((library) {
+                                    children:
+                                        _availableLibraries.map((library) {
                                       return Padding(
-                                        padding: const EdgeInsets.only(right: 8),
+                                        padding:
+                                            const EdgeInsets.only(right: 8),
                                         child: FilterChip(
                                           label: Text(library),
                                           selected: library == _selectedLibrary,
@@ -400,12 +404,15 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                 SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
                                   child: Row(
-                                    children: _availableCategories.map((category) {
+                                    children:
+                                        _availableCategories.map((category) {
                                       return Padding(
-                                        padding: const EdgeInsets.only(right: 8),
+                                        padding:
+                                            const EdgeInsets.only(right: 8),
                                         child: FilterChip(
                                           label: Text(category),
-                                          selected: category == _selectedCategory,
+                                          selected:
+                                              category == _selectedCategory,
                                           onSelected: (selected) {
                                             setState(() {
                                               _selectedCategory = category;
@@ -428,8 +435,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               children: [
                                 Text('Total: ${_allIcons.length}'),
                                 Text('Filtered: ${_filteredIcons.length}'),
-                                Text('Libraries: ${_availableLibraries.length}'),
-                                Text('Categories: ${_availableCategories.length}'),
+                                Text(
+                                    'Libraries: ${_availableLibraries.length}'),
+                                Text(
+                                    'Categories: ${_availableCategories.length}'),
                               ],
                             ),
                           ],
