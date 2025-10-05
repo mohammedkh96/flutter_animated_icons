@@ -87,37 +87,37 @@ class _UsageExamplesPageState extends State<UsageExamplesPage>
           children: [
             _buildSectionTitle('📦 Package Information'),
             _buildInfoCard(),
-            
+
             const SizedBox(height: 24),
-            
+
             _buildSectionTitle('🎯 Icons8 Library Examples'),
             _buildIcons8Examples(),
-            
+
             const SizedBox(height: 24),
-            
+
             _buildSectionTitle('🎨 LottieFiles Library Examples'),
             _buildLottieFilesExamples(),
-            
+
             const SizedBox(height: 24),
-            
+
             _buildSectionTitle('✨ UseAnimations Library Examples'),
             _buildUseAnimationsExamples(),
-            
+
             const SizedBox(height: 24),
-            
+
             _buildSectionTitle('👑 Lordicon Library Examples'),
             _buildLordiconExamples(),
-            
+
             const SizedBox(height: 24),
-            
+
             _buildSectionTitle('🌊 LottieFlow Library Examples'),
             _buildLottieFlowExamples(),
-            
+
             const SizedBox(height: 24),
-            
+
             _buildSectionTitle('💡 Usage Tips & Best Practices'),
             _buildUsageTips(),
-            
+
             const SizedBox(height: 100), // Bottom padding
           ],
         ),
@@ -301,10 +301,22 @@ Lottie.asset(
 )'''),
             const SizedBox(height: 16),
             _buildIconGrid([
-              {'path': LottieFiles.$33262_icons_bell_notification, 'name': 'bell_notification'},
-              {'path': LottieFiles.$40048_bell_icon_notification, 'name': 'bell_icon'},
-              {'path': LottieFiles.$33262_icons_bell_notification, 'name': 'notification'},
-              {'path': LottieFiles.$40048_bell_icon_notification, 'name': 'bell'},
+              {
+                'path': LottieFiles.$33262_icons_bell_notification,
+                'name': 'bell_notification'
+              },
+              {
+                'path': LottieFiles.$40048_bell_icon_notification,
+                'name': 'bell_icon'
+              },
+              {
+                'path': LottieFiles.$33262_icons_bell_notification,
+                'name': 'notification'
+              },
+              {
+                'path': LottieFiles.$40048_bell_icon_notification,
+                'name': 'bell'
+              },
             ], _lottieFilesController),
           ],
         ),
@@ -385,8 +397,14 @@ Lottie.asset(Lordicon.\$1_share_outline) // Outline version'''),
             _buildIconGrid([
               {'path': Lordicon.$1_share_outline, 'name': 'share_outline'},
               {'path': Lordicon.$1_share_solid, 'name': 'share_solid'},
-              {'path': Lordicon.$48_favorite_heart_outline, 'name': 'heart_outline'},
-              {'path': Lordicon.$48_favorite_heart_solid, 'name': 'heart_solid'},
+              {
+                'path': Lordicon.$48_favorite_heart_outline,
+                'name': 'heart_outline'
+              },
+              {
+                'path': Lordicon.$48_favorite_heart_solid,
+                'name': 'heart_solid'
+              },
             ], _lordiconController),
           ],
         ),
@@ -422,10 +440,22 @@ Lottie.asset(
 Lottie.asset(LottieFlow.lottieflow_background_13_000000_easey)'''),
             const SizedBox(height: 16),
             _buildIconGrid([
-              {'path': LottieFlow.lottieflow_404_12_1_000000_easey, 'name': '404_1'},
-              {'path': LottieFlow.lottieflow_404_12_2_000000_easey, 'name': '404_2'},
-              {'path': LottieFlow.lottieflow_arrow_03_1_000000_easey, 'name': 'arrow_03'},
-              {'path': LottieFlow.lottieflow_arrow_05_2_000000_easey, 'name': 'arrow_05'},
+              {
+                'path': LottieFlow.lottieflow_404_12_1_000000_easey,
+                'name': '404_1'
+              },
+              {
+                'path': LottieFlow.lottieflow_404_12_2_000000_easey,
+                'name': '404_2'
+              },
+              {
+                'path': LottieFlow.lottieflow_arrow_03_1_000000_easey,
+                'name': 'arrow_03'
+              },
+              {
+                'path': LottieFlow.lottieflow_arrow_05_2_000000_easey,
+                'name': 'arrow_05'
+              },
             ], _lottieFlowController),
           ],
         ),
@@ -433,7 +463,8 @@ Lottie.asset(LottieFlow.lottieflow_background_13_000000_easey)'''),
     );
   }
 
-  Widget _buildIconGrid(List<Map<String, String>> icons, AnimationController controller) {
+  Widget _buildIconGrid(
+      List<Map<String, String>> icons, AnimationController controller) {
     return GridView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -466,7 +497,8 @@ Lottie.asset(LottieFlow.lottieflow_background_13_000000_easey)'''),
                       height: 40,
                       fit: BoxFit.contain,
                       errorBuilder: (context, error, stackTrace) {
-                        return const Icon(Icons.error_outline, color: Colors.grey);
+                        return const Icon(Icons.error_outline,
+                            color: Colors.grey);
                       },
                     ),
                   ),
