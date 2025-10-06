@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -96,7 +96,7 @@ class _MyAppState extends State<MyApp> {
       ),
       cardTheme: CardThemeData(
         elevation: 2,
-        shadowColor: colorScheme.shadow.withOpacity(0.1),
+        shadowColor: colorScheme.shadow.withValues(alpha: 0.1),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
@@ -141,7 +141,7 @@ class _MyAppState extends State<MyApp> {
       ),
       cardTheme: CardThemeData(
         elevation: 2,
-        shadowColor: colorScheme.shadow.withOpacity(0.1),
+        shadowColor: colorScheme.shadow.withValues(alpha: 0.1),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
@@ -152,11 +152,11 @@ class _MyAppState extends State<MyApp> {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
-    Key? key,
+    super.key,
     required this.title,
     required this.onToggleTheme,
     required this.currentThemeMode,
-  }) : super(key: key);
+  });
 
   final String title;
   final VoidCallback onToggleTheme;
@@ -176,7 +176,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   bool _isLoading = true;
   bool _showScrollToTop = false;
 
+  // ignore: prefer_final_fields
   Map<String, AnimationController> _controllers = {};
+  // ignore: prefer_final_fields
   Set<String> _animatingIcons = {};
   List<IconItem> _allIcons = [];
 
@@ -455,7 +457,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     .textTheme
                     .bodyLarge
                     ?.color
-                    ?.withOpacity(0.6),
+                    ?.withValues(alpha: 0.6),
               ),
               border: InputBorder.none,
               prefixIcon: Icon(
@@ -464,7 +466,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     .textTheme
                     .bodyLarge
                     ?.color
-                    ?.withOpacity(0.6),
+                    ?.withValues(alpha: 0.6),
                 size: 20,
               ),
               suffixIcon: _searchQuery.isNotEmpty
@@ -475,7 +477,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                             .textTheme
                             .bodyLarge
                             ?.color
-                            ?.withOpacity(0.6),
+                            ?.withValues(alpha: 0.6),
                         size: 20,
                       ),
                       onPressed: () {
@@ -498,7 +500,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               margin: const EdgeInsets.only(right: 8),
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
@@ -573,7 +575,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                           selectedColor: Theme.of(context)
                                               .colorScheme
                                               .primary
-                                              .withOpacity(0.2),
+                                              .withValues(alpha: 0.2),
                                           checkmarkColor: Theme.of(context)
                                               .colorScheme
                                               .primary,
@@ -585,7 +587,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                                 : Theme.of(context)
                                                     .colorScheme
                                                     .outline
-                                                    .withOpacity(0.3),
+                                                    .withValues(alpha: 0.3),
                                             width: 1,
                                           ),
                                           elevation: library == _selectedLibrary
@@ -594,7 +596,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                           shadowColor: Theme.of(context)
                                               .colorScheme
                                               .primary
-                                              .withOpacity(0.3),
+                                              .withValues(alpha: 0.3),
                                         ),
                                       );
                                     }).toList(),
@@ -644,7 +646,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                           selectedColor: Theme.of(context)
                                               .colorScheme
                                               .primary
-                                              .withOpacity(0.2),
+                                              .withValues(alpha: 0.2),
                                           checkmarkColor: Theme.of(context)
                                               .colorScheme
                                               .primary,
@@ -656,7 +658,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                                 : Theme.of(context)
                                                     .colorScheme
                                                     .outline
-                                                    .withOpacity(0.3),
+                                                    .withValues(alpha: 0.3),
                                             width: 1,
                                           ),
                                           elevation:
@@ -666,7 +668,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                           shadowColor: Theme.of(context)
                                               .colorScheme
                                               .primary
-                                              .withOpacity(0.3),
+                                              .withValues(alpha: 0.3),
                                         ),
                                       );
                                     }).toList(),
@@ -687,7 +689,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                   color: Theme.of(context)
                                       .colorScheme
                                       .outline
-                                      .withOpacity(0.2),
+                                      .withValues(alpha: 0.2),
                                 ),
                               ),
                               child: Row(
@@ -848,8 +850,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     return Card(
       elevation: isAnimating ? 4 : 2,
       shadowColor: isAnimating
-          ? Theme.of(context).colorScheme.primary.withOpacity(0.3)
-          : Theme.of(context).colorScheme.shadow.withOpacity(0.1),
+          ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.3)
+          : Theme.of(context).colorScheme.shadow.withValues(alpha: 0.1),
       child: InkWell(
         onTap: () => _animateIcon(iconKey),
         borderRadius: BorderRadius.circular(12),
@@ -865,7 +867,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: isAnimating
-                        ? Theme.of(context).colorScheme.primary.withOpacity(0.1)
+                        ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.1)
                         : Theme.of(context).colorScheme.surface,
                     borderRadius: BorderRadius.circular(8),
                     border: isAnimating
@@ -877,7 +879,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                             color: Theme.of(context)
                                 .colorScheme
                                 .outline
-                                .withOpacity(0.2),
+                                .withValues(alpha: 0.2),
                             width: 1,
                           ),
                     boxShadow: isAnimating
@@ -886,7 +888,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               color: Theme.of(context)
                                   .colorScheme
                                   .primary
-                                  .withOpacity(0.3),
+                                  .withValues(alpha: 0.3),
                               blurRadius: 8,
                               spreadRadius: 2,
                             ),
@@ -976,5 +978,5 @@ class IconItem {
     required this.path,
   });
 
-  String get key => '${library}_${name}';
+  String get key => '${library}_$name';
 }

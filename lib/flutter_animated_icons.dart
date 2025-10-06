@@ -3,8 +3,6 @@ import 'package:lottie/lottie.dart';
 import 'icons8.dart';
 import 'lottiefiles.dart';
 import 'useanimations.dart';
-import 'lordicon.dart';
-import 'lottieflow.dart';
 
 // Export all library classes
 export 'icons8.dart';
@@ -18,7 +16,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -150,7 +148,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 splashRadius: 50,
                 iconSize: 100,
                 onPressed: () {
-                  print(_bellController.status);
                   if (_bellController.isAnimating) {
                     // _bellController.stop();
                     _bellController.reset();

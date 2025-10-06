@@ -53,7 +53,9 @@ void main() async {
   final jsonString = JsonEncoder.withIndent('  ').convert(catalog);
   await File('example/assets/icon_catalog.json').writeAsString(jsonString);
 
+  // ignore: avoid_print
   print('Icon catalog generated successfully!');
+  // ignore: avoid_print
   print('Total libraries: ${catalog['libraries'].length}');
 
   for (var entry in catalog['libraries'].entries) {
@@ -63,6 +65,7 @@ void main() async {
     for (var category in categories.values) {
       totalIcons += (category as List).length;
     }
+    // ignore: avoid_print
     print('${entry.key}: $totalIcons icons in ${categories.length} categories');
   }
 }
@@ -76,6 +79,7 @@ Future<void> processLibrary(
 ) async {
   final directory = Directory(assetPath);
   if (!await directory.exists()) {
+    // ignore: avoid_print
     print('Directory $assetPath does not exist');
     return;
   }
