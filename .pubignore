@@ -19,7 +19,11 @@ assets/Summer Lottie Icons/SurfBoard 01.json
 assets/Summer Lottie Icons/Fire Pit.json
 assets/Summer Lottie Icons/Sail Boat.json
 
-# Medical - Remove largest files (keep smaller ones)
+# Medical - Keep only outline type, remove filled and flat types
+assets/medical/filled_*
+assets/medical/flat_*
+
+# Medical - Remove largest outline files (keep smaller ones)
 assets/medical/outline_17_Doctor_Writing_Prescription.json
 assets/medical/outline_25_Healthy_heart.json
 assets/medical/outline_26_Heart_care.json
