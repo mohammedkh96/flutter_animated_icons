@@ -37,6 +37,18 @@ assets/aichat/Search Waveform (Dark Theme).json
 assets/aichat/Search Waveform (Light Theme).json
 assets/aichat/Waveform.json
 
+# Weather Pack - Remove largest files (keep smaller ones)
+assets/weather-pack/Full Moon and Snow.json
+assets/weather-pack/Half Moon and Snow.json
+assets/weather-pack/Sun Eclipse.json
+assets/weather-pack/Full Moon and Rain.json
+assets/weather-pack/Half Moon and Rain.json
+assets/weather-pack/Full Moon.json
+assets/weather-pack/Half Moon.json
+assets/weather-pack/Cloudy Full Moon.json
+assets/weather-pack/Cloudy Half Moon.json
+assets/weather-pack/Snow.json
+
 # Exclude example app to reduce size
 example/
 
