@@ -13,6 +13,7 @@ export 'lottieflow.dart';
 export 'crypto.dart';
 export 'flowers.dart';
 export 'medical.dart';
+export 'emoji.dart';
 
 void main() {
   runApp(const MyApp());

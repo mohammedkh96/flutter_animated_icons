@@ -2972,6 +2972,85 @@
           "outlineVaccinationCard"
         ]
       }
+    },
+    "Emoji": {
+      "name": "Emoji",
+      "description": "Fun and expressive emoji animated icons with 60+ icons",
+      "color": "#FFD700",
+      "categories": {
+        "Happy Emojis": [
+          "emoji01",
+          "emoji02",
+          "emoji03",
+          "emoji04",
+          "emoji05",
+          "emoji06",
+          "emoji07",
+          "emoji08",
+          "emoji09",
+          "emoji10"
+        ],
+        "Expressive Emojis": [
+          "emoji11",
+          "emoji12",
+          "emoji13",
+          "emoji14",
+          "emoji15",
+          "emoji16",
+          "emoji17",
+          "emoji18",
+          "emoji19",
+          "emoji20"
+        ],
+        "Action Emojis": [
+          "emoji21",
+          "emoji22",
+          "emoji23",
+          "emoji24",
+          "emoji25",
+          "emoji26",
+          "emoji27",
+          "emoji28",
+          "emoji29",
+          "emoji30"
+        ],
+        "Special Emojis": [
+          "emoji31",
+          "emoji32",
+          "emoji33",
+          "emoji34",
+          "emoji35",
+          "emoji36",
+          "emoji37",
+          "emoji38",
+          "emoji39",
+          "emoji40"
+        ],
+        "Fun Emojis": [
+          "emoji41",
+          "emoji42",
+          "emoji43",
+          "emoji44",
+          "emoji45",
+          "emoji46",
+          "emoji47",
+          "emoji48",
+          "emoji49",
+          "emoji50"
+        ],
+        "More Emojis": [
+          "emoji51",
+          "emoji52",
+          "emoji53",
+          "emoji54",
+          "emoji55",
+          "emoji56",
+          "emoji57",
+          "emoji58",
+          "emoji59",
+          "emoji60"
+        ]
+      }
     }
   }
 }

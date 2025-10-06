@@ -1,3 +1,12 @@
+## 1.4.0
+
+- 😊 **NEW**: Added fun and expressive emoji animated icons library
+- 🎭 Added 60+ emoji icons for social apps, messaging, and fun interfaces
+- 😄 Added emoji icon categories: Happy Emojis, Expressive Emojis, Action Emojis, Special Emojis, Fun Emojis, More Emojis
+- 🎨 Updated example app to showcase emoji icons
+- 📚 Updated documentation and icon catalog
+- 🔧 Enhanced package structure with new Emoji library
+
 ## 1.3.0
 
 - 🏥 **NEW**: Added medical and healthcare animated icons library

@@ -3,14 +3,15 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.3.0-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,586+-orange?style=for-the-badge)
-![Libraries](https://img.shields.io/badge/libraries-8-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.4.0-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,646+-orange?style=for-the-badge)
+![Libraries](https://img.shields.io/badge/libraries-9-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
 ![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
 ![Medical](https://img.shields.io/badge/medical-96+-teal?style=for-the-badge)
+![Emoji](https://img.shields.io/badge/emoji-60+-yellow?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,586+ animated icons from 8 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, and 96+ medical healthcare icons in 3 styles**
+**🎨 A comprehensive collection of 2,646+ animated icons from 9 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, and 60+ fun emoji icons**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -31,10 +32,11 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - 🪙 **NEW: Cryptocurrency Icons**: 25+ crypto icons including Bitcoin, Ethereum, Solana, and more
 - 🌸 **NEW: Flower Icons**: 12+ beautiful flower and nature icons for botanical and natural themes
 - 🏥 **NEW: Medical Icons**: 96+ medical and healthcare icons in 3 styles (Filled, Flat, Outline) for health apps and medical interfaces
+- 😊 **NEW: Emoji Icons**: 60+ fun and expressive emoji icons for social apps, messaging, and fun interfaces
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,586+ animated icons** from 8 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, and 96+ medical healthcare icons in 3 styles. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,646+ animated icons** from 9 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, and 60+ fun emoji icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -48,6 +50,7 @@ Animation always adds life to your icons. This package collects **2,586+ animate
 | **Crypto** | 25 | Cryptocurrency animated icons (Bitcoin, Ethereum, etc.) | 🟡 Gold |
 | **Flowers** | 12+ | Beautiful flower and nature animated icons | 🌸 Pink |
 | **Medical** | 96+ | Medical and healthcare animated icons in 3 styles | 🏥 Teal |
+| **Emoji** | 60+ | Fun and expressive emoji animated icons | 😊 Yellow |
 
 ## 📱 Examples
 
@@ -303,6 +306,51 @@ Lottie.asset(Medical.filledDietList)
 Lottie.asset(Medical.filledVirusProtection)
 Lottie.asset(Medical.filledCoronaMask)
 Lottie.asset(Medical.filledVaccinationCard)
+```
+
+### Emoji Library
+```dart
+// Happy Emojis
+Lottie.asset(Emoji.emoji01)
+Lottie.asset(Emoji.emoji02)
+Lottie.asset(Emoji.emoji03)
+Lottie.asset(Emoji.emoji04)
+Lottie.asset(Emoji.emoji05)
+
+// Expressive Emojis
+Lottie.asset(Emoji.emoji11)
+Lottie.asset(Emoji.emoji12)
+Lottie.asset(Emoji.emoji13)
+Lottie.asset(Emoji.emoji14)
+Lottie.asset(Emoji.emoji15)
+
+// Action Emojis
+Lottie.asset(Emoji.emoji21)
+Lottie.asset(Emoji.emoji22)
+Lottie.asset(Emoji.emoji23)
+Lottie.asset(Emoji.emoji24)
+Lottie.asset(Emoji.emoji25)
+
+// Special Emojis
+Lottie.asset(Emoji.emoji31)
+Lottie.asset(Emoji.emoji32)
+Lottie.asset(Emoji.emoji33)
+Lottie.asset(Emoji.emoji34)
+Lottie.asset(Emoji.emoji35)
+
+// Fun Emojis
+Lottie.asset(Emoji.emoji41)
+Lottie.asset(Emoji.emoji42)
+Lottie.asset(Emoji.emoji43)
+Lottie.asset(Emoji.emoji44)
+Lottie.asset(Emoji.emoji45)
+
+// More Emojis
+Lottie.asset(Emoji.emoji51)
+Lottie.asset(Emoji.emoji52)
+Lottie.asset(Emoji.emoji53)
+Lottie.asset(Emoji.emoji54)
+Lottie.asset(Emoji.emoji55)
 ```
 
 ## 🎨 Advanced Usage
