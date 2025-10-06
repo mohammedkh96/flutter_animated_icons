@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:convert';
-import 'package:flutter_icons_animated/crypto.dart';
 
 void main() {
   runApp(const MyApp());
