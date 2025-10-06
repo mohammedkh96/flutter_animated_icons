@@ -1,49 +1,60 @@
 name: Deploy to GitHub Pages
 
 on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-            - name: Setup Flutter
-              uses: subosito/flutter-action@v2
-              with:
-                  flutter-version: "3.27.0"
-                  channel: "stable"
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.35.5"
+          channel: "stable"
 
-            - name: Configure Flutter
-              run: |
-                  flutter config --no-analytics
-                  flutter doctor
+      - name: Configure Flutter
+        run: |
+          flutter config --no-analytics
+          flutter config --no-cli-animations
+          flutter doctor
 
-            - name: Install dependencies
-              run: |
-                  cd example
-                  flutter pub get
+      - name: Cache Flutter dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.pub-cache
+            example/.dart_tool
+          key: ${{ runner.os }}-flutter-${{ hashFiles('example/pubspec.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-flutter-
 
-            - name: Build web app
-              run: |
-                  cd example
-                  flutter build web --release
+      - name: Install dependencies
+        run: |
+          cd example
+          flutter pub get
 
-            - name: Prepare deployment files
-              run: |
-                  # Copy the main index.html to the build directory
-                  cp index.html example/build/web/
+      - name: Build web app
+        run: |
+          cd example
+          flutter build web --release --web-renderer html
 
-            - name: Deploy to GitHub Pages
-              uses: peaceiris/actions-gh-pages@v3
-              if: github.ref == 'refs/heads/main'
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./example/build/web
-                  cname: # Optional: add your custom domain here
+      - name: Prepare deployment files
+        run: |
+          # Copy the main index.html to the build directory
+          cp index.html example/build/web/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./example/build/web
+          cname: # Optional: add your custom domain here
