@@ -1,23 +1,37 @@
-# Exclude large asset folders to reduce package size for pub.dev
-# These folders contain the most assets and can be downloaded separately
-assets/icons8.com/
-assets/lottiefiles.com/
-assets/lottieflow.com/
-assets/lordicon.com/
-assets/useanimations.com/
+# Exclude largest files to reduce package size for pub.dev
+# These files are over 100KB and can be downloaded separately
 
-# Keep smaller, newer libraries
-# assets/new/
-# assets/flowers/
-# assets/medical/
-# assets/emoji/
-# assets/new_communication/
-# assets/Summer Lottie Icons/
-# assets/superhero-character/
-# assets/fitnesandhealthlottiepack/
-# assets/weather-pack/
-# assets/aichat/
-# assets/B404/
+# B404 - Remove largest files (keep smaller ones)
+assets/B404/404 Maintenance.json
+assets/B404/Server Isometric.json
+assets/B404/UFO.json
+assets/B404/Fishing.json
+assets/B404/Falling.json
+assets/B404/Street Maintenance.json
+assets/B404/Binocular.json
+
+# Summer Lottie Icons - Remove largest files (keep smaller ones)
+assets/Summer Lottie Icons/Speed Boat.json
+assets/Summer Lottie Icons/Boat 02.json
+assets/Summer Lottie Icons/Boat 01.json
+assets/Summer Lottie Icons/SurfBoard 02.json
+assets/Summer Lottie Icons/SurfBoard 01.json
+assets/Summer Lottie Icons/Fire Pit.json
+assets/Summer Lottie Icons/Sail Boat.json
+
+# Medical - Remove largest files (keep smaller ones)
+assets/medical/outline_17_Doctor_Writing_Prescription.json
+assets/medical/outline_25_Healthy_heart.json
+assets/medical/outline_26_Heart_care.json
+assets/medical/outline_13_Diet_list.json
+assets/medical/outline_16_Medication.json
+
+# AI Chat - Remove largest waveform files (keep smaller ones)
+assets/aichat/Chat Bubble Ellipses Waveform.json
+assets/aichat/Chat Bubble Waveform.json
+assets/aichat/Search Waveform (Dark Theme).json
+assets/aichat/Search Waveform (Light Theme).json
+assets/aichat/Waveform.json
 
 # Exclude example app to reduce size
 example/
