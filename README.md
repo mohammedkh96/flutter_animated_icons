@@ -3,15 +3,16 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.4.0-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,646+-orange?style=for-the-badge)
-![Libraries](https://img.shields.io/badge/libraries-9-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.5.0-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,656+-orange?style=for-the-badge)
+![Libraries](https://img.shields.io/badge/libraries-10-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
 ![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
 ![Medical](https://img.shields.io/badge/medical-96+-teal?style=for-the-badge)
 ![Emoji](https://img.shields.io/badge/emoji-60+-yellow?style=for-the-badge)
+![Communication](https://img.shields.io/badge/communication-10+-blue?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,646+ animated icons from 9 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, and 60+ fun emoji icons**
+**🎨 A comprehensive collection of 2,656+ animated icons from 10 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, and 10+ communication icons**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -33,10 +34,11 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - 🌸 **NEW: Flower Icons**: 12+ beautiful flower and nature icons for botanical and natural themes
 - 🏥 **NEW: Medical Icons**: 96+ medical and healthcare icons in 3 styles (Filled, Flat, Outline) for health apps and medical interfaces
 - 😊 **NEW: Emoji Icons**: 60+ fun and expressive emoji icons for social apps, messaging, and fun interfaces
+- 📞 **NEW: Communication Icons**: 10+ communication and messaging icons for email, phone, and notifications
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,646+ animated icons** from 9 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, and 60+ fun emoji icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,656+ animated icons** from 10 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, and 10+ communication icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -51,8 +53,36 @@ Animation always adds life to your icons. This package collects **2,646+ animate
 | **Flowers** | 12+ | Beautiful flower and nature animated icons | 🌸 Pink |
 | **Medical** | 96+ | Medical and healthcare animated icons in 3 styles | 🏥 Teal |
 | **Emoji** | 60+ | Fun and expressive emoji animated icons | 😊 Yellow |
+| **Communication** | 10+ | Communication and messaging animated icons | 📞 Blue |
 
 ## 📱 Examples
+
+### 🆕 New Unified Approach (Recommended)
+Use the new `IconsAnimated` class to access all icons from a single place:
+
+```dart
+import 'package:flutter_icons_animated/flutter_icons_animated.dart';
+
+// All icons accessible from one class
+Lottie.asset(IconsAnimated.bitcoin)           // Crypto
+Lottie.asset(IconsAnimated.flower)            // Flowers
+Lottie.asset(IconsAnimated.filledStethoscope) // Medical
+Lottie.asset(IconsAnimated.emoji01)           // Emoji
+Lottie.asset(IconsAnimated.phoneInTalk)       // Communication
+```
+
+### 🔄 Legacy Approach (Still Supported)
+You can still use the individual library classes:
+
+```dart
+import 'package:flutter_icons_animated/flutter_icons_animated.dart';
+
+// Individual library access
+Lottie.asset(Crypto.bitcoin)
+Lottie.asset(Flowers.flower)
+Lottie.asset(Medical.filledStethoscope)
+Lottie.asset(Emoji.emoji01)
+```
 
 ### Example 1: Complete Icon Browser
 A full-featured app with search, filtering, and autoplay functionality:
@@ -351,6 +381,27 @@ Lottie.asset(Emoji.emoji52)
 Lottie.asset(Emoji.emoji53)
 Lottie.asset(Emoji.emoji54)
 Lottie.asset(Emoji.emoji55)
+```
+
+### Communication Library
+```dart
+// Email and messaging
+Lottie.asset(IconsAnimated.markEmailRead)
+Lottie.asset(IconsAnimated.markEmailUnread)
+Lottie.asset(IconsAnimated.outgoingMail)
+Lottie.asset(IconsAnimated.moveToInbox)
+
+// Phone and communication
+Lottie.asset(IconsAnimated.phoneInTalk)
+Lottie.asset(IconsAnimated.permPhoneMsg)
+
+// Notifications
+Lottie.asset(IconsAnimated.notifications)
+Lottie.asset(IconsAnimated.notificationsActive)
+Lottie.asset(IconsAnimated.notificationsOff)
+
+// Search and contacts
+Lottie.asset(IconsAnimated.personSearch)
 ```
 
 ## 🎨 Advanced Usage

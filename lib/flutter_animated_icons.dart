@@ -14,6 +14,7 @@ export 'crypto.dart';
 export 'flowers.dart';
 export 'medical.dart';
 export 'emoji.dart';
+export 'icons_animated.dart';
 
 void main() {
   runApp(const MyApp());

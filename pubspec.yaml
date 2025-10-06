@@ -1,5 +1,5 @@
 name: flutter_icons_animated
-description: Collection of 2646+ animations for your icons and buttons, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, and 60+ fun emoji icons. They are implemented by Lottie animation. Effective icon animation tells a clear story amplifying the intended UX.
+description: Collection of 2656+ animations for your icons and buttons, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, and 10+ communication icons. They are implemented by Lottie animation. Effective icon animation tells a clear story amplifying the intended UX.
 homepage: https://github.com/hajisalam/flutter_icons_animated
 repository: https://github.com/hajisalam/flutter_icons_animated
 issue_tracker: https://github.com/hajisalam/flutter_icons_animated/issues
@@ -17,7 +17,7 @@ issue_tracker: https://github.com/hajisalam/flutter_icons_animated/issues
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.4.0
+version: 1.5.0
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -101,3 +101,4 @@ flutter:
         - assets/flowers/
         - assets/medical/
         - assets/emoji/
+        - assets/new_communication/

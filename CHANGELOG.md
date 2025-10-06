@@ -1,3 +1,12 @@
+## 1.5.0
+
+- 🆕 **NEW**: Added unified `IconsAnimated` class for accessing all icons from one place
+- 📞 **NEW**: Added communication and messaging animated icons library
+- 📧 Added 10+ communication icons for email, phone, notifications, and messaging
+- 🔄 **BREAKING**: Both new unified approach and legacy individual library access supported
+- 📚 Updated documentation with new unified usage examples
+- 🎨 Enhanced package structure with comprehensive icon access
+
 ## 1.4.0
 
 - 😊 **NEW**: Added fun and expressive emoji animated icons library
