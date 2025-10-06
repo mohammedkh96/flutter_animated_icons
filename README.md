@@ -3,9 +3,9 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.7.0-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,758+-orange?style=for-the-badge)
-![Libraries](https://img.shields.io/badge/libraries-12-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.8.0-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,868+-orange?style=for-the-badge)
+![Libraries](https://img.shields.io/badge/libraries-14-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
 ![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
 ![Medical](https://img.shields.io/badge/medical-96+-teal?style=for-the-badge)
@@ -13,8 +13,10 @@
 ![Communication](https://img.shields.io/badge/communication-10+-blue?style=for-the-badge)
 ![Summer](https://img.shields.io/badge/summer-89+-orange?style=for-the-badge)
 ![Superhero](https://img.shields.io/badge/superhero-13+-red?style=for-the-badge)
+![Fitness](https://img.shields.io/badge/fitness-100+-green?style=for-the-badge)
+![Weather](https://img.shields.io/badge/weather-10+-blue?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,758+ animated icons from 12 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, and 13+ superhero character icons**
+**🎨 A comprehensive collection of 2,868+ animated icons from 14 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, and 10+ weather icons**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -39,10 +41,12 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - 📞 **NEW: Communication Icons**: 10+ communication and messaging icons for email, phone, and notifications
 - ☀️ **NEW: Summer Icons**: 89+ summer and beach themed icons for vacation, travel, and summer apps
 - 🦸 **NEW: Superhero Icons**: 13+ superhero character icons for gaming, entertainment, and character-based apps
+- 💪 **NEW: Fitness Icons**: 100+ fitness and health icons for workout apps, health tracking, and fitness interfaces
+- 🌤️ **NEW: Weather Icons**: 10+ weather condition icons for weather apps and environmental interfaces
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,758+ animated icons** from 12 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, and 13+ superhero character icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,868+ animated icons** from 14 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, and 10+ weather icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -60,6 +64,8 @@ Animation always adds life to your icons. This package collects **2,758+ animate
 | **Communication** | 10+ | Communication and messaging animated icons | 📞 Blue |
 | **Summer** | 89+ | Summer and beach themed animated icons | ☀️ Orange |
 | **Superhero** | 13+ | Superhero character animated icons | 🦸 Red |
+| **Fitness** | 100+ | Fitness and health animated icons | 💪 Green |
+| **Weather** | 10+ | Weather condition animated icons | 🌤️ Blue |
 
 ## 📱 Examples
 
@@ -478,6 +484,93 @@ Lottie.asset(IconsAnimated.holdingPhone)
 // Achievements & Recognition
 Lottie.asset(IconsAnimated.holdingTrophy)
 Lottie.asset(IconsAnimated.holdingOfferBoard)
+```
+
+### Fitness Library
+```dart
+// Body Parts - Women
+Lottie.asset(IconsAnimated.womanAbs)
+Lottie.asset(IconsAnimated.womanBiceps)
+Lottie.asset(IconsAnimated.womanChest)
+Lottie.asset(IconsAnimated.womanFigure)
+
+// Body Parts - Men
+Lottie.asset(IconsAnimated.manAbs)
+Lottie.asset(IconsAnimated.manBiceps)
+Lottie.asset(IconsAnimated.manChest)
+Lottie.asset(IconsAnimated.manFigure)
+
+// Equipment & Machines
+Lottie.asset(IconsAnimated.weights01)
+Lottie.asset(IconsAnimated.weightlifting)
+Lottie.asset(IconsAnimated.kettleBells01)
+Lottie.asset(IconsAnimated.smithMachine)
+Lottie.asset(IconsAnimated.pullUpBar)
+Lottie.asset(IconsAnimated.punchingBag)
+
+// Cardio Equipment
+Lottie.asset(IconsAnimated.treadmill)
+Lottie.asset(IconsAnimated.spinBike)
+Lottie.asset(IconsAnimated.skippingRope01)
+
+// Swimming
+Lottie.asset(IconsAnimated.swimmingIcon01)
+Lottie.asset(IconsAnimated.swimmingIcon02)
+
+// Running & Activities
+Lottie.asset(IconsAnimated.runningMan)
+Lottie.asset(IconsAnimated.runningWoman)
+Lottie.asset(IconsAnimated.runningParkour01)
+
+// Tracking & Monitoring
+Lottie.asset(IconsAnimated.stepTracker01)
+Lottie.asset(IconsAnimated.sleepTracker01)
+Lottie.asset(IconsAnimated.waterTracker01)
+Lottie.asset(IconsAnimated.weightTracker)
+Lottie.asset(IconsAnimated.repsTracker)
+
+// Timers & Clocks
+Lottie.asset(IconsAnimated.timer01)
+Lottie.asset(IconsAnimated.smartWatch)
+Lottie.asset(IconsAnimated.whistle)
+
+// Nutrition & Hydration
+Lottie.asset(IconsAnimated.waterIcon)
+Lottie.asset(IconsAnimated.waterBottle)
+Lottie.asset(IconsAnimated.supplements)
+
+// Sleep & Recovery
+Lottie.asset(IconsAnimated.sleepingIcon01)
+Lottie.asset(IconsAnimated.sleepingIcon02)
+
+// Measurements & Progress
+Lottie.asset(IconsAnimated.measure01)
+Lottie.asset(IconsAnimated.progressIcon)
+Lottie.asset(IconsAnimated.weightProgressGraphic)
+
+// Performance & Analytics
+Lottie.asset(IconsAnimated.workoutIntensityGraphic01)
+Lottie.asset(IconsAnimated.weeklyPerformanceGraphic01)
+
+// Achievements & Recognition
+Lottie.asset(IconsAnimated.trophy)
+Lottie.asset(IconsAnimated.medal)
+Lottie.asset(IconsAnimated.strengthIcon)
+```
+
+### Weather Library
+```dart
+// Weather Conditions
+Lottie.asset(IconsAnimated.thunderV1)
+Lottie.asset(IconsAnimated.thunderV2)
+Lottie.asset(IconsAnimated.snowfallV1)
+Lottie.asset(IconsAnimated.snowfallV2)
+Lottie.asset(IconsAnimated.rainingV1)
+Lottie.asset(IconsAnimated.rainingV2)
+Lottie.asset(IconsAnimated.normalWeatherV1)
+Lottie.asset(IconsAnimated.normalWeatherV2)
+Lottie.asset(IconsAnimated.mistV1)
+Lottie.asset(IconsAnimated.mistV2)
 ```
 
 ## 🎨 Advanced Usage
