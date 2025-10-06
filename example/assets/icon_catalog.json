@@ -2806,6 +2806,33 @@
           "gala"
         ]
       }
+    },
+    "Flowers": {
+      "name": "Flowers",
+      "description": "Beautiful flower and nature animated icons with 12+ icons",
+      "color": "#FF69B4",
+      "categories": {
+        "Flowers": [
+          "curveFlower01",
+          "curveFlower02",
+          "flower",
+          "pinkFlower",
+          "purpleFlower"
+        ],
+        "Flower Lines": [
+          "curveFlowerLine",
+          "flowerLine",
+          "flowerThinLine",
+          "straightFlowerLine"
+        ],
+        "Nature": [
+          "greenLeaves",
+          "leaf"
+        ],
+        "Frames": [
+          "frame"
+        ]
+      }
     }
   }
 }

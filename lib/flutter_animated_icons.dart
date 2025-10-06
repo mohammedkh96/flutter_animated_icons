@@ -11,6 +11,7 @@ export 'useanimations.dart';
 export 'lordicon.dart';
 export 'lottieflow.dart';
 export 'crypto.dart';
+export 'flowers.dart';
 
 void main() {
   runApp(const MyApp());

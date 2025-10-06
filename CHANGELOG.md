@@ -1,3 +1,12 @@
+## 1.2.0
+
+- 🌸 **NEW**: Added beautiful flowers and nature animated icons library
+- 🌺 Added 12+ flower and nature icons including various flower styles, leaves, and frames
+- 🌿 Added flower icon categories: Flowers, Flower Lines, Nature, Frames
+- 🎨 Updated example app to showcase flower icons
+- 📚 Updated documentation and icon catalog
+- 🔧 Enhanced package structure with new Flowers library
+
 ## 1.1.0
 
 - ✨ **NEW**: Added cryptocurrency animated icons library

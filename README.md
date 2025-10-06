@@ -3,12 +3,13 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.1.0-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,479+-orange?style=for-the-badge)
-![Libraries](https://img.shields.io/badge/libraries-6-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.2.0-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,490+-orange?style=for-the-badge)
+![Libraries](https://img.shields.io/badge/libraries-7-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
+![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,479+ animated icons from 6 premium libraries, including 25+ cryptocurrency icons**
+**🎨 A comprehensive collection of 2,490+ animated icons from 7 premium libraries, including 25+ cryptocurrency icons and 12+ beautiful flower icons**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -27,10 +28,11 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - ✅ **Performance Optimized**: Improved loading and animation performance
 - ✅ **Git Integration**: Proper version control and commit history
 - 🪙 **NEW: Cryptocurrency Icons**: 25+ crypto icons including Bitcoin, Ethereum, Solana, and more
+- 🌸 **NEW: Flower Icons**: 12+ beautiful flower and nature icons for botanical and natural themes
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,479+ animated icons** from 6 premium libraries, including 25+ cryptocurrency icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,490+ animated icons** from 7 premium libraries, including 25+ cryptocurrency icons and 12+ beautiful flower icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -42,6 +44,7 @@ Animation always adds life to your icons. This package collects **2,479+ animate
 | **Lordicon** | 154 | Premium animated icons with multiple styles | 🟣 Purple |
 | **LottieFlow** | 277 | Creative and artistic animations | 🟦 Teal |
 | **Crypto** | 25 | Cryptocurrency animated icons (Bitcoin, Ethereum, etc.) | 🟡 Gold |
+| **Flowers** | 12+ | Beautiful flower and nature animated icons | 🌸 Pink |
 
 ## 📱 Examples
 
@@ -216,6 +219,29 @@ Lottie.asset(Crypto.pancakeswap)
 Lottie.asset(Crypto.decentraland)
 Lottie.asset(Crypto.sandbox)
 Lottie.asset(Crypto.gala)
+```
+
+### Flowers Library
+```dart
+// Beautiful flowers
+Lottie.asset(Flowers.flower)
+Lottie.asset(Flowers.pinkFlower)
+Lottie.asset(Flowers.purpleFlower)
+Lottie.asset(Flowers.curveFlower01)
+Lottie.asset(Flowers.curveFlower02)
+
+// Flower lines and designs
+Lottie.asset(Flowers.flowerLine)
+Lottie.asset(Flowers.flowerThinLine)
+Lottie.asset(Flowers.curveFlowerLine)
+Lottie.asset(Flowers.straightFlowerLine)
+
+// Nature elements
+Lottie.asset(Flowers.leaf)
+Lottie.asset(Flowers.greenLeaves)
+
+// Frames
+Lottie.asset(Flowers.frame)
 ```
 
 ## 🎨 Advanced Usage

@@ -94,3 +94,4 @@ flutter:
   assets:
     - assets/icon_catalog.json
     - ../assets/new/
+    - ../assets/flowers/
