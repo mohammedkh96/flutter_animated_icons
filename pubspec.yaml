@@ -1,5 +1,5 @@
 name: flutter_icons_animated
-description: Collection of 2400+ animations for your icons and buttons. They are implemented by Lottie animation. Effective icon animation tells a clear story amplifying the intended UX.
+description: Collection of 2400+ animations for your icons and buttons, including 25+ cryptocurrency icons. They are implemented by Lottie animation. Effective icon animation tells a clear story amplifying the intended UX.
 homepage: https://github.com/hajisalam/flutter_icons_animated
 repository: https://github.com/hajisalam/flutter_icons_animated
 issue_tracker: https://github.com/hajisalam/flutter_icons_animated/issues
@@ -18,7 +18,7 @@ issue_tracker: https://github.com/hajisalam/flutter_icons_animated/issues
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0
+version: 1.1.0
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
