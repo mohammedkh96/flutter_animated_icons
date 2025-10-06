@@ -3390,6 +3390,66 @@
           "normalWeatherV2"
         ]
       }
+    },
+    "AI Chat": {
+      "name": "AI Chat",
+      "description": "AI chat and chatbot animated icons with 45+ icons",
+      "color": "#00D4AA",
+      "categories": {
+        "Bing Chat": [
+          "bingChatBlueFill01",
+          "bingChatBlueFill02",
+          "bingChatBlueStroke",
+          "bingChatFillBlack",
+          "bingChatFillBlue",
+          "bingChatStrokeBlack",
+          "bingChatStrokeBlue",
+          "bingChatTextToImageDark",
+          "bingChatTextToImageLight",
+          "bingChatTextToTextDark",
+          "bingChatTextToTextLight"
+        ],
+        "ChatGPT": [
+          "chatGPTFillBlack",
+          "chatGPTFillGreen",
+          "chatGPTGreenFill01",
+          "chatGPTGreenFill02",
+          "chatGPTGreenFillChat01",
+          "chatGPTGreenFillChat02",
+          "chatGPTGreenStroke",
+          "chatGPTStroke01",
+          "chatGPTStroke02",
+          "chatGPTStrokeGreen",
+          "chatGPTTextToImageDark",
+          "chatGPTTextToImageLight",
+          "chatGPTTextToTextDark",
+          "chatGPTTextToTextLight"
+        ],
+        "Chat Bubbles": [
+          "chatBubbleDotsStroke",
+          "chatBubbleDots",
+          "chatBubbleEllipsesDotsStroke",
+          "chatBubbleEllipsesDots",
+          "chatBubbleEllipsesTextLineStroke",
+          "chatBubbleEllipsesTextLine",
+          "chatBubbleEllipsesWaveformStroke",
+          "chatBubbleEllipsesWaveform",
+          "chatBubbleTextLineStroke",
+          "chatBubbleTextLine",
+          "chatBubbleWaveformStroke",
+          "chatBubbleWaveform"
+        ],
+        "Search & Loading": [
+          "loadingPoints",
+          "searchTextDark",
+          "searchTextLight",
+          "searchWaveLineDark",
+          "searchWaveLineLight",
+          "searchWaveformDark",
+          "searchWaveformLight",
+          "waveform"
+        ]
+      }
     }
   }
 }

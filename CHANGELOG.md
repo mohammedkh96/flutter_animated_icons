@@ -1,3 +1,13 @@
+## 1.9.0
+
+- 🤖 **NEW**: Added AI chat and chatbot animated icons library
+- 💬 Added 45+ AI chat icons for AI applications and conversational interfaces
+- 🤖 Added AI chat categories: Bing Chat, ChatGPT, Chat Bubbles, Search & Loading
+- 🎨 Added popular AI platform icons: Bing Chat (blue theme), ChatGPT (green theme), chat bubbles, search animations, and loading indicators
+- 🎨 Updated example app to showcase AI chat icons
+- 📚 Updated documentation with AI chat usage examples
+- 🔧 Enhanced package structure with new AI Chat library
+
 ## 1.8.1
 
 - 🌤️ **ENHANCED**: Expanded weather animated icons library

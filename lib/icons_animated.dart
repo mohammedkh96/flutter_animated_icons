@@ -743,15 +743,18 @@ class IconsAnimated {
   // ============================================================================
   // WEATHER ICONS (40 icons)
   // ============================================================================
-  
+
   // Clouds & Sky
   static const String cloudDark = 'assets/weather-pack/Cloud Dark.json';
   static const String cloudLight = 'assets/weather-pack/Cloud Light.json';
   static const String clouds = 'assets/weather-pack/Clouds.json';
   static const String cloudySun = 'assets/weather-pack/Cloudy Sun.json';
-  static const String cloudySunWind = 'assets/weather-pack/Cloudy Sun Wind.json';
-  static const String cloudyFullMoon = 'assets/weather-pack/Cloudy Full Moon.json';
-  static const String cloudyHalfMoon = 'assets/weather-pack/Cloudy Half Moon.json';
+  static const String cloudySunWind =
+      'assets/weather-pack/Cloudy Sun Wind.json';
+  static const String cloudyFullMoon =
+      'assets/weather-pack/Cloudy Full Moon.json';
+  static const String cloudyHalfMoon =
+      'assets/weather-pack/Cloudy Half Moon.json';
 
   // Sun & Solar
   static const String sun = 'assets/weather-pack/Sun.json';
@@ -762,10 +765,14 @@ class IconsAnimated {
   // Moon & Night
   static const String fullMoon = 'assets/weather-pack/Full Moon.json';
   static const String halfMoon = 'assets/weather-pack/Half Moon.json';
-  static const String fullMoonAndRain = 'assets/weather-pack/Full Moon and Rain.json';
-  static const String fullMoonAndSnow = 'assets/weather-pack/Full Moon and Snow.json';
-  static const String halfMoonAndRain = 'assets/weather-pack/Half Moon and Rain.json';
-  static const String halfMoonAndSnow = 'assets/weather-pack/Half Moon and Snow.json';
+  static const String fullMoonAndRain =
+      'assets/weather-pack/Full Moon and Rain.json';
+  static const String fullMoonAndSnow =
+      'assets/weather-pack/Full Moon and Snow.json';
+  static const String halfMoonAndRain =
+      'assets/weather-pack/Half Moon and Rain.json';
+  static const String halfMoonAndSnow =
+      'assets/weather-pack/Half Moon and Snow.json';
   static const String star = 'assets/weather-pack/Star.json';
 
   // Rain & Precipitation
@@ -793,14 +800,75 @@ class IconsAnimated {
   static const String mistV2 = 'assets/weather-pack/mist_v2.json';
 
   // Temperature
-  static const String hotTemperature = 'assets/weather-pack/Hot Temperature.json';
-  static const String coldTemperature = 'assets/weather-pack/Cold Temperature.json';
+  static const String hotTemperature =
+      'assets/weather-pack/Hot Temperature.json';
+  static const String coldTemperature =
+      'assets/weather-pack/Cold Temperature.json';
 
   // Special Weather
   static const String rainbow = 'assets/weather-pack/Rainbow.json';
   static const String uvMeter = 'assets/weather-pack/UV Meter.json';
-  static const String normalWeatherV1 = 'assets/weather-pack/normal_weather_v1.json';
-  static const String normalWeatherV2 = 'assets/weather-pack/normal_weather_v2.json';
+  static const String normalWeatherV1 =
+      'assets/weather-pack/normal_weather_v1.json';
+  static const String normalWeatherV2 =
+      'assets/weather-pack/normal_weather_v2.json';
+
+  // ============================================================================
+  // AI CHAT ICONS (45 icons)
+  // ============================================================================
+  
+  // Bing Chat Icons
+  static const String bingChatBlueFill01 = 'assets/aichat/Bing Chat Blue Fill 01.json';
+  static const String bingChatBlueFill02 = 'assets/aichat/Bing Chat Blue Fill 02.json';
+  static const String bingChatBlueStroke = 'assets/aichat/Bing Chat Blue Stroke.json';
+  static const String bingChatFillBlack = 'assets/aichat/Bing Chat Fill Black.json';
+  static const String bingChatFillBlue = 'assets/aichat/Bing Chat Fill Blue.json';
+  static const String bingChatStrokeBlack = 'assets/aichat/Bing Chat Stroke Black.json';
+  static const String bingChatStrokeBlue = 'assets/aichat/Bing Chat Stroke Blue.json';
+  static const String bingChatTextToImageDark = 'assets/aichat/Bing Chat Text to Image (Dark Theme).json';
+  static const String bingChatTextToImageLight = 'assets/aichat/Bing Chat Text to Image (Light Theme).json';
+  static const String bingChatTextToTextDark = 'assets/aichat/Bing Chat Text to Text (Dark Theme).json';
+  static const String bingChatTextToTextLight = 'assets/aichat/Bing Chat Text to Text (Light Theme).json';
+
+  // ChatGPT Icons
+  static const String chatGPTFillBlack = 'assets/aichat/ChatGPT Fill Black.json';
+  static const String chatGPTFillGreen = 'assets/aichat/ChatGPT Fill Green.json';
+  static const String chatGPTGreenFill01 = 'assets/aichat/ChatGPT Green Fill 01.json';
+  static const String chatGPTGreenFill02 = 'assets/aichat/ChatGPT Green Fill 02.json';
+  static const String chatGPTGreenFillChat01 = 'assets/aichat/ChatGPT Green Fill Chat 01.json';
+  static const String chatGPTGreenFillChat02 = 'assets/aichat/ChatGPT Green Fill Chat 02.json';
+  static const String chatGPTGreenStroke = 'assets/aichat/ChatGPT Green Stroke.json';
+  static const String chatGPTStroke01 = 'assets/aichat/ChatGPT Stroke 01.json';
+  static const String chatGPTStroke02 = 'assets/aichat/ChatGPT Stroke 02.json';
+  static const String chatGPTStrokeGreen = 'assets/aichat/ChatGPT Stroke Green.json';
+  static const String chatGPTTextToImageDark = 'assets/aichat/ChatGPT Text to Image (Dark Theme).json';
+  static const String chatGPTTextToImageLight = 'assets/aichat/ChatGPT Text to Image (Light Theme).json';
+  static const String chatGPTTextToTextDark = 'assets/aichat/ChatGPT Text to Text (Dark Theme).json';
+  static const String chatGPTTextToTextLight = 'assets/aichat/ChatGPT Text to Text (Light Theme).json';
+
+  // Chat Bubble Icons
+  static const String chatBubbleDotsStroke = 'assets/aichat/Chat Bubble Dots Stroke.json';
+  static const String chatBubbleDots = 'assets/aichat/Chat Bubble Dots.json';
+  static const String chatBubbleEllipsesDotsStroke = 'assets/aichat/Chat Bubble Ellipses Dots Stroke.json';
+  static const String chatBubbleEllipsesDots = 'assets/aichat/Chat Bubble Ellipses Dots.json';
+  static const String chatBubbleEllipsesTextLineStroke = 'assets/aichat/Chat Bubble Ellipses Text Line Stroke.json';
+  static const String chatBubbleEllipsesTextLine = 'assets/aichat/Chat Bubble Ellipses Text Line.json';
+  static const String chatBubbleEllipsesWaveformStroke = 'assets/aichat/Chat Bubble Ellipses Waveform Stroke.json';
+  static const String chatBubbleEllipsesWaveform = 'assets/aichat/Chat Bubble Ellipses Waveform.json';
+  static const String chatBubbleTextLineStroke = 'assets/aichat/Chat Bubble Text Line Stroke.json';
+  static const String chatBubbleTextLine = 'assets/aichat/Chat Bubble Text Line.json';
+  static const String chatBubbleWaveformStroke = 'assets/aichat/Chat Bubble Waveform Stroke.json';
+  static const String chatBubbleWaveform = 'assets/aichat/Chat Bubble Waveform.json';
+
+  // Search & Loading Icons
+  static const String loadingPoints = 'assets/aichat/Loading Points.json';
+  static const String searchTextDark = 'assets/aichat/Search Text (Dark Theme).json';
+  static const String searchTextLight = 'assets/aichat/Search Text (Light Theme).json';
+  static const String searchWaveLineDark = 'assets/aichat/Search Wave Line (Dark Theme).json';
+  static const String searchWaveLineLight = 'assets/aichat/Search Wave Line (Light Theme).json';
+  static const String searchWaveformDark = 'assets/aichat/Search Waveform (Dark Theme).json';
+  static const String searchWaveformLight = 'assets/aichat/Search Waveform (Light Theme).json';
+  static const String waveform = 'assets/aichat/Waveform.json';
 
   // ============================================================================
   // LEGACY LIBRARY ACCESS (for backward compatibility)

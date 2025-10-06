@@ -431,6 +431,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       folderName = 'fitnesandhealthlottiepack';
     } else if (folderName == 'weather') {
       folderName = 'weather-pack';
+    } else if (folderName == 'ai chat') {
+      folderName = 'aichat';
     }
 
     // Add .json extension if not present

@@ -3,9 +3,9 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.8.1-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,898+-orange?style=for-the-badge)
-![Libraries](https://img.shields.io/badge/libraries-14-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.9.0-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,943+-orange?style=for-the-badge)
+![Libraries](https://img.shields.io/badge/libraries-15-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
 ![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
 ![Medical](https://img.shields.io/badge/medical-96+-teal?style=for-the-badge)
@@ -15,8 +15,9 @@
 ![Superhero](https://img.shields.io/badge/superhero-13+-red?style=for-the-badge)
 ![Fitness](https://img.shields.io/badge/fitness-100+-green?style=for-the-badge)
 ![Weather](https://img.shields.io/badge/weather-40+-blue?style=for-the-badge)
+![AI Chat](https://img.shields.io/badge/ai%20chat-45+-purple?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,898+ animated icons from 14 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, and 40+ weather icons**
+**🎨 A comprehensive collection of 2,943+ animated icons from 15 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, 40+ weather icons, and 45+ AI chat icons**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -43,10 +44,11 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - 🦸 **NEW: Superhero Icons**: 13+ superhero character icons for gaming, entertainment, and character-based apps
 - 💪 **NEW: Fitness Icons**: 100+ fitness and health icons for workout apps, health tracking, and fitness interfaces
 - 🌤️ **NEW: Weather Icons**: 40+ weather condition icons for weather apps and environmental interfaces
+- 🤖 **NEW: AI Chat Icons**: 45+ AI chat and chatbot icons for AI applications and conversational interfaces
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,898+ animated icons** from 14 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, and 40+ weather icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,943+ animated icons** from 15 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, 40+ weather icons, and 45+ AI chat icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -66,6 +68,7 @@ Animation always adds life to your icons. This package collects **2,898+ animate
 | **Superhero** | 13+ | Superhero character animated icons | 🦸 Red |
 | **Fitness** | 100+ | Fitness and health animated icons | 💪 Green |
 | **Weather** | 40+ | Weather condition animated icons | 🌤️ Blue |
+| **AI Chat** | 45+ | AI chat and chatbot animated icons | 🤖 Purple |
 
 ## 📱 Examples
 
@@ -617,6 +620,36 @@ Lottie.asset(IconsAnimated.rainbow)
 Lottie.asset(IconsAnimated.uvMeter)
 Lottie.asset(IconsAnimated.normalWeatherV1)
 Lottie.asset(IconsAnimated.normalWeatherV2)
+```
+
+### AI Chat Library
+```dart
+// Bing Chat
+Lottie.asset(IconsAnimated.bingChatBlueFill01)
+Lottie.asset(IconsAnimated.bingChatFillBlue)
+Lottie.asset(IconsAnimated.bingChatStrokeBlue)
+Lottie.asset(IconsAnimated.bingChatTextToTextLight)
+Lottie.asset(IconsAnimated.bingChatTextToImageDark)
+
+// ChatGPT
+Lottie.asset(IconsAnimated.chatGPTFillGreen)
+Lottie.asset(IconsAnimated.chatGPTGreenFill01)
+Lottie.asset(IconsAnimated.chatGPTGreenStroke)
+Lottie.asset(IconsAnimated.chatGPTTextToTextLight)
+Lottie.asset(IconsAnimated.chatGPTTextToImageDark)
+
+// Chat Bubbles
+Lottie.asset(IconsAnimated.chatBubbleDots)
+Lottie.asset(IconsAnimated.chatBubbleEllipsesDots)
+Lottie.asset(IconsAnimated.chatBubbleTextLine)
+Lottie.asset(IconsAnimated.chatBubbleWaveform)
+Lottie.asset(IconsAnimated.chatBubbleEllipsesWaveform)
+
+// Search & Loading
+Lottie.asset(IconsAnimated.loadingPoints)
+Lottie.asset(IconsAnimated.searchTextLight)
+Lottie.asset(IconsAnimated.searchWaveformDark)
+Lottie.asset(IconsAnimated.waveform)
 ```
 
 ## 🎨 Advanced Usage
