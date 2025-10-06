@@ -2764,6 +2764,48 @@
           "lottieflow-success-09-000000-easey"
         ]
       }
+    },
+    "Crypto": {
+      "name": "Crypto",
+      "description": "Cryptocurrency animated icons with 25+ icons",
+      "color": "#FFD700",
+      "categories": {
+        "Major Cryptocurrencies": [
+          "bitcoin",
+          "ethereum",
+          "solana",
+          "bnb",
+          "cardano",
+          "chainlink",
+          "doge",
+          "litecoin",
+          "polkadot",
+          "polkadot2",
+          "polygon",
+          "avalanche",
+          "fantom",
+          "near",
+          "terra",
+          "tron",
+          "xrp"
+        ],
+        "Stablecoins": [
+          "tether",
+          "usdCoin"
+        ],
+        "Meme Coins": [
+          "shibaInu"
+        ],
+        "DeFi Tokens": [
+          "uniswap",
+          "pancakeswap"
+        ],
+        "Gaming/Metaverse": [
+          "decentraland",
+          "sandbox",
+          "gala"
+        ]
+      }
     }
   }
 }

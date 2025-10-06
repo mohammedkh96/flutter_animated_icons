@@ -10,6 +10,7 @@ export 'lottiefiles.dart';
 export 'useanimations.dart';
 export 'lordicon.dart';
 export 'lottieflow.dart';
+export 'crypto.dart';
 
 void main() {
   runApp(const MyApp());

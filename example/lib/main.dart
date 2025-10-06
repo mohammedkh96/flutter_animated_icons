@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:convert';
+import 'package:flutter_icons_animated/crypto.dart';
 
 void main() {
   runApp(const MyApp());
@@ -417,6 +418,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       folderName = 'lottieflow.com';
     } else if (folderName == 'useanimations') {
       folderName = 'useanimations.com';
+    } else if (folderName == 'crypto') {
+      folderName = 'new';
     }
 
     // Add .json extension if not present
