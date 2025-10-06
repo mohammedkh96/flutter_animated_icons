@@ -2833,6 +2833,145 @@
           "frame"
         ]
       }
+    },
+    "Medical": {
+      "name": "Medical",
+      "description": "Medical and healthcare animated icons with 96+ icons in 3 styles",
+      "color": "#00BCD4",
+      "categories": {
+        "Filled Medical Equipment": [
+          "filledStethoscope",
+          "filledThermometer",
+          "filledEcg",
+          "filledXray",
+          "filledUltrasound",
+          "filledHeartRateMonitor",
+          "filledDoctorBag"
+        ],
+        "Filled Medical Procedures": [
+          "filledBloodTest",
+          "filledTakingBlood",
+          "filledBloodDonation",
+          "filledBloodDonation2",
+          "filledInfusion",
+          "filledEyeInspection",
+          "filledTeethCheckRoutine",
+          "filledTeethProblem"
+        ],
+        "Filled Healthcare Facilities": [
+          "filledHospital",
+          "filledHospitalBed",
+          "filledHospitalChair",
+          "filledAmbulance"
+        ],
+        "Filled Medications & Treatment": [
+          "filledDrugs",
+          "filledMedication",
+          "filledPlasterWound",
+          "filledDoctorWritingPrescription",
+          "filledBuyingMedicineOnline"
+        ],
+        "Filled Health Monitoring": [
+          "filledHealthyHeart",
+          "filledHeartCare",
+          "filledCardioReport",
+          "filledDietList",
+          "filledMedicalCaseHistory"
+        ],
+        "Filled Protection & Safety": [
+          "filledVirusProtection",
+          "filledCoronaMask",
+          "filledVaccinationCard"
+        ],
+        "Flat Medical Equipment": [
+          "flatStethoscope",
+          "flatThermometer",
+          "flatEcg",
+          "flatXray",
+          "flatUltrasound",
+          "flatHeartRateMonitor",
+          "flatDoctorBag"
+        ],
+        "Flat Medical Procedures": [
+          "flatBloodTest",
+          "flatTakingBlood",
+          "flatBloodDonation",
+          "flatBloodDonation2",
+          "flatInfusion",
+          "flatEyeInspection",
+          "flatTeethCheckRoutine",
+          "flatTeethProblem"
+        ],
+        "Flat Healthcare Facilities": [
+          "flatHospital",
+          "flatHospitalBed",
+          "flatHospitalChair",
+          "flatAmbulance"
+        ],
+        "Flat Medications & Treatment": [
+          "flatDrugs",
+          "flatMedication",
+          "flatPlasterWound",
+          "flatDoctorWritingPrescription",
+          "flatBuyingMedicineOnline"
+        ],
+        "Flat Health Monitoring": [
+          "flatHealthyHeart",
+          "flatHeartCare",
+          "flatCardioReport",
+          "flatDietList",
+          "flatMedicalCaseHistory"
+        ],
+        "Flat Protection & Safety": [
+          "flatVirusProtection",
+          "flatCoronaMask",
+          "flatVaccinationCard"
+        ],
+        "Outline Medical Equipment": [
+          "outlineStethoscope",
+          "outlineThermometer",
+          "outlineEcg",
+          "outlineXray",
+          "outlineUltrasound",
+          "outlineHeartRateMonitor",
+          "outlineDoctorBag"
+        ],
+        "Outline Medical Procedures": [
+          "outlineBloodTest",
+          "outlineTakingBlood",
+          "outlineBloodDonation",
+          "outlineBloodDonation2",
+          "outlineInfusion",
+          "outlineEyeInspection",
+          "outlineTeethCheckRoutine",
+          "outlineTeethProblem"
+        ],
+        "Outline Healthcare Facilities": [
+          "outlineHospital",
+          "outlineHospitalBed",
+          "outlineHospitalChair",
+          "outlineAmbulance"
+        ],
+        "Outline Medications & Treatment": [
+          "outlineDrugs",
+          "outlineMedication",
+          "outlinePlasterWound",
+          "outlineDoctorWritingPrescription",
+          "outlineBuyingMedicineOnline"
+        ],
+        "Outline Health Monitoring": [
+          "outlineHealthyHeart",
+          "outlineHeartCare",
+          "outlineCardioReport",
+          "outlineDietList",
+          "outlineMedicalCaseHistory"
+        ],
+        "Outline Protection & Safety": [
+          "outlineVirusProtection",
+          "outlineCoronaMask",
+          "outlineVaccinationCard"
+        ]
+      }
     }
   }
 }

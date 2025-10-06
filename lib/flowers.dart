@@ -12,5 +12,6 @@ class Flowers {
   static const String leaf = 'assets/flowers/Leaf.json';
   static const String pinkFlower = 'assets/flowers/Pink Flower.json';
   static const String purpleFlower = 'assets/flowers/Purple Flower.json';
-  static const String straightFlowerLine = 'assets/flowers/Straight Flower Line.json';
+  static const String straightFlowerLine =
+      'assets/flowers/Straight Flower Line.json';
 }

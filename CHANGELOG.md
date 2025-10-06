@@ -1,3 +1,12 @@
+## 1.3.0
+
+- 🏥 **NEW**: Added medical and healthcare animated icons library
+- 🩺 Added 96+ medical and healthcare icons in 3 styles (Filled, Flat, Outline)
+- 💊 Added medical icon categories: Medical Equipment, Medical Procedures, Healthcare Facilities, Medications & Treatment, Health Monitoring, Protection & Safety
+- 🎨 Updated example app to showcase medical icons with all 3 styles
+- 📚 Updated documentation and icon catalog
+- 🔧 Enhanced package structure with new Medical library
+
 ## 1.2.0
 
 - 🌸 **NEW**: Added beautiful flowers and nature animated icons library

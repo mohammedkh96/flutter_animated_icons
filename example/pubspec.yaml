@@ -95,3 +95,4 @@ flutter:
     - assets/icon_catalog.json
     - ../assets/new/
     - ../assets/flowers/
+    - ../assets/medical/

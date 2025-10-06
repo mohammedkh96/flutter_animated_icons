@@ -3,13 +3,14 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.2.0-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,490+-orange?style=for-the-badge)
-![Libraries](https://img.shields.io/badge/libraries-7-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.3.0-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,586+-orange?style=for-the-badge)
+![Libraries](https://img.shields.io/badge/libraries-8-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
 ![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
+![Medical](https://img.shields.io/badge/medical-96+-teal?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,490+ animated icons from 7 premium libraries, including 25+ cryptocurrency icons and 12+ beautiful flower icons**
+**🎨 A comprehensive collection of 2,586+ animated icons from 8 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, and 96+ medical healthcare icons in 3 styles**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -29,10 +30,11 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - ✅ **Git Integration**: Proper version control and commit history
 - 🪙 **NEW: Cryptocurrency Icons**: 25+ crypto icons including Bitcoin, Ethereum, Solana, and more
 - 🌸 **NEW: Flower Icons**: 12+ beautiful flower and nature icons for botanical and natural themes
+- 🏥 **NEW: Medical Icons**: 96+ medical and healthcare icons in 3 styles (Filled, Flat, Outline) for health apps and medical interfaces
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,490+ animated icons** from 7 premium libraries, including 25+ cryptocurrency icons and 12+ beautiful flower icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,586+ animated icons** from 8 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, and 96+ medical healthcare icons in 3 styles. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -45,6 +47,7 @@ Animation always adds life to your icons. This package collects **2,490+ animate
 | **LottieFlow** | 277 | Creative and artistic animations | 🟦 Teal |
 | **Crypto** | 25 | Cryptocurrency animated icons (Bitcoin, Ethereum, etc.) | 🟡 Gold |
 | **Flowers** | 12+ | Beautiful flower and nature animated icons | 🌸 Pink |
+| **Medical** | 96+ | Medical and healthcare animated icons in 3 styles | 🏥 Teal |
 
 ## 📱 Examples
 
@@ -242,6 +245,64 @@ Lottie.asset(Flowers.greenLeaves)
 
 // Frames
 Lottie.asset(Flowers.frame)
+```
+
+### Medical Library
+```dart
+// Filled Medical Icons
+Lottie.asset(Medical.filledStethoscope)
+Lottie.asset(Medical.filledHospital)
+Lottie.asset(Medical.filledBloodTest)
+Lottie.asset(Medical.filledThermometer)
+Lottie.asset(Medical.filledAmbulance)
+
+// Flat Medical Icons
+Lottie.asset(Medical.flatStethoscope)
+Lottie.asset(Medical.flatHospital)
+Lottie.asset(Medical.flatBloodTest)
+Lottie.asset(Medical.flatThermometer)
+Lottie.asset(Medical.flatAmbulance)
+
+// Outline Medical Icons
+Lottie.asset(Medical.outlineStethoscope)
+Lottie.asset(Medical.outlineHospital)
+Lottie.asset(Medical.outlineBloodTest)
+Lottie.asset(Medical.outlineThermometer)
+Lottie.asset(Medical.outlineAmbulance)
+
+// Medical Equipment
+Lottie.asset(Medical.filledEcg)
+Lottie.asset(Medical.filledXray)
+Lottie.asset(Medical.filledUltrasound)
+Lottie.asset(Medical.filledHeartRateMonitor)
+
+// Medical Procedures
+Lottie.asset(Medical.filledTakingBlood)
+Lottie.asset(Medical.filledInfusion)
+Lottie.asset(Medical.filledEyeInspection)
+Lottie.asset(Medical.filledTeethCheckRoutine)
+
+// Healthcare Facilities
+Lottie.asset(Medical.filledHospitalBed)
+Lottie.asset(Medical.filledHospitalChair)
+Lottie.asset(Medical.filledDoctorBag)
+
+// Medications & Treatment
+Lottie.asset(Medical.filledDrugs)
+Lottie.asset(Medical.filledMedication)
+Lottie.asset(Medical.filledPlasterWound)
+Lottie.asset(Medical.filledDoctorWritingPrescription)
+
+// Health Monitoring
+Lottie.asset(Medical.filledHealthyHeart)
+Lottie.asset(Medical.filledHeartCare)
+Lottie.asset(Medical.filledCardioReport)
+Lottie.asset(Medical.filledDietList)
+
+// Protection & Safety
+Lottie.asset(Medical.filledVirusProtection)
+Lottie.asset(Medical.filledCoronaMask)
+Lottie.asset(Medical.filledVaccinationCard)
 ```
 
 ## 🎨 Advanced Usage

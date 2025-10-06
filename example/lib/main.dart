@@ -421,6 +421,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       folderName = 'new';
     } else if (folderName == 'flowers') {
       folderName = 'flowers';
+    } else if (folderName == 'medical') {
+      folderName = 'medical';
     }
 
     // Add .json extension if not present

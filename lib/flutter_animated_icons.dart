@@ -12,6 +12,7 @@ export 'lordicon.dart';
 export 'lottieflow.dart';
 export 'crypto.dart';
 export 'flowers.dart';
+export 'medical.dart';
 
 void main() {
   runApp(const MyApp());
