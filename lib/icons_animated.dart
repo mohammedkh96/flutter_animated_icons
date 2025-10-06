@@ -913,25 +913,42 @@ class IconsAnimated {
   // ============================================================================
   // B404 ERROR ICONS (27 icons)
   // ============================================================================
-  
+
   // Business Characters 404 Errors
-  static const String businessCharacters404Error01 = 'assets/B404/Business Characters 404 Error 01.json';
-  static const String businessCharacters404Error02 = 'assets/B404/Business Characters 404 Error 02.json';
-  static const String businessCharacters404Error03 = 'assets/B404/Business Characters 404 Error 03.json';
-  static const String businessCharacters404Error04 = 'assets/B404/Business Characters 404 Error 04.json';
-  static const String businessCharacters404Error05 = 'assets/B404/Business Characters 404 Error 05.json';
-  static const String businessCharacters404Error06 = 'assets/B404/Business Characters 404 Error 06.json';
-  static const String businessCharacters404Error07 = 'assets/B404/Business Characters 404 Error 07.json';
-  static const String businessCharacters404Error08 = 'assets/B404/Business Characters 404 Error 08.json';
-  static const String businessCharacters404Error09 = 'assets/B404/Business Characters 404 Error 09.json';
-  static const String businessCharacters404Error10 = 'assets/B404/Business Characters 404 Error 10.json';
-  static const String businessCharacters404Error11 = 'assets/B404/Business Characters 404 Error 11.json';
-  static const String businessCharacters404Error12 = 'assets/B404/Business Characters 404 Error 12.json';
-  static const String businessCharacters404Error13 = 'assets/B404/Business Characters 404 Error 13.json';
-  static const String businessCharacters404Error14 = 'assets/B404/Business Characters 404 Error 14.json';
-  static const String businessCharacters404Error15 = 'assets/B404/Business Characters 404 Error 15.json';
-  static const String businessCharacters404Error16 = 'assets/B404/Business Characters 404 Error 16.json';
-  static const String businessCharacters404Error17 = 'assets/B404/Business Characters 404 Error 17.json';
+  static const String businessCharacters404Error01 =
+      'assets/B404/Business Characters 404 Error 01.json';
+  static const String businessCharacters404Error02 =
+      'assets/B404/Business Characters 404 Error 02.json';
+  static const String businessCharacters404Error03 =
+      'assets/B404/Business Characters 404 Error 03.json';
+  static const String businessCharacters404Error04 =
+      'assets/B404/Business Characters 404 Error 04.json';
+  static const String businessCharacters404Error05 =
+      'assets/B404/Business Characters 404 Error 05.json';
+  static const String businessCharacters404Error06 =
+      'assets/B404/Business Characters 404 Error 06.json';
+  static const String businessCharacters404Error07 =
+      'assets/B404/Business Characters 404 Error 07.json';
+  static const String businessCharacters404Error08 =
+      'assets/B404/Business Characters 404 Error 08.json';
+  static const String businessCharacters404Error09 =
+      'assets/B404/Business Characters 404 Error 09.json';
+  static const String businessCharacters404Error10 =
+      'assets/B404/Business Characters 404 Error 10.json';
+  static const String businessCharacters404Error11 =
+      'assets/B404/Business Characters 404 Error 11.json';
+  static const String businessCharacters404Error12 =
+      'assets/B404/Business Characters 404 Error 12.json';
+  static const String businessCharacters404Error13 =
+      'assets/B404/Business Characters 404 Error 13.json';
+  static const String businessCharacters404Error14 =
+      'assets/B404/Business Characters 404 Error 14.json';
+  static const String businessCharacters404Error15 =
+      'assets/B404/Business Characters 404 Error 15.json';
+  static const String businessCharacters404Error16 =
+      'assets/B404/Business Characters 404 Error 16.json';
+  static const String businessCharacters404Error17 =
+      'assets/B404/Business Characters 404 Error 17.json';
 
   // Error & Maintenance Scenarios
   static const String error404Maintenance = 'assets/B404/404 Maintenance.json';
@@ -939,9 +956,11 @@ class IconsAnimated {
   static const String errorFalling = 'assets/B404/Falling.json';
   static const String errorFishing = 'assets/B404/Fishing.json';
   static const String errorLostInSpace = 'assets/B404/Lost in Space.json';
-  static const String errorServerIsometric = 'assets/B404/Server Isometric.json';
+  static const String errorServerIsometric =
+      'assets/B404/Server Isometric.json';
   static const String errorShipwreck = 'assets/B404/Shipwreck.json';
-  static const String errorStreetMaintenance = 'assets/B404/Street Maintenance.json';
+  static const String errorStreetMaintenance =
+      'assets/B404/Street Maintenance.json';
   static const String errorUFO = 'assets/B404/UFO.json';
 
   // ============================================================================
