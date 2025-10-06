@@ -4,9 +4,8 @@ homepage: https://github.com/hajisalam/flutter_icons_animated
 repository: https://github.com/hajisalam/flutter_icons_animated
 issue_tracker: https://github.com/hajisalam/flutter_icons_animated/issues
 
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-#publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+# Package is ready for publication to pub.dev
+# publish_to: 'none' # Uncomment this line if you wish to prevent publishing
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
