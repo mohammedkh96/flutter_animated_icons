@@ -91,15 +91,16 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
-      assets:
-        - assets/icon_catalog.json
-        - ../assets/new/
-        - ../assets/flowers/
-        - ../assets/medical/
-        - ../assets/emoji/
-        - ../assets/new_communication/
-        - ../assets/Summer Lottie Icons/
-        - ../assets/superhero-character/
-        - ../assets/fitnesandhealthlottiepack/
-        - ../assets/weather-pack/
-        - ../assets/aichat/
+  assets:
+    - assets/icon_catalog.json
+    - ../assets/new/
+    - ../assets/flowers/
+    - ../assets/medical/
+    - ../assets/emoji/
+    - ../assets/new_communication/
+    - ../assets/Summer Lottie Icons/
+    - ../assets/superhero-character/
+    - ../assets/fitnesandhealthlottiepack/
+    - ../assets/weather-pack/
+    - ../assets/aichat/
+    - ../assets/B404/

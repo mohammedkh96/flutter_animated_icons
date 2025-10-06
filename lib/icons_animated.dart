@@ -816,59 +816,133 @@ class IconsAnimated {
   // ============================================================================
   // AI CHAT ICONS (45 icons)
   // ============================================================================
-  
+
   // Bing Chat Icons
-  static const String bingChatBlueFill01 = 'assets/aichat/Bing Chat Blue Fill 01.json';
-  static const String bingChatBlueFill02 = 'assets/aichat/Bing Chat Blue Fill 02.json';
-  static const String bingChatBlueStroke = 'assets/aichat/Bing Chat Blue Stroke.json';
-  static const String bingChatFillBlack = 'assets/aichat/Bing Chat Fill Black.json';
-  static const String bingChatFillBlue = 'assets/aichat/Bing Chat Fill Blue.json';
-  static const String bingChatStrokeBlack = 'assets/aichat/Bing Chat Stroke Black.json';
-  static const String bingChatStrokeBlue = 'assets/aichat/Bing Chat Stroke Blue.json';
-  static const String bingChatTextToImageDark = 'assets/aichat/Bing Chat Text to Image (Dark Theme).json';
-  static const String bingChatTextToImageLight = 'assets/aichat/Bing Chat Text to Image (Light Theme).json';
-  static const String bingChatTextToTextDark = 'assets/aichat/Bing Chat Text to Text (Dark Theme).json';
-  static const String bingChatTextToTextLight = 'assets/aichat/Bing Chat Text to Text (Light Theme).json';
+  static const String bingChatBlueFill01 =
+      'assets/aichat/Bing Chat Blue Fill 01.json';
+  static const String bingChatBlueFill02 =
+      'assets/aichat/Bing Chat Blue Fill 02.json';
+  static const String bingChatBlueStroke =
+      'assets/aichat/Bing Chat Blue Stroke.json';
+  static const String bingChatFillBlack =
+      'assets/aichat/Bing Chat Fill Black.json';
+  static const String bingChatFillBlue =
+      'assets/aichat/Bing Chat Fill Blue.json';
+  static const String bingChatStrokeBlack =
+      'assets/aichat/Bing Chat Stroke Black.json';
+  static const String bingChatStrokeBlue =
+      'assets/aichat/Bing Chat Stroke Blue.json';
+  static const String bingChatTextToImageDark =
+      'assets/aichat/Bing Chat Text to Image (Dark Theme).json';
+  static const String bingChatTextToImageLight =
+      'assets/aichat/Bing Chat Text to Image (Light Theme).json';
+  static const String bingChatTextToTextDark =
+      'assets/aichat/Bing Chat Text to Text (Dark Theme).json';
+  static const String bingChatTextToTextLight =
+      'assets/aichat/Bing Chat Text to Text (Light Theme).json';
 
   // ChatGPT Icons
-  static const String chatGPTFillBlack = 'assets/aichat/ChatGPT Fill Black.json';
-  static const String chatGPTFillGreen = 'assets/aichat/ChatGPT Fill Green.json';
-  static const String chatGPTGreenFill01 = 'assets/aichat/ChatGPT Green Fill 01.json';
-  static const String chatGPTGreenFill02 = 'assets/aichat/ChatGPT Green Fill 02.json';
-  static const String chatGPTGreenFillChat01 = 'assets/aichat/ChatGPT Green Fill Chat 01.json';
-  static const String chatGPTGreenFillChat02 = 'assets/aichat/ChatGPT Green Fill Chat 02.json';
-  static const String chatGPTGreenStroke = 'assets/aichat/ChatGPT Green Stroke.json';
+  static const String chatGPTFillBlack =
+      'assets/aichat/ChatGPT Fill Black.json';
+  static const String chatGPTFillGreen =
+      'assets/aichat/ChatGPT Fill Green.json';
+  static const String chatGPTGreenFill01 =
+      'assets/aichat/ChatGPT Green Fill 01.json';
+  static const String chatGPTGreenFill02 =
+      'assets/aichat/ChatGPT Green Fill 02.json';
+  static const String chatGPTGreenFillChat01 =
+      'assets/aichat/ChatGPT Green Fill Chat 01.json';
+  static const String chatGPTGreenFillChat02 =
+      'assets/aichat/ChatGPT Green Fill Chat 02.json';
+  static const String chatGPTGreenStroke =
+      'assets/aichat/ChatGPT Green Stroke.json';
   static const String chatGPTStroke01 = 'assets/aichat/ChatGPT Stroke 01.json';
   static const String chatGPTStroke02 = 'assets/aichat/ChatGPT Stroke 02.json';
-  static const String chatGPTStrokeGreen = 'assets/aichat/ChatGPT Stroke Green.json';
-  static const String chatGPTTextToImageDark = 'assets/aichat/ChatGPT Text to Image (Dark Theme).json';
-  static const String chatGPTTextToImageLight = 'assets/aichat/ChatGPT Text to Image (Light Theme).json';
-  static const String chatGPTTextToTextDark = 'assets/aichat/ChatGPT Text to Text (Dark Theme).json';
-  static const String chatGPTTextToTextLight = 'assets/aichat/ChatGPT Text to Text (Light Theme).json';
+  static const String chatGPTStrokeGreen =
+      'assets/aichat/ChatGPT Stroke Green.json';
+  static const String chatGPTTextToImageDark =
+      'assets/aichat/ChatGPT Text to Image (Dark Theme).json';
+  static const String chatGPTTextToImageLight =
+      'assets/aichat/ChatGPT Text to Image (Light Theme).json';
+  static const String chatGPTTextToTextDark =
+      'assets/aichat/ChatGPT Text to Text (Dark Theme).json';
+  static const String chatGPTTextToTextLight =
+      'assets/aichat/ChatGPT Text to Text (Light Theme).json';
 
   // Chat Bubble Icons
-  static const String chatBubbleDotsStroke = 'assets/aichat/Chat Bubble Dots Stroke.json';
+  static const String chatBubbleDotsStroke =
+      'assets/aichat/Chat Bubble Dots Stroke.json';
   static const String chatBubbleDots = 'assets/aichat/Chat Bubble Dots.json';
-  static const String chatBubbleEllipsesDotsStroke = 'assets/aichat/Chat Bubble Ellipses Dots Stroke.json';
-  static const String chatBubbleEllipsesDots = 'assets/aichat/Chat Bubble Ellipses Dots.json';
-  static const String chatBubbleEllipsesTextLineStroke = 'assets/aichat/Chat Bubble Ellipses Text Line Stroke.json';
-  static const String chatBubbleEllipsesTextLine = 'assets/aichat/Chat Bubble Ellipses Text Line.json';
-  static const String chatBubbleEllipsesWaveformStroke = 'assets/aichat/Chat Bubble Ellipses Waveform Stroke.json';
-  static const String chatBubbleEllipsesWaveform = 'assets/aichat/Chat Bubble Ellipses Waveform.json';
-  static const String chatBubbleTextLineStroke = 'assets/aichat/Chat Bubble Text Line Stroke.json';
-  static const String chatBubbleTextLine = 'assets/aichat/Chat Bubble Text Line.json';
-  static const String chatBubbleWaveformStroke = 'assets/aichat/Chat Bubble Waveform Stroke.json';
-  static const String chatBubbleWaveform = 'assets/aichat/Chat Bubble Waveform.json';
+  static const String chatBubbleEllipsesDotsStroke =
+      'assets/aichat/Chat Bubble Ellipses Dots Stroke.json';
+  static const String chatBubbleEllipsesDots =
+      'assets/aichat/Chat Bubble Ellipses Dots.json';
+  static const String chatBubbleEllipsesTextLineStroke =
+      'assets/aichat/Chat Bubble Ellipses Text Line Stroke.json';
+  static const String chatBubbleEllipsesTextLine =
+      'assets/aichat/Chat Bubble Ellipses Text Line.json';
+  static const String chatBubbleEllipsesWaveformStroke =
+      'assets/aichat/Chat Bubble Ellipses Waveform Stroke.json';
+  static const String chatBubbleEllipsesWaveform =
+      'assets/aichat/Chat Bubble Ellipses Waveform.json';
+  static const String chatBubbleTextLineStroke =
+      'assets/aichat/Chat Bubble Text Line Stroke.json';
+  static const String chatBubbleTextLine =
+      'assets/aichat/Chat Bubble Text Line.json';
+  static const String chatBubbleWaveformStroke =
+      'assets/aichat/Chat Bubble Waveform Stroke.json';
+  static const String chatBubbleWaveform =
+      'assets/aichat/Chat Bubble Waveform.json';
 
   // Search & Loading Icons
   static const String loadingPoints = 'assets/aichat/Loading Points.json';
-  static const String searchTextDark = 'assets/aichat/Search Text (Dark Theme).json';
-  static const String searchTextLight = 'assets/aichat/Search Text (Light Theme).json';
-  static const String searchWaveLineDark = 'assets/aichat/Search Wave Line (Dark Theme).json';
-  static const String searchWaveLineLight = 'assets/aichat/Search Wave Line (Light Theme).json';
-  static const String searchWaveformDark = 'assets/aichat/Search Waveform (Dark Theme).json';
-  static const String searchWaveformLight = 'assets/aichat/Search Waveform (Light Theme).json';
+  static const String searchTextDark =
+      'assets/aichat/Search Text (Dark Theme).json';
+  static const String searchTextLight =
+      'assets/aichat/Search Text (Light Theme).json';
+  static const String searchWaveLineDark =
+      'assets/aichat/Search Wave Line (Dark Theme).json';
+  static const String searchWaveLineLight =
+      'assets/aichat/Search Wave Line (Light Theme).json';
+  static const String searchWaveformDark =
+      'assets/aichat/Search Waveform (Dark Theme).json';
+  static const String searchWaveformLight =
+      'assets/aichat/Search Waveform (Light Theme).json';
   static const String waveform = 'assets/aichat/Waveform.json';
+
+  // ============================================================================
+  // B404 ERROR ICONS (27 icons)
+  // ============================================================================
+  
+  // Business Characters 404 Errors
+  static const String businessCharacters404Error01 = 'assets/B404/Business Characters 404 Error 01.json';
+  static const String businessCharacters404Error02 = 'assets/B404/Business Characters 404 Error 02.json';
+  static const String businessCharacters404Error03 = 'assets/B404/Business Characters 404 Error 03.json';
+  static const String businessCharacters404Error04 = 'assets/B404/Business Characters 404 Error 04.json';
+  static const String businessCharacters404Error05 = 'assets/B404/Business Characters 404 Error 05.json';
+  static const String businessCharacters404Error06 = 'assets/B404/Business Characters 404 Error 06.json';
+  static const String businessCharacters404Error07 = 'assets/B404/Business Characters 404 Error 07.json';
+  static const String businessCharacters404Error08 = 'assets/B404/Business Characters 404 Error 08.json';
+  static const String businessCharacters404Error09 = 'assets/B404/Business Characters 404 Error 09.json';
+  static const String businessCharacters404Error10 = 'assets/B404/Business Characters 404 Error 10.json';
+  static const String businessCharacters404Error11 = 'assets/B404/Business Characters 404 Error 11.json';
+  static const String businessCharacters404Error12 = 'assets/B404/Business Characters 404 Error 12.json';
+  static const String businessCharacters404Error13 = 'assets/B404/Business Characters 404 Error 13.json';
+  static const String businessCharacters404Error14 = 'assets/B404/Business Characters 404 Error 14.json';
+  static const String businessCharacters404Error15 = 'assets/B404/Business Characters 404 Error 15.json';
+  static const String businessCharacters404Error16 = 'assets/B404/Business Characters 404 Error 16.json';
+  static const String businessCharacters404Error17 = 'assets/B404/Business Characters 404 Error 17.json';
+
+  // Error & Maintenance Scenarios
+  static const String error404Maintenance = 'assets/B404/404 Maintenance.json';
+  static const String errorBinocular = 'assets/B404/Binocular.json';
+  static const String errorFalling = 'assets/B404/Falling.json';
+  static const String errorFishing = 'assets/B404/Fishing.json';
+  static const String errorLostInSpace = 'assets/B404/Lost in Space.json';
+  static const String errorServerIsometric = 'assets/B404/Server Isometric.json';
+  static const String errorShipwreck = 'assets/B404/Shipwreck.json';
+  static const String errorStreetMaintenance = 'assets/B404/Street Maintenance.json';
+  static const String errorUFO = 'assets/B404/UFO.json';
 
   // ============================================================================
   // LEGACY LIBRARY ACCESS (for backward compatibility)

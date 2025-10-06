@@ -3450,6 +3450,43 @@
           "waveform"
         ]
       }
+    },
+    "B404": {
+      "name": "B404",
+      "description": "404 error and maintenance animated icons with 27+ icons",
+      "color": "#FF6B6B",
+      "categories": {
+        "Business Characters 404": [
+          "businessCharacters404Error01",
+          "businessCharacters404Error02",
+          "businessCharacters404Error03",
+          "businessCharacters404Error04",
+          "businessCharacters404Error05",
+          "businessCharacters404Error06",
+          "businessCharacters404Error07",
+          "businessCharacters404Error08",
+          "businessCharacters404Error09",
+          "businessCharacters404Error10",
+          "businessCharacters404Error11",
+          "businessCharacters404Error12",
+          "businessCharacters404Error13",
+          "businessCharacters404Error14",
+          "businessCharacters404Error15",
+          "businessCharacters404Error16",
+          "businessCharacters404Error17"
+        ],
+        "Error & Maintenance Scenarios": [
+          "error404Maintenance",
+          "errorBinocular",
+          "errorFalling",
+          "errorFishing",
+          "errorLostInSpace",
+          "errorServerIsometric",
+          "errorShipwreck",
+          "errorStreetMaintenance",
+          "errorUFO"
+        ]
+      }
     }
   }
 }

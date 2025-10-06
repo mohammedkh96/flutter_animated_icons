@@ -1,3 +1,14 @@
+## 1.9.1
+
+- 🚫 **NEW**: Added B404 error and maintenance animated icons library
+- 🔧 Added 27+ 404 error icons for error pages and maintenance screens
+- 🚫 Added B404 categories: Business Characters 404, Error & Maintenance Scenarios
+- 🎨 Added comprehensive error page icons: business characters, maintenance scenarios, lost in space, shipwreck, UFO, and more
+- 🎨 Updated example app to showcase B404 error icons
+- 📚 Updated documentation with B404 usage examples
+- 🔧 Enhanced package structure with new B404 library
+- 🛠️ Fixed pubspec.yaml indentation error in example app
+
 ## 1.9.0
 
 - 🤖 **NEW**: Added AI chat and chatbot animated icons library

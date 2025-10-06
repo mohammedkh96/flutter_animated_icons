@@ -3,9 +3,9 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.9.0-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,943+-orange?style=for-the-badge)
-![Libraries](https://img.shields.io/badge/libraries-15-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.9.1-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,970+-orange?style=for-the-badge)
+![Libraries](https://img.shields.io/badge/libraries-16-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
 ![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
 ![Medical](https://img.shields.io/badge/medical-96+-teal?style=for-the-badge)
@@ -16,8 +16,9 @@
 ![Fitness](https://img.shields.io/badge/fitness-100+-green?style=for-the-badge)
 ![Weather](https://img.shields.io/badge/weather-40+-blue?style=for-the-badge)
 ![AI Chat](https://img.shields.io/badge/ai%20chat-45+-purple?style=for-the-badge)
+![B404](https://img.shields.io/badge/404%20error-27+-red?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,943+ animated icons from 15 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, 40+ weather icons, and 45+ AI chat icons**
+**🎨 A comprehensive collection of 2,970+ animated icons from 16 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, 40+ weather icons, 45+ AI chat icons, and 27+ 404 error icons**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -45,10 +46,11 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - 💪 **NEW: Fitness Icons**: 100+ fitness and health icons for workout apps, health tracking, and fitness interfaces
 - 🌤️ **NEW: Weather Icons**: 40+ weather condition icons for weather apps and environmental interfaces
 - 🤖 **NEW: AI Chat Icons**: 45+ AI chat and chatbot icons for AI applications and conversational interfaces
+- 🚫 **NEW: B404 Error Icons**: 27+ 404 error and maintenance icons for error pages and maintenance screens
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,943+ animated icons** from 15 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, 40+ weather icons, and 45+ AI chat icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,970+ animated icons** from 16 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, 40+ weather icons, 45+ AI chat icons, and 27+ 404 error icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -69,6 +71,7 @@ Animation always adds life to your icons. This package collects **2,943+ animate
 | **Fitness** | 100+ | Fitness and health animated icons | 💪 Green |
 | **Weather** | 40+ | Weather condition animated icons | 🌤️ Blue |
 | **AI Chat** | 45+ | AI chat and chatbot animated icons | 🤖 Purple |
+| **B404** | 27+ | 404 error and maintenance animated icons | 🚫 Red |
 
 ## 📱 Examples
 
@@ -650,6 +653,26 @@ Lottie.asset(IconsAnimated.loadingPoints)
 Lottie.asset(IconsAnimated.searchTextLight)
 Lottie.asset(IconsAnimated.searchWaveformDark)
 Lottie.asset(IconsAnimated.waveform)
+```
+
+### B404 Error Library
+```dart
+// Business Characters 404 Errors
+Lottie.asset(IconsAnimated.businessCharacters404Error01)
+Lottie.asset(IconsAnimated.businessCharacters404Error05)
+Lottie.asset(IconsAnimated.businessCharacters404Error10)
+Lottie.asset(IconsAnimated.businessCharacters404Error15)
+Lottie.asset(IconsAnimated.businessCharacters404Error17)
+
+// Error & Maintenance Scenarios
+Lottie.asset(IconsAnimated.error404Maintenance)
+Lottie.asset(IconsAnimated.errorBinocular)
+Lottie.asset(IconsAnimated.errorFalling)
+Lottie.asset(IconsAnimated.errorLostInSpace)
+Lottie.asset(IconsAnimated.errorServerIsometric)
+Lottie.asset(IconsAnimated.errorShipwreck)
+Lottie.asset(IconsAnimated.errorStreetMaintenance)
+Lottie.asset(IconsAnimated.errorUFO)
 ```
 
 ## 🎨 Advanced Usage
