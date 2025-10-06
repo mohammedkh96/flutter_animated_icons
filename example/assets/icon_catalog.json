@@ -3051,6 +3051,117 @@
           "emoji60"
         ]
       }
+    },
+    "Summer": {
+      "name": "Summer",
+      "description": "Summer and beach themed animated icons with 89+ icons",
+      "color": "#FF8C00",
+      "categories": {
+        "Beach & Water Activities": [
+          "bag",
+          "beachBall01",
+          "beachBall02",
+          "beachBar",
+          "beachChair",
+          "beachHouse",
+          "beachTowel01",
+          "beachTowel02",
+          "beachUmbrella01",
+          "beachUmbrella02",
+          "boat01",
+          "boat02",
+          "sailBoat",
+          "speedBoat",
+          "surfBoard01",
+          "surfBoard02",
+          "kiteSurfing",
+          "skydiving",
+          "lifebuoy01",
+          "lifebuoy02",
+          "rubberRing01",
+          "rubberRing02",
+          "pool01",
+          "pool02",
+          "pool03",
+          "pool04",
+          "seaShell01",
+          "seaShell02"
+        ],
+        "Transportation": [
+          "bus01",
+          "bus02",
+          "luggage01",
+          "luggage02"
+        ],
+        "Nature & Plants": [
+          "cactus01",
+          "cactus02",
+          "tree",
+          "tinyHouse"
+        ],
+        "Photography & Technology": [
+          "camera",
+          "instantCamera",
+          "casettePlayer",
+          "speaker",
+          "musicIcon01",
+          "musicIcon02",
+          "guitar"
+        ],
+        "Food & Drinks": [
+          "coctail01",
+          "coctail02",
+          "iceCream01",
+          "iceCream02",
+          "strawberry",
+          "watermelon",
+          "pineapple"
+        ],
+        "Sea Life": [
+          "crab",
+          "fish01",
+          "fish02",
+          "lobster",
+          "whale",
+          "whaleTail",
+          "flamingo"
+        ],
+        "Summer Accessories": [
+          "hat01",
+          "hat02",
+          "sunglasses01",
+          "sunglasses02",
+          "fan",
+          "termometer"
+        ],
+        "Weather & Environment": [
+          "sun01",
+          "sun02",
+          "firePit"
+        ],
+        "People": [
+          "man01",
+          "man02",
+          "man03",
+          "man04",
+          "woman01",
+          "woman02",
+          "woman03",
+          "woman04"
+        ],
+        "Ornaments & Decorations": [
+          "ornaments01",
+          "ornaments02",
+          "ornaments03",
+          "ornaments04",
+          "ornaments05",
+          "ornaments06",
+          "ornaments07",
+          "ornaments08",
+          "ornaments09",
+          "ornaments10"
+        ]
+      }
     }
   }
 }

@@ -1,3 +1,12 @@
+## 1.6.0
+
+- ☀️ **NEW**: Added summer and beach themed animated icons library
+- 🏖️ Added 89+ summer icons for vacation, travel, and summer apps
+- 🏄 Added summer icon categories: Beach & Water Activities, Transportation, Nature & Plants, Photography & Technology, Food & Drinks, Sea Life, Summer Accessories, Weather & Environment, People, Ornaments & Decorations
+- 🎨 Updated example app to showcase summer icons
+- 📚 Updated documentation with summer usage examples
+- 🔧 Enhanced package structure with new Summer library
+
 ## 1.5.0
 
 - 🆕 **NEW**: Added unified `IconsAnimated` class for accessing all icons from one place

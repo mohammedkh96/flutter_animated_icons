@@ -3,16 +3,17 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.5.0-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,656+-orange?style=for-the-badge)
-![Libraries](https://img.shields.io/badge/libraries-10-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.6.0-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,745+-orange?style=for-the-badge)
+![Libraries](https://img.shields.io/badge/libraries-11-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
 ![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
 ![Medical](https://img.shields.io/badge/medical-96+-teal?style=for-the-badge)
 ![Emoji](https://img.shields.io/badge/emoji-60+-yellow?style=for-the-badge)
 ![Communication](https://img.shields.io/badge/communication-10+-blue?style=for-the-badge)
+![Summer](https://img.shields.io/badge/summer-89+-orange?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,656+ animated icons from 10 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, and 10+ communication icons**
+**🎨 A comprehensive collection of 2,745+ animated icons from 11 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, and 89+ summer beach icons**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -35,10 +36,11 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - 🏥 **NEW: Medical Icons**: 96+ medical and healthcare icons in 3 styles (Filled, Flat, Outline) for health apps and medical interfaces
 - 😊 **NEW: Emoji Icons**: 60+ fun and expressive emoji icons for social apps, messaging, and fun interfaces
 - 📞 **NEW: Communication Icons**: 10+ communication and messaging icons for email, phone, and notifications
+- ☀️ **NEW: Summer Icons**: 89+ summer and beach themed icons for vacation, travel, and summer apps
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,656+ animated icons** from 10 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, and 10+ communication icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,745+ animated icons** from 11 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, and 89+ summer beach icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -54,6 +56,7 @@ Animation always adds life to your icons. This package collects **2,656+ animate
 | **Medical** | 96+ | Medical and healthcare animated icons in 3 styles | 🏥 Teal |
 | **Emoji** | 60+ | Fun and expressive emoji animated icons | 😊 Yellow |
 | **Communication** | 10+ | Communication and messaging animated icons | 📞 Blue |
+| **Summer** | 89+ | Summer and beach themed animated icons | ☀️ Orange |
 
 ## 📱 Examples
 
@@ -402,6 +405,50 @@ Lottie.asset(IconsAnimated.notificationsOff)
 
 // Search and contacts
 Lottie.asset(IconsAnimated.personSearch)
+```
+
+### Summer Library
+```dart
+// Beach & Water Activities
+Lottie.asset(IconsAnimated.beachBall01)
+Lottie.asset(IconsAnimated.beachUmbrella01)
+Lottie.asset(IconsAnimated.surfBoard01)
+Lottie.asset(IconsAnimated.sailBoat)
+Lottie.asset(IconsAnimated.pool01)
+
+// Food & Drinks
+Lottie.asset(IconsAnimated.iceCream01)
+Lottie.asset(IconsAnimated.coctail01)
+Lottie.asset(IconsAnimated.watermelon)
+Lottie.asset(IconsAnimated.strawberry)
+Lottie.asset(IconsAnimated.pineapple)
+
+// Sea Life
+Lottie.asset(IconsAnimated.whale)
+Lottie.asset(IconsAnimated.crab)
+Lottie.asset(IconsAnimated.fish01)
+Lottie.asset(IconsAnimated.lobster)
+Lottie.asset(IconsAnimated.flamingo)
+
+// Summer Accessories
+Lottie.asset(IconsAnimated.sunglasses01)
+Lottie.asset(IconsAnimated.hat01)
+Lottie.asset(IconsAnimated.fan)
+Lottie.asset(IconsAnimated.termometer)
+
+// Weather & Environment
+Lottie.asset(IconsAnimated.sun01)
+Lottie.asset(IconsAnimated.firePit)
+Lottie.asset(IconsAnimated.tree)
+
+// People
+Lottie.asset(IconsAnimated.man01)
+Lottie.asset(IconsAnimated.woman01)
+
+// Photography & Technology
+Lottie.asset(IconsAnimated.camera)
+Lottie.asset(IconsAnimated.guitar)
+Lottie.asset(IconsAnimated.speaker)
 ```
 
 ## 🎨 Advanced Usage
