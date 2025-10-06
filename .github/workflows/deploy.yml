@@ -50,6 +50,8 @@ jobs:
         run: |
           # Copy the main index.html to the build directory
           cp index.html example/build/web/
+          # Copy .nojekyll to prevent Jekyll processing
+          cp .nojekyll example/build/web/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
