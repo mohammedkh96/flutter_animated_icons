@@ -3,8 +3,8 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.8.0-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,868+-orange?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.8.1-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,898+-orange?style=for-the-badge)
 ![Libraries](https://img.shields.io/badge/libraries-14-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
 ![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
@@ -14,9 +14,9 @@
 ![Summer](https://img.shields.io/badge/summer-89+-orange?style=for-the-badge)
 ![Superhero](https://img.shields.io/badge/superhero-13+-red?style=for-the-badge)
 ![Fitness](https://img.shields.io/badge/fitness-100+-green?style=for-the-badge)
-![Weather](https://img.shields.io/badge/weather-10+-blue?style=for-the-badge)
+![Weather](https://img.shields.io/badge/weather-40+-blue?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,868+ animated icons from 14 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, and 10+ weather icons**
+**🎨 A comprehensive collection of 2,898+ animated icons from 14 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, and 40+ weather icons**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -42,11 +42,11 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - ☀️ **NEW: Summer Icons**: 89+ summer and beach themed icons for vacation, travel, and summer apps
 - 🦸 **NEW: Superhero Icons**: 13+ superhero character icons for gaming, entertainment, and character-based apps
 - 💪 **NEW: Fitness Icons**: 100+ fitness and health icons for workout apps, health tracking, and fitness interfaces
-- 🌤️ **NEW: Weather Icons**: 10+ weather condition icons for weather apps and environmental interfaces
+- 🌤️ **NEW: Weather Icons**: 40+ weather condition icons for weather apps and environmental interfaces
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,868+ animated icons** from 14 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, and 10+ weather icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,898+ animated icons** from 14 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, and 40+ weather icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -65,7 +65,7 @@ Animation always adds life to your icons. This package collects **2,868+ animate
 | **Summer** | 89+ | Summer and beach themed animated icons | ☀️ Orange |
 | **Superhero** | 13+ | Superhero character animated icons | 🦸 Red |
 | **Fitness** | 100+ | Fitness and health animated icons | 💪 Green |
-| **Weather** | 10+ | Weather condition animated icons | 🌤️ Blue |
+| **Weather** | 40+ | Weather condition animated icons | 🌤️ Blue |
 
 ## 📱 Examples
 
@@ -560,17 +560,63 @@ Lottie.asset(IconsAnimated.strengthIcon)
 
 ### Weather Library
 ```dart
-// Weather Conditions
-Lottie.asset(IconsAnimated.thunderV1)
-Lottie.asset(IconsAnimated.thunderV2)
-Lottie.asset(IconsAnimated.snowfallV1)
-Lottie.asset(IconsAnimated.snowfallV2)
+// Clouds & Sky
+Lottie.asset(IconsAnimated.cloudDark)
+Lottie.asset(IconsAnimated.cloudLight)
+Lottie.asset(IconsAnimated.clouds)
+Lottie.asset(IconsAnimated.cloudySun)
+Lottie.asset(IconsAnimated.cloudySunWind)
+Lottie.asset(IconsAnimated.cloudyFullMoon)
+Lottie.asset(IconsAnimated.cloudyHalfMoon)
+
+// Sun & Solar
+Lottie.asset(IconsAnimated.sun)
+Lottie.asset(IconsAnimated.sunSet)
+Lottie.asset(IconsAnimated.sunEclipse)
+Lottie.asset(IconsAnimated.sunAndRain)
+
+// Moon & Night
+Lottie.asset(IconsAnimated.fullMoon)
+Lottie.asset(IconsAnimated.halfMoon)
+Lottie.asset(IconsAnimated.fullMoonAndRain)
+Lottie.asset(IconsAnimated.fullMoonAndSnow)
+Lottie.asset(IconsAnimated.halfMoonAndRain)
+Lottie.asset(IconsAnimated.halfMoonAndSnow)
+Lottie.asset(IconsAnimated.star)
+
+// Rain & Precipitation
+Lottie.asset(IconsAnimated.mildRain)
+Lottie.asset(IconsAnimated.heavyRain)
 Lottie.asset(IconsAnimated.rainingV1)
 Lottie.asset(IconsAnimated.rainingV2)
-Lottie.asset(IconsAnimated.normalWeatherV1)
-Lottie.asset(IconsAnimated.normalWeatherV2)
+
+// Snow & Winter
+Lottie.asset(IconsAnimated.snow)
+Lottie.asset(IconsAnimated.snowflake)
+Lottie.asset(IconsAnimated.snowfallV1)
+Lottie.asset(IconsAnimated.snowfallV2)
+Lottie.asset(IconsAnimated.hail)
+
+// Storms & Thunder
+Lottie.asset(IconsAnimated.thunderV1)
+Lottie.asset(IconsAnimated.thunderV2)
+Lottie.asset(IconsAnimated.lightning)
+Lottie.asset(IconsAnimated.storm)
+
+// Wind & Air
+Lottie.asset(IconsAnimated.wind)
 Lottie.asset(IconsAnimated.mistV1)
 Lottie.asset(IconsAnimated.mistV2)
+
+// Temperature
+Lottie.asset(IconsAnimated.hotTemperature)
+Lottie.asset(IconsAnimated.coldTemperature)
+
+// Special Weather
+Lottie.asset(IconsAnimated.rainbow)
+Lottie.asset(IconsAnimated.uvMeter)
+Lottie.asset(IconsAnimated.normalWeatherV1)
+Lottie.asset(IconsAnimated.normalWeatherV2)
 ```
 
 ## 🎨 Advanced Usage

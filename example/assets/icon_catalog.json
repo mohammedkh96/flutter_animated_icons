@@ -3328,20 +3328,66 @@
     },
     "Weather": {
       "name": "Weather",
-      "description": "Weather animated icons with 10+ icons",
+      "description": "Weather animated icons with 40+ icons",
       "color": "#87CEEB",
       "categories": {
-        "Weather Conditions": [
-          "thunderV1",
-          "thunderV2",
+        "Clouds & Sky": [
+          "cloudDark",
+          "cloudLight",
+          "clouds",
+          "cloudySun",
+          "cloudySunWind",
+          "cloudyFullMoon",
+          "cloudyHalfMoon"
+        ],
+        "Sun & Solar": [
+          "sun",
+          "sunSet",
+          "sunEclipse",
+          "sunAndRain"
+        ],
+        "Moon & Night": [
+          "fullMoon",
+          "halfMoon",
+          "fullMoonAndRain",
+          "fullMoonAndSnow",
+          "halfMoonAndRain",
+          "halfMoonAndSnow",
+          "star"
+        ],
+        "Rain & Precipitation": [
+          "mildRain",
+          "heavyRain",
+          "rainingV1",
+          "rainingV2"
+        ],
+        "Snow & Winter": [
+          "snow",
+          "snowflake",
           "snowfallV1",
           "snowfallV2",
-          "rainingV1",
-          "rainingV2",
-          "normalWeatherV1",
-          "normalWeatherV2",
+          "hail"
+        ],
+        "Storms & Thunder": [
+          "thunderV1",
+          "thunderV2",
+          "lightning",
+          "storm"
+        ],
+        "Wind & Air": [
+          "wind",
           "mistV1",
           "mistV2"
+        ],
+        "Temperature": [
+          "hotTemperature",
+          "coldTemperature"
+        ],
+        "Special Weather": [
+          "rainbow",
+          "uvMeter",
+          "normalWeatherV1",
+          "normalWeatherV2"
         ]
       }
     }

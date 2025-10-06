@@ -518,147 +518,289 @@ class IconsAnimated {
   // ============================================================================
   // FITNESS & HEALTH ICONS (100+ icons)
   // ============================================================================
-  
+
   // Body Parts - Women
-  static const String womanAbs = 'assets/fitnesandhealthlottiepack/Woman Abs.json';
-  static const String womanBack = 'assets/fitnesandhealthlottiepack/Woman Back.json';
-  static const String womanBackCalves = 'assets/fitnesandhealthlottiepack/Woman Back Calves.json';
-  static const String womanBiceps = 'assets/fitnesandhealthlottiepack/Woman Biceps.json';
-  static const String womanCalves = 'assets/fitnesandhealthlottiepack/Woman Calves.json';
-  static const String womanChest = 'assets/fitnesandhealthlottiepack/Woman Chest.json';
-  static const String womanFigure = 'assets/fitnesandhealthlottiepack/Woman Figure.json';
-  static const String womanForearms = 'assets/fitnesandhealthlottiepack/Woman Forearms.json';
-  static const String womanGlutes = 'assets/fitnesandhealthlottiepack/Woman Glutes.json';
-  static const String womanHamstrings = 'assets/fitnesandhealthlottiepack/Woman Hamstrings.json';
-  static const String womanNeck = 'assets/fitnesandhealthlottiepack/Woman Neck.json';
-  static const String womanShoulders = 'assets/fitnesandhealthlottiepack/Woman Shoulders.json';
-  static const String womanThigs = 'assets/fitnesandhealthlottiepack/Woman Thigs.json';
-  static const String womanTriceps = 'assets/fitnesandhealthlottiepack/Woman Triceps.json';
+  static const String womanAbs =
+      'assets/fitnesandhealthlottiepack/Woman Abs.json';
+  static const String womanBack =
+      'assets/fitnesandhealthlottiepack/Woman Back.json';
+  static const String womanBackCalves =
+      'assets/fitnesandhealthlottiepack/Woman Back Calves.json';
+  static const String womanBiceps =
+      'assets/fitnesandhealthlottiepack/Woman Biceps.json';
+  static const String womanCalves =
+      'assets/fitnesandhealthlottiepack/Woman Calves.json';
+  static const String womanChest =
+      'assets/fitnesandhealthlottiepack/Woman Chest.json';
+  static const String womanFigure =
+      'assets/fitnesandhealthlottiepack/Woman Figure.json';
+  static const String womanForearms =
+      'assets/fitnesandhealthlottiepack/Woman Forearms.json';
+  static const String womanGlutes =
+      'assets/fitnesandhealthlottiepack/Woman Glutes.json';
+  static const String womanHamstrings =
+      'assets/fitnesandhealthlottiepack/Woman Hamstrings.json';
+  static const String womanNeck =
+      'assets/fitnesandhealthlottiepack/Woman Neck.json';
+  static const String womanShoulders =
+      'assets/fitnesandhealthlottiepack/Woman Shoulders.json';
+  static const String womanThigs =
+      'assets/fitnesandhealthlottiepack/Woman Thigs.json';
+  static const String womanTriceps =
+      'assets/fitnesandhealthlottiepack/Woman Triceps.json';
 
   // Body Parts - Men
   static const String manAbs = 'assets/fitnesandhealthlottiepack/Man Abs.json';
-  static const String manBack = 'assets/fitnesandhealthlottiepack/Man Back.json';
-  static const String manBackCalves = 'assets/fitnesandhealthlottiepack/Man Back Calves.json';
-  static const String manBiceps = 'assets/fitnesandhealthlottiepack/Man Biceps.json';
-  static const String manCalves = 'assets/fitnesandhealthlottiepack/Man Calves.json';
-  static const String manChest = 'assets/fitnesandhealthlottiepack/Man Chest.json';
-  static const String manFigure = 'assets/fitnesandhealthlottiepack/Man figure.json';
-  static const String manForearms = 'assets/fitnesandhealthlottiepack/Man Forearms.json';
-  static const String manGlutes = 'assets/fitnesandhealthlottiepack/Man Glutes.json';
-  static const String manHamstrings = 'assets/fitnesandhealthlottiepack/Man Hamstrings.json';
-  static const String manNeck = 'assets/fitnesandhealthlottiepack/Man Neck.json';
-  static const String manShoulders = 'assets/fitnesandhealthlottiepack/Man Shoulders.json';
-  static const String manThigs = 'assets/fitnesandhealthlottiepack/Man Thigs.json';
-  static const String manTriceps = 'assets/fitnesandhealthlottiepack/Man Triceps.json';
+  static const String manBack =
+      'assets/fitnesandhealthlottiepack/Man Back.json';
+  static const String manBackCalves =
+      'assets/fitnesandhealthlottiepack/Man Back Calves.json';
+  static const String manBiceps =
+      'assets/fitnesandhealthlottiepack/Man Biceps.json';
+  static const String manCalves =
+      'assets/fitnesandhealthlottiepack/Man Calves.json';
+  static const String manChest =
+      'assets/fitnesandhealthlottiepack/Man Chest.json';
+  static const String manFigure =
+      'assets/fitnesandhealthlottiepack/Man figure.json';
+  static const String manForearms =
+      'assets/fitnesandhealthlottiepack/Man Forearms.json';
+  static const String manGlutes =
+      'assets/fitnesandhealthlottiepack/Man Glutes.json';
+  static const String manHamstrings =
+      'assets/fitnesandhealthlottiepack/Man Hamstrings.json';
+  static const String manNeck =
+      'assets/fitnesandhealthlottiepack/Man Neck.json';
+  static const String manShoulders =
+      'assets/fitnesandhealthlottiepack/Man Shoulders.json';
+  static const String manThigs =
+      'assets/fitnesandhealthlottiepack/Man Thigs.json';
+  static const String manTriceps =
+      'assets/fitnesandhealthlottiepack/Man Triceps.json';
 
   // Equipment & Machines
-  static const String weights01 = 'assets/fitnesandhealthlottiepack/Weights 01.json';
-  static const String weights02 = 'assets/fitnesandhealthlottiepack/Weights 02.json';
-  static const String weights03 = 'assets/fitnesandhealthlottiepack/Weights 03.json';
-  static const String weights04 = 'assets/fitnesandhealthlottiepack/Weights 04.json';
-  static const String weightlifting = 'assets/fitnesandhealthlottiepack/Weightlifting.json';
-  static const String kettleBells01 = 'assets/fitnesandhealthlottiepack/Kettle Bells 01.json';
-  static const String smithMachine = 'assets/fitnesandhealthlottiepack/Smith Machine.json';
-  static const String legCurlMachine = 'assets/fitnesandhealthlottiepack/Leg Curl Machine.json';
-  static const String pullUpBar = 'assets/fitnesandhealthlottiepack/Pull Up bar.json';
-  static const String punchingBag = 'assets/fitnesandhealthlottiepack/Punching Bag.json';
+  static const String weights01 =
+      'assets/fitnesandhealthlottiepack/Weights 01.json';
+  static const String weights02 =
+      'assets/fitnesandhealthlottiepack/Weights 02.json';
+  static const String weights03 =
+      'assets/fitnesandhealthlottiepack/Weights 03.json';
+  static const String weights04 =
+      'assets/fitnesandhealthlottiepack/Weights 04.json';
+  static const String weightlifting =
+      'assets/fitnesandhealthlottiepack/Weightlifting.json';
+  static const String kettleBells01 =
+      'assets/fitnesandhealthlottiepack/Kettle Bells 01.json';
+  static const String smithMachine =
+      'assets/fitnesandhealthlottiepack/Smith Machine.json';
+  static const String legCurlMachine =
+      'assets/fitnesandhealthlottiepack/Leg Curl Machine.json';
+  static const String pullUpBar =
+      'assets/fitnesandhealthlottiepack/Pull Up bar.json';
+  static const String punchingBag =
+      'assets/fitnesandhealthlottiepack/Punching Bag.json';
   static const String mat = 'assets/fitnesandhealthlottiepack/Mat.json';
-  static const String sportBag = 'assets/fitnesandhealthlottiepack/Sport Bag.json';
+  static const String sportBag =
+      'assets/fitnesandhealthlottiepack/Sport Bag.json';
 
   // Cardio Equipment
-  static const String treadmill = 'assets/fitnesandhealthlottiepack/Treadmill.json';
-  static const String spinBike = 'assets/fitnesandhealthlottiepack/Spin Bike.json';
-  static const String skippingRope01 = 'assets/fitnesandhealthlottiepack/Skipping Rope 01.json';
-  static const String skippingRope02 = 'assets/fitnesandhealthlottiepack/Skipping Rope 02.json';
+  static const String treadmill =
+      'assets/fitnesandhealthlottiepack/Treadmill.json';
+  static const String spinBike =
+      'assets/fitnesandhealthlottiepack/Spin Bike.json';
+  static const String skippingRope01 =
+      'assets/fitnesandhealthlottiepack/Skipping Rope 01.json';
+  static const String skippingRope02 =
+      'assets/fitnesandhealthlottiepack/Skipping Rope 02.json';
 
   // Swimming
-  static const String swimmingIcon01 = 'assets/fitnesandhealthlottiepack/Swimming Icon 01.json';
-  static const String swimmingIcon02 = 'assets/fitnesandhealthlottiepack/Swimming Icon 02.json';
-  static const String swimmingIcon03 = 'assets/fitnesandhealthlottiepack/Swimming Icon 03.json';
-  static const String swimmingIcon04 = 'assets/fitnesandhealthlottiepack/Swimming Icon 04.json';
+  static const String swimmingIcon01 =
+      'assets/fitnesandhealthlottiepack/Swimming Icon 01.json';
+  static const String swimmingIcon02 =
+      'assets/fitnesandhealthlottiepack/Swimming Icon 02.json';
+  static const String swimmingIcon03 =
+      'assets/fitnesandhealthlottiepack/Swimming Icon 03.json';
+  static const String swimmingIcon04 =
+      'assets/fitnesandhealthlottiepack/Swimming Icon 04.json';
 
   // Running & Activities
-  static const String runningMan = 'assets/fitnesandhealthlottiepack/Running Man.json';
-  static const String runningWoman = 'assets/fitnesandhealthlottiepack/Running Woman.json';
-  static const String runningParkour01 = 'assets/fitnesandhealthlottiepack/Running Parkour 01.json';
-  static const String runningParkour02 = 'assets/fitnesandhealthlottiepack/Running Parkour 02.json';
-  static const String runningParkour03 = 'assets/fitnesandhealthlottiepack/Running Parkour 03.json';
-  static const String runningParkour04 = 'assets/fitnesandhealthlottiepack/Running Parkour 04.json';
-  static const String runningParkour05 = 'assets/fitnesandhealthlottiepack/Running Parkour 05.json';
-  static const String runningParkour06 = 'assets/fitnesandhealthlottiepack/Running Parkour 06.json';
-  static const String runningParkour07 = 'assets/fitnesandhealthlottiepack/Running Parkour 07.json';
-  static const String runningParkour08 = 'assets/fitnesandhealthlottiepack/Running Parkour 08.json';
-  static const String runningParkour09 = 'assets/fitnesandhealthlottiepack/Running Parkour 09.json';
-  static const String runningParkour10 = 'assets/fitnesandhealthlottiepack/Running Parkour 10.json';
+  static const String runningMan =
+      'assets/fitnesandhealthlottiepack/Running Man.json';
+  static const String runningWoman =
+      'assets/fitnesandhealthlottiepack/Running Woman.json';
+  static const String runningParkour01 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 01.json';
+  static const String runningParkour02 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 02.json';
+  static const String runningParkour03 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 03.json';
+  static const String runningParkour04 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 04.json';
+  static const String runningParkour05 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 05.json';
+  static const String runningParkour06 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 06.json';
+  static const String runningParkour07 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 07.json';
+  static const String runningParkour08 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 08.json';
+  static const String runningParkour09 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 09.json';
+  static const String runningParkour10 =
+      'assets/fitnesandhealthlottiepack/Running Parkour 10.json';
 
   // Tracking & Monitoring
-  static const String stepTracker01 = 'assets/fitnesandhealthlottiepack/Step Tracker 01.json';
-  static const String stepTracker02 = 'assets/fitnesandhealthlottiepack/Step Tracker 02.json';
-  static const String runningTracker01 = 'assets/fitnesandhealthlottiepack/Running Tracker 01.json';
-  static const String runningTracker02 = 'assets/fitnesandhealthlottiepack/Running Tracker 02.json';
-  static const String sleepTracker01 = 'assets/fitnesandhealthlottiepack/Sleep Tracker 01.json';
-  static const String sleepTracker02 = 'assets/fitnesandhealthlottiepack/Sleep Tracker 02.json';
-  static const String waterTracker01 = 'assets/fitnesandhealthlottiepack/Water Tracker 01.json';
-  static const String waterTracker02 = 'assets/fitnesandhealthlottiepack/Water Tracker 02.json';
-  static const String weightTracker = 'assets/fitnesandhealthlottiepack/Weight Tracker.json';
-  static const String timeTracker = 'assets/fitnesandhealthlottiepack/Time Tracker.json';
-  static const String repsTracker = 'assets/fitnesandhealthlottiepack/Reps Tracker.json';
-  static const String repsAndSeries = 'assets/fitnesandhealthlottiepack/Reps and Series.json';
-  static const String progressTracker = 'assets/fitnesandhealthlottiepack/Progress Tracker.json';
-  static const String heightAndWeightTracker = 'assets/fitnesandhealthlottiepack/Height and Weight Tracker.json';
+  static const String stepTracker01 =
+      'assets/fitnesandhealthlottiepack/Step Tracker 01.json';
+  static const String stepTracker02 =
+      'assets/fitnesandhealthlottiepack/Step Tracker 02.json';
+  static const String runningTracker01 =
+      'assets/fitnesandhealthlottiepack/Running Tracker 01.json';
+  static const String runningTracker02 =
+      'assets/fitnesandhealthlottiepack/Running Tracker 02.json';
+  static const String sleepTracker01 =
+      'assets/fitnesandhealthlottiepack/Sleep Tracker 01.json';
+  static const String sleepTracker02 =
+      'assets/fitnesandhealthlottiepack/Sleep Tracker 02.json';
+  static const String waterTracker01 =
+      'assets/fitnesandhealthlottiepack/Water Tracker 01.json';
+  static const String waterTracker02 =
+      'assets/fitnesandhealthlottiepack/Water Tracker 02.json';
+  static const String weightTracker =
+      'assets/fitnesandhealthlottiepack/Weight Tracker.json';
+  static const String timeTracker =
+      'assets/fitnesandhealthlottiepack/Time Tracker.json';
+  static const String repsTracker =
+      'assets/fitnesandhealthlottiepack/Reps Tracker.json';
+  static const String repsAndSeries =
+      'assets/fitnesandhealthlottiepack/Reps and Series.json';
+  static const String progressTracker =
+      'assets/fitnesandhealthlottiepack/Progress Tracker.json';
+  static const String heightAndWeightTracker =
+      'assets/fitnesandhealthlottiepack/Height and Weight Tracker.json';
 
   // Timers & Clocks
-  static const String timer01 = 'assets/fitnesandhealthlottiepack/Timer 01.json';
-  static const String timer02 = 'assets/fitnesandhealthlottiepack/Timer 02.json';
-  static const String smartWatch = 'assets/fitnesandhealthlottiepack/Smart Watch.json';
+  static const String timer01 =
+      'assets/fitnesandhealthlottiepack/Timer 01.json';
+  static const String timer02 =
+      'assets/fitnesandhealthlottiepack/Timer 02.json';
+  static const String smartWatch =
+      'assets/fitnesandhealthlottiepack/Smart Watch.json';
   static const String whistle = 'assets/fitnesandhealthlottiepack/Whistle.json';
 
   // Nutrition & Hydration
-  static const String waterIcon = 'assets/fitnesandhealthlottiepack/Water Icon.json';
-  static const String waterBottle = 'assets/fitnesandhealthlottiepack/Water Bottle.json';
-  static const String supplements = 'assets/fitnesandhealthlottiepack/Supplements.json';
-  static const String macronutrientsChart = 'assets/fitnesandhealthlottiepack/Macronutrients Chart.json';
+  static const String waterIcon =
+      'assets/fitnesandhealthlottiepack/Water Icon.json';
+  static const String waterBottle =
+      'assets/fitnesandhealthlottiepack/Water Bottle.json';
+  static const String supplements =
+      'assets/fitnesandhealthlottiepack/Supplements.json';
+  static const String macronutrientsChart =
+      'assets/fitnesandhealthlottiepack/Macronutrients Chart.json';
 
   // Sleep & Recovery
-  static const String sleepingIcon01 = 'assets/fitnesandhealthlottiepack/Sleeping Icon 01.json';
-  static const String sleepingIcon02 = 'assets/fitnesandhealthlottiepack/Sleeping Icon 02.json';
-  static const String sleepingIcon03 = 'assets/fitnesandhealthlottiepack/Sleeping Icon 03.json';
+  static const String sleepingIcon01 =
+      'assets/fitnesandhealthlottiepack/Sleeping Icon 01.json';
+  static const String sleepingIcon02 =
+      'assets/fitnesandhealthlottiepack/Sleeping Icon 02.json';
+  static const String sleepingIcon03 =
+      'assets/fitnesandhealthlottiepack/Sleeping Icon 03.json';
 
   // Measurements & Progress
-  static const String measure01 = 'assets/fitnesandhealthlottiepack/Measure 01.json';
-  static const String measure02 = 'assets/fitnesandhealthlottiepack/Measure 02.json';
-  static const String measure03 = 'assets/fitnesandhealthlottiepack/Measure 03.json';
-  static const String inchGraphic01 = 'assets/fitnesandhealthlottiepack/Inch Graphic 01.json';
-  static const String inchGraphic02 = 'assets/fitnesandhealthlottiepack/Inch Graphic 02.json';
-  static const String weightProgressGraphic = 'assets/fitnesandhealthlottiepack/Weight Progress Graphic.json';
-  static const String progressIcon = 'assets/fitnesandhealthlottiepack/Progress Icon.json';
+  static const String measure01 =
+      'assets/fitnesandhealthlottiepack/Measure 01.json';
+  static const String measure02 =
+      'assets/fitnesandhealthlottiepack/Measure 02.json';
+  static const String measure03 =
+      'assets/fitnesandhealthlottiepack/Measure 03.json';
+  static const String inchGraphic01 =
+      'assets/fitnesandhealthlottiepack/Inch Graphic 01.json';
+  static const String inchGraphic02 =
+      'assets/fitnesandhealthlottiepack/Inch Graphic 02.json';
+  static const String weightProgressGraphic =
+      'assets/fitnesandhealthlottiepack/Weight Progress Graphic.json';
+  static const String progressIcon =
+      'assets/fitnesandhealthlottiepack/Progress Icon.json';
 
   // Performance & Analytics
-  static const String workoutIntensityGraphic01 = 'assets/fitnesandhealthlottiepack/Workout Internsity Graphic 01.json';
-  static const String workoutIntensityGraphic02 = 'assets/fitnesandhealthlottiepack/Workout Internsity Graphic 02.json';
-  static const String weeklyPerformanceGraphic01 = 'assets/fitnesandhealthlottiepack/Weekly Performance Graphic 01.json';
-  static const String weeklyPerformanceGraphic02 = 'assets/fitnesandhealthlottiepack/Weekly Performance Graphic 02.json';
-  static const String weeklyPerformanceGraphic03 = 'assets/fitnesandhealthlottiepack/Weekly Performance Graphic 03.json';
+  static const String workoutIntensityGraphic01 =
+      'assets/fitnesandhealthlottiepack/Workout Internsity Graphic 01.json';
+  static const String workoutIntensityGraphic02 =
+      'assets/fitnesandhealthlottiepack/Workout Internsity Graphic 02.json';
+  static const String weeklyPerformanceGraphic01 =
+      'assets/fitnesandhealthlottiepack/Weekly Performance Graphic 01.json';
+  static const String weeklyPerformanceGraphic02 =
+      'assets/fitnesandhealthlottiepack/Weekly Performance Graphic 02.json';
+  static const String weeklyPerformanceGraphic03 =
+      'assets/fitnesandhealthlottiepack/Weekly Performance Graphic 03.json';
 
   // Achievements & Recognition
   static const String trophy = 'assets/fitnesandhealthlottiepack/Trophy.json';
   static const String medal = 'assets/fitnesandhealthlottiepack/Medal.json';
-  static const String strengthIcon = 'assets/fitnesandhealthlottiepack/Strength Icon.json';
+  static const String strengthIcon =
+      'assets/fitnesandhealthlottiepack/Strength Icon.json';
 
   // ============================================================================
-  // WEATHER ICONS (10 icons)
+  // WEATHER ICONS (40 icons)
   // ============================================================================
   
-  static const String thunderV1 = 'assets/weather-pack/thunder_v1.json';
-  static const String thunderV2 = 'assets/weather-pack/thunder_v2.json';
-  static const String snowfallV1 = 'assets/weather-pack/snowfall_v1.json';
-  static const String snowfallV2 = 'assets/weather-pack/snowfall_v2.json';
+  // Clouds & Sky
+  static const String cloudDark = 'assets/weather-pack/Cloud Dark.json';
+  static const String cloudLight = 'assets/weather-pack/Cloud Light.json';
+  static const String clouds = 'assets/weather-pack/Clouds.json';
+  static const String cloudySun = 'assets/weather-pack/Cloudy Sun.json';
+  static const String cloudySunWind = 'assets/weather-pack/Cloudy Sun Wind.json';
+  static const String cloudyFullMoon = 'assets/weather-pack/Cloudy Full Moon.json';
+  static const String cloudyHalfMoon = 'assets/weather-pack/Cloudy Half Moon.json';
+
+  // Sun & Solar
+  static const String sun = 'assets/weather-pack/Sun.json';
+  static const String sunSet = 'assets/weather-pack/Sun Set.json';
+  static const String sunEclipse = 'assets/weather-pack/Sun Eclipse.json';
+  static const String sunAndRain = 'assets/weather-pack/Sun and Rain.json';
+
+  // Moon & Night
+  static const String fullMoon = 'assets/weather-pack/Full Moon.json';
+  static const String halfMoon = 'assets/weather-pack/Half Moon.json';
+  static const String fullMoonAndRain = 'assets/weather-pack/Full Moon and Rain.json';
+  static const String fullMoonAndSnow = 'assets/weather-pack/Full Moon and Snow.json';
+  static const String halfMoonAndRain = 'assets/weather-pack/Half Moon and Rain.json';
+  static const String halfMoonAndSnow = 'assets/weather-pack/Half Moon and Snow.json';
+  static const String star = 'assets/weather-pack/Star.json';
+
+  // Rain & Precipitation
+  static const String mildRain = 'assets/weather-pack/Mild Rain.json';
+  static const String heavyRain = 'assets/weather-pack/Heavy Rain.json';
   static const String rainingV1 = 'assets/weather-pack/raining_v1.json';
   static const String rainingV2 = 'assets/weather-pack/raining_v2.json';
-  static const String normalWeatherV1 = 'assets/weather-pack/normal_weather_v1.json';
-  static const String normalWeatherV2 = 'assets/weather-pack/normal_weather_v2.json';
+
+  // Snow & Winter
+  static const String snow = 'assets/weather-pack/Snow.json';
+  static const String snowflake = 'assets/weather-pack/Snowflake.json';
+  static const String snowfallV1 = 'assets/weather-pack/snowfall_v1.json';
+  static const String snowfallV2 = 'assets/weather-pack/snowfall_v2.json';
+  static const String hail = 'assets/weather-pack/Hail.json';
+
+  // Storms & Thunder
+  static const String thunderV1 = 'assets/weather-pack/thunder_v1.json';
+  static const String thunderV2 = 'assets/weather-pack/thunder_v2.json';
+  static const String lightning = 'assets/weather-pack/Lightning.json';
+  static const String storm = 'assets/weather-pack/Storm.json';
+
+  // Wind & Air
+  static const String wind = 'assets/weather-pack/Wind.json';
   static const String mistV1 = 'assets/weather-pack/mist_v1.json';
   static const String mistV2 = 'assets/weather-pack/mist_v2.json';
+
+  // Temperature
+  static const String hotTemperature = 'assets/weather-pack/Hot Temperature.json';
+  static const String coldTemperature = 'assets/weather-pack/Cold Temperature.json';
+
+  // Special Weather
+  static const String rainbow = 'assets/weather-pack/Rainbow.json';
+  static const String uvMeter = 'assets/weather-pack/UV Meter.json';
+  static const String normalWeatherV1 = 'assets/weather-pack/normal_weather_v1.json';
+  static const String normalWeatherV2 = 'assets/weather-pack/normal_weather_v2.json';
 
   // ============================================================================
   // LEGACY LIBRARY ACCESS (for backward compatibility)

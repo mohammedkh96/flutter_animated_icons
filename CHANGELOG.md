@@ -1,3 +1,13 @@
+## 1.8.1
+
+- 🌤️ **ENHANCED**: Expanded weather animated icons library
+- 🌦️ Added 30+ additional weather condition icons (now 40+ total)
+- 🌤️ Added comprehensive weather categories: Clouds & Sky, Sun & Solar, Moon & Night, Rain & Precipitation, Snow & Winter, Storms & Thunder, Wind & Air, Temperature, Special Weather
+- 🌈 Added new weather icons: sun, moon phases, rainbow, UV meter, temperature indicators, and more
+- 🎨 Updated example app to showcase expanded weather icons
+- 📚 Updated documentation with comprehensive weather usage examples
+- 🔧 Enhanced weather library with detailed categorization
+
 ## 1.8.0
 
 - 💪 **NEW**: Added fitness and health animated icons library
