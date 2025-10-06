@@ -3,17 +3,18 @@
 <div align="center">
 
 ![Flutter Icons Animated](https://img.shields.io/badge/Flutter-Icons%20Animated-blue?style=for-the-badge&logo=flutter)
-![Version](https://img.shields.io/badge/version-1.6.0-green?style=for-the-badge)
-![Icons](https://img.shields.io/badge/icons-2,745+-orange?style=for-the-badge)
-![Libraries](https://img.shields.io/badge/libraries-11-purple?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.7.0-green?style=for-the-badge)
+![Icons](https://img.shields.io/badge/icons-2,758+-orange?style=for-the-badge)
+![Libraries](https://img.shields.io/badge/libraries-12-purple?style=for-the-badge)
 ![Crypto](https://img.shields.io/badge/crypto-25+-gold?style=for-the-badge)
 ![Flowers](https://img.shields.io/badge/flowers-12+-pink?style=for-the-badge)
 ![Medical](https://img.shields.io/badge/medical-96+-teal?style=for-the-badge)
 ![Emoji](https://img.shields.io/badge/emoji-60+-yellow?style=for-the-badge)
 ![Communication](https://img.shields.io/badge/communication-10+-blue?style=for-the-badge)
 ![Summer](https://img.shields.io/badge/summer-89+-orange?style=for-the-badge)
+![Superhero](https://img.shields.io/badge/superhero-13+-red?style=for-the-badge)
 
-**🎨 A comprehensive collection of 2,745+ animated icons from 11 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, and 89+ summer beach icons**
+**🎨 A comprehensive collection of 2,758+ animated icons from 12 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, and 13+ superhero character icons**
 
 [![Forked & Updated](https://img.shields.io/badge/FORKED%20%26%20UPDATED-red?style=for-the-badge&logo=github)](https://github.com)
 [![Enhanced Features](https://img.shields.io/badge/Enhanced%20Features-green?style=for-the-badge)](https://github.com)
@@ -37,10 +38,11 @@ This is a **forked and enhanced version** of the original flutter_animated_icons
 - 😊 **NEW: Emoji Icons**: 60+ fun and expressive emoji icons for social apps, messaging, and fun interfaces
 - 📞 **NEW: Communication Icons**: 10+ communication and messaging icons for email, phone, and notifications
 - ☀️ **NEW: Summer Icons**: 89+ summer and beach themed icons for vacation, travel, and summer apps
+- 🦸 **NEW: Superhero Icons**: 13+ superhero character icons for gaming, entertainment, and character-based apps
 
 ## 📦 Package Overview
 
-Animation always adds life to your icons. This package collects **2,745+ animated icons** from 11 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, and 89+ summer beach icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
+Animation always adds life to your icons. This package collects **2,758+ animated icons** from 12 premium libraries, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, and 13+ superhero character icons. The animated icons are implemented using [Lottie](https://lottiefiles.com/) animation, providing smooth, high-quality animations for your Flutter apps.
 
 ## 🎯 Icon Libraries
 
@@ -57,6 +59,7 @@ Animation always adds life to your icons. This package collects **2,745+ animate
 | **Emoji** | 60+ | Fun and expressive emoji animated icons | 😊 Yellow |
 | **Communication** | 10+ | Communication and messaging animated icons | 📞 Blue |
 | **Summer** | 89+ | Summer and beach themed animated icons | ☀️ Orange |
+| **Superhero** | 13+ | Superhero character animated icons | 🦸 Red |
 
 ## 📱 Examples
 
@@ -449,6 +452,32 @@ Lottie.asset(IconsAnimated.woman01)
 Lottie.asset(IconsAnimated.camera)
 Lottie.asset(IconsAnimated.guitar)
 Lottie.asset(IconsAnimated.speaker)
+```
+
+### Superhero Library
+```dart
+// Emotions & Expressions
+Lottie.asset(IconsAnimated.angry)
+Lottie.asset(IconsAnimated.sad)
+Lottie.asset(IconsAnimated.gotIdea)
+
+// Actions & Activities
+Lottie.asset(IconsAnimated.pointing)
+Lottie.asset(IconsAnimated.wavingHand)
+Lottie.asset(IconsAnimated.waiting)
+Lottie.asset(IconsAnimated.shopping)
+
+// Transportation
+Lottie.asset(IconsAnimated.drivingCar)
+Lottie.asset(IconsAnimated.ridingBike)
+
+// Work & Technology
+Lottie.asset(IconsAnimated.workingOnLaptop)
+Lottie.asset(IconsAnimated.holdingPhone)
+
+// Achievements & Recognition
+Lottie.asset(IconsAnimated.holdingTrophy)
+Lottie.asset(IconsAnimated.holdingOfferBoard)
 ```
 
 ## 🎨 Advanced Usage

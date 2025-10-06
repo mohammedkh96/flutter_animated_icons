@@ -350,36 +350,53 @@ class IconsAnimated {
   // ============================================================================
   // SUMMER ICONS (89 icons)
   // ============================================================================
-  
+
   // Beach & Water Activities
   static const String bag = 'assets/Summer Lottie Icons/Bag.json';
-  static const String beachBall01 = 'assets/Summer Lottie Icons/Beach Ball 01.json';
-  static const String beachBall02 = 'assets/Summer Lottie Icons/Beach Ball 02.json';
+  static const String beachBall01 =
+      'assets/Summer Lottie Icons/Beach Ball 01.json';
+  static const String beachBall02 =
+      'assets/Summer Lottie Icons/Beach Ball 02.json';
   static const String beachBar = 'assets/Summer Lottie Icons/Beach Bar.json';
-  static const String beachChair = 'assets/Summer Lottie Icons/Beach Chair.json';
-  static const String beachHouse = 'assets/Summer Lottie Icons/Beach House.json';
-  static const String beachTowel01 = 'assets/Summer Lottie Icons/Beach Towel 01.json';
-  static const String beachTowel02 = 'assets/Summer Lottie Icons/Beach Towel 02.json';
-  static const String beachUmbrella01 = 'assets/Summer Lottie Icons/Beach Umbrella 01.json';
-  static const String beachUmbrella02 = 'assets/Summer Lottie Icons/Beach Umbrella 02.json';
+  static const String beachChair =
+      'assets/Summer Lottie Icons/Beach Chair.json';
+  static const String beachHouse =
+      'assets/Summer Lottie Icons/Beach House.json';
+  static const String beachTowel01 =
+      'assets/Summer Lottie Icons/Beach Towel 01.json';
+  static const String beachTowel02 =
+      'assets/Summer Lottie Icons/Beach Towel 02.json';
+  static const String beachUmbrella01 =
+      'assets/Summer Lottie Icons/Beach Umbrella 01.json';
+  static const String beachUmbrella02 =
+      'assets/Summer Lottie Icons/Beach Umbrella 02.json';
   static const String boat01 = 'assets/Summer Lottie Icons/Boat 01.json';
   static const String boat02 = 'assets/Summer Lottie Icons/Boat 02.json';
   static const String sailBoat = 'assets/Summer Lottie Icons/Sail Boat.json';
   static const String speedBoat = 'assets/Summer Lottie Icons/Speed Boat.json';
-  static const String surfBoard01 = 'assets/Summer Lottie Icons/SurfBoard 01.json';
-  static const String surfBoard02 = 'assets/Summer Lottie Icons/SurfBoard 02.json';
-  static const String kiteSurfing = 'assets/Summer Lottie Icons/Kite Surfing.json';
+  static const String surfBoard01 =
+      'assets/Summer Lottie Icons/SurfBoard 01.json';
+  static const String surfBoard02 =
+      'assets/Summer Lottie Icons/SurfBoard 02.json';
+  static const String kiteSurfing =
+      'assets/Summer Lottie Icons/Kite Surfing.json';
   static const String skydiving = 'assets/Summer Lottie Icons/Skydiving.json';
-  static const String lifebuoy01 = 'assets/Summer Lottie Icons/Lifebuoy 01.json';
-  static const String lifebuoy02 = 'assets/Summer Lottie Icons/Lifebuoy 02.json';
-  static const String rubberRing01 = 'assets/Summer Lottie Icons/Rubber Ring 01.json';
-  static const String rubberRing02 = 'assets/Summer Lottie Icons/Rubber Ring 02.json';
+  static const String lifebuoy01 =
+      'assets/Summer Lottie Icons/Lifebuoy 01.json';
+  static const String lifebuoy02 =
+      'assets/Summer Lottie Icons/Lifebuoy 02.json';
+  static const String rubberRing01 =
+      'assets/Summer Lottie Icons/Rubber Ring 01.json';
+  static const String rubberRing02 =
+      'assets/Summer Lottie Icons/Rubber Ring 02.json';
   static const String pool01 = 'assets/Summer Lottie Icons/Pool 01.json';
   static const String pool02 = 'assets/Summer Lottie Icons/Pool 02.json';
   static const String pool03 = 'assets/Summer Lottie Icons/Pool 03.json';
   static const String pool04 = 'assets/Summer Lottie Icons/Pool 04.json';
-  static const String seaShell01 = 'assets/Summer Lottie Icons/Sea Shell 01.json';
-  static const String seaShell02 = 'assets/Summer Lottie Icons/Sea Shell 02.json';
+  static const String seaShell01 =
+      'assets/Summer Lottie Icons/Sea Shell 01.json';
+  static const String seaShell02 =
+      'assets/Summer Lottie Icons/Sea Shell 02.json';
 
   // Transportation
   static const String bus01 = 'assets/Summer Lottie Icons/Bus 01.json';
@@ -395,18 +412,24 @@ class IconsAnimated {
 
   // Photography & Technology
   static const String camera = 'assets/Summer Lottie Icons/Camera.json';
-  static const String instantCamera = 'assets/Summer Lottie Icons/Instant Camera.json';
-  static const String casettePlayer = 'assets/Summer Lottie Icons/Casette Player.json';
+  static const String instantCamera =
+      'assets/Summer Lottie Icons/Instant Camera.json';
+  static const String casettePlayer =
+      'assets/Summer Lottie Icons/Casette Player.json';
   static const String speaker = 'assets/Summer Lottie Icons/Speaker.json';
-  static const String musicIcon01 = 'assets/Summer Lottie Icons/Music Icon 01.json';
-  static const String musicIcon02 = 'assets/Summer Lottie Icons/Music Icon 02.json';
+  static const String musicIcon01 =
+      'assets/Summer Lottie Icons/Music Icon 01.json';
+  static const String musicIcon02 =
+      'assets/Summer Lottie Icons/Music Icon 02.json';
   static const String guitar = 'assets/Summer Lottie Icons/Guitar.json';
 
   // Food & Drinks
   static const String coctail01 = 'assets/Summer Lottie Icons/Coctail 01.json';
   static const String coctail02 = 'assets/Summer Lottie Icons/Coctail 02.json';
-  static const String iceCream01 = 'assets/Summer Lottie Icons/Ice Cream 01.json';
-  static const String iceCream02 = 'assets/Summer Lottie Icons/Ice Cream 02.json';
+  static const String iceCream01 =
+      'assets/Summer Lottie Icons/Ice Cream 01.json';
+  static const String iceCream02 =
+      'assets/Summer Lottie Icons/Ice Cream 02.json';
   static const String strawberry = 'assets/Summer Lottie Icons/Strawberry.json';
   static const String watermelon = 'assets/Summer Lottie Icons/Watermelon.json';
   static const String pineapple = 'assets/Summer Lottie Icons/Pineapple.json';
@@ -423,8 +446,10 @@ class IconsAnimated {
   // Summer Accessories
   static const String hat01 = 'assets/Summer Lottie Icons/Hat 01.json';
   static const String hat02 = 'assets/Summer Lottie Icons/Hat 02.json';
-  static const String sunglasses01 = 'assets/Summer Lottie Icons/Sunglasses 01.json';
-  static const String sunglasses02 = 'assets/Summer Lottie Icons/Sunglasses 02.json';
+  static const String sunglasses01 =
+      'assets/Summer Lottie Icons/Sunglasses 01.json';
+  static const String sunglasses02 =
+      'assets/Summer Lottie Icons/Sunglasses 02.json';
   static const String fan = 'assets/Summer Lottie Icons/Fan.json';
   static const String termometer = 'assets/Summer Lottie Icons/Termometer.json';
 
@@ -444,16 +469,44 @@ class IconsAnimated {
   static const String woman04 = 'assets/Summer Lottie Icons/Woman 04.json';
 
   // Ornaments & Decorations
-  static const String ornaments01 = 'assets/Summer Lottie Icons/Ornaments 01.json';
-  static const String ornaments02 = 'assets/Summer Lottie Icons/Ornaments 02.json';
-  static const String ornaments03 = 'assets/Summer Lottie Icons/Ornaments 03.json';
-  static const String ornaments04 = 'assets/Summer Lottie Icons/Ornaments 04.json';
-  static const String ornaments05 = 'assets/Summer Lottie Icons/Ornaments 05.json';
-  static const String ornaments06 = 'assets/Summer Lottie Icons/Ornaments 06.json';
-  static const String ornaments07 = 'assets/Summer Lottie Icons/Ornaments 07.json';
-  static const String ornaments08 = 'assets/Summer Lottie Icons/Ornaments 08.json';
-  static const String ornaments09 = 'assets/Summer Lottie Icons/Ornaments 09.json';
-  static const String ornaments10 = 'assets/Summer Lottie Icons/Ornaments 10.json';
+  static const String ornaments01 =
+      'assets/Summer Lottie Icons/Ornaments 01.json';
+  static const String ornaments02 =
+      'assets/Summer Lottie Icons/Ornaments 02.json';
+  static const String ornaments03 =
+      'assets/Summer Lottie Icons/Ornaments 03.json';
+  static const String ornaments04 =
+      'assets/Summer Lottie Icons/Ornaments 04.json';
+  static const String ornaments05 =
+      'assets/Summer Lottie Icons/Ornaments 05.json';
+  static const String ornaments06 =
+      'assets/Summer Lottie Icons/Ornaments 06.json';
+  static const String ornaments07 =
+      'assets/Summer Lottie Icons/Ornaments 07.json';
+  static const String ornaments08 =
+      'assets/Summer Lottie Icons/Ornaments 08.json';
+  static const String ornaments09 =
+      'assets/Summer Lottie Icons/Ornaments 09.json';
+  static const String ornaments10 =
+      'assets/Summer Lottie Icons/Ornaments 10.json';
+
+  // ============================================================================
+  // SUPERHERO CHARACTER ICONS (13 icons)
+  // ============================================================================
+  
+  static const String angry = 'assets/superhero-character/ANGRY.json';
+  static const String drivingCar = 'assets/superhero-character/DRIVING CAR.json';
+  static const String gotIdea = 'assets/superhero-character/GOT IDEA.json';
+  static const String holdingOfferBoard = 'assets/superhero-character/HOLDING OFFER BOARD.json';
+  static const String holdingPhone = 'assets/superhero-character/HOLDING PHONE.json';
+  static const String holdingTrophy = 'assets/superhero-character/HOLDING TROPHY.json';
+  static const String pointing = 'assets/superhero-character/POINTING.json';
+  static const String ridingBike = 'assets/superhero-character/RIDING BIKE.json';
+  static const String sad = 'assets/superhero-character/SAD.json';
+  static const String shopping = 'assets/superhero-character/SHOPPING.json';
+  static const String waiting = 'assets/superhero-character/WAITING.json';
+  static const String wavingHand = 'assets/superhero-character/WAVING HAND.json';
+  static const String workingOnLaptop = 'assets/superhero-character/WORKING ON LAPTOP.json';
 
   // ============================================================================
   // LEGACY LIBRARY ACCESS (for backward compatibility)

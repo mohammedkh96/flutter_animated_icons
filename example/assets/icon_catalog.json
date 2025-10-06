@@ -3162,6 +3162,36 @@
           "ornaments10"
         ]
       }
+    },
+    "Superhero": {
+      "name": "Superhero",
+      "description": "Superhero character animated icons with 13+ icons",
+      "color": "#FF4500",
+      "categories": {
+        "Emotions & Expressions": [
+          "angry",
+          "sad",
+          "gotIdea"
+        ],
+        "Actions & Activities": [
+          "pointing",
+          "wavingHand",
+          "waiting",
+          "shopping"
+        ],
+        "Transportation": [
+          "drivingCar",
+          "ridingBike"
+        ],
+        "Work & Technology": [
+          "workingOnLaptop",
+          "holdingPhone"
+        ],
+        "Achievements & Recognition": [
+          "holdingTrophy",
+          "holdingOfferBoard"
+        ]
+      }
     }
   }
 }

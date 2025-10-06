@@ -1,3 +1,12 @@
+## 1.7.0
+
+- 🦸 **NEW**: Added superhero character animated icons library
+- 🎮 Added 13+ superhero character icons for gaming, entertainment, and character-based apps
+- 🦸 Added superhero icon categories: Emotions & Expressions, Actions & Activities, Transportation, Work & Technology, Achievements & Recognition
+- 🎨 Updated example app to showcase superhero icons
+- 📚 Updated documentation with superhero usage examples
+- 🔧 Enhanced package structure with new Superhero library
+
 ## 1.6.0
 
 - ☀️ **NEW**: Added summer and beach themed animated icons library
