@@ -3240,7 +3240,7 @@
     },
     "Weather": {
       "name": "Weather",
-      "description": "Weather animated icons with 40+ icons",
+      "description": "Weather animated icons with 30+ icons (optimized)",
       "color": "#87CEEB",
       "categories": {
         "Clouds & Sky": [
@@ -3248,23 +3248,14 @@
           "cloudLight",
           "clouds",
           "cloudySun",
-          "cloudySunWind",
-          "cloudyFullMoon",
-          "cloudyHalfMoon"
+          "cloudySunWind"
         ],
         "Sun & Solar": [
           "sun",
           "sunSet",
-          "sunEclipse",
           "sunAndRain"
         ],
-        "Moon & Night": [
-          "fullMoon",
-          "halfMoon",
-          "fullMoonAndRain",
-          "fullMoonAndSnow",
-          "halfMoonAndRain",
-          "halfMoonAndSnow",
+        "Night Sky": [
           "star"
         ],
         "Rain & Precipitation": [
@@ -3274,7 +3265,6 @@
           "rainingV2"
         ],
         "Snow & Winter": [
-          "snow",
           "snowflake",
           "snowfallV1",
           "snowfallV2",

@@ -621,8 +621,9 @@ class IconsAnimated {
       'assets/fitnesandhealthlottiepack/Strength Icon.json';
 
   // ============================================================================
-  // WEATHER ICONS (40 icons)
+  // WEATHER ICONS (30 icons - optimized)
   // ============================================================================
+  // Note: Large files (>80KB) excluded to reduce package size
 
   // Clouds & Sky
   static const String cloudDark = 'assets/weather-pack/Cloud Dark.json';
@@ -631,28 +632,13 @@ class IconsAnimated {
   static const String cloudySun = 'assets/weather-pack/Cloudy Sun.json';
   static const String cloudySunWind =
       'assets/weather-pack/Cloudy Sun Wind.json';
-  static const String cloudyFullMoon =
-      'assets/weather-pack/Cloudy Full Moon.json';
-  static const String cloudyHalfMoon =
-      'assets/weather-pack/Cloudy Half Moon.json';
 
   // Sun & Solar
   static const String sun = 'assets/weather-pack/Sun.json';
   static const String sunSet = 'assets/weather-pack/Sun Set.json';
-  static const String sunEclipse = 'assets/weather-pack/Sun Eclipse.json';
   static const String sunAndRain = 'assets/weather-pack/Sun and Rain.json';
 
-  // Moon & Night
-  static const String fullMoon = 'assets/weather-pack/Full Moon.json';
-  static const String halfMoon = 'assets/weather-pack/Half Moon.json';
-  static const String fullMoonAndRain =
-      'assets/weather-pack/Full Moon and Rain.json';
-  static const String fullMoonAndSnow =
-      'assets/weather-pack/Full Moon and Snow.json';
-  static const String halfMoonAndRain =
-      'assets/weather-pack/Half Moon and Rain.json';
-  static const String halfMoonAndSnow =
-      'assets/weather-pack/Half Moon and Snow.json';
+  // Night Sky
   static const String star = 'assets/weather-pack/Star.json';
 
   // Rain & Precipitation
@@ -662,7 +648,6 @@ class IconsAnimated {
   static const String rainingV2 = 'assets/weather-pack/raining_v2.json';
 
   // Snow & Winter
-  static const String snow = 'assets/weather-pack/Snow.json';
   static const String snowflake = 'assets/weather-pack/Snowflake.json';
   static const String snowfallV1 = 'assets/weather-pack/snowfall_v1.json';
   static const String snowfallV2 = 'assets/weather-pack/snowfall_v2.json';
