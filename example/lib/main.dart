@@ -500,7 +500,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               margin: const EdgeInsets.only(right: 8),
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
+                color: Theme.of(context)
+                    .colorScheme
+                    .primary
+                    .withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
@@ -867,7 +870,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: isAnimating
-                        ? Theme.of(context).colorScheme.primary.withValues(alpha: 0.1)
+                        ? Theme.of(context)
+                            .colorScheme
+                            .primary
+                            .withValues(alpha: 0.1)
                         : Theme.of(context).colorScheme.surface,
                     borderRadius: BorderRadius.circular(8),
                     border: isAnimating
