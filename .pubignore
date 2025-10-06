@@ -1,0 +1,35 @@
+# Exclude large asset folders to reduce package size for pub.dev
+# These folders contain the most assets and can be downloaded separately
+assets/icons8.com/
+assets/lottiefiles.com/
+assets/lottieflow.com/
+assets/lordicon.com/
+assets/useanimations.com/
+
+# Keep smaller, newer libraries
+# assets/new/
+# assets/flowers/
+# assets/medical/
+# assets/emoji/
+# assets/new_communication/
+# assets/Summer Lottie Icons/
+# assets/superhero-character/
+# assets/fitnesandhealthlottiepack/
+# assets/weather-pack/
+# assets/aichat/
+# assets/B404/
+
+# Exclude example app to reduce size
+example/
+
+# Exclude documentation files
+*.md
+CHANGELOG.md
+README.md
+GITHUB_PAGES_SETUP.md
+
+# Exclude CI/CD files
+.github/
+
+# Exclude development files
+analysis_options.yaml

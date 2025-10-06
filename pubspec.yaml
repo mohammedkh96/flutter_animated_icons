@@ -1,5 +1,5 @@
 name: flutter_icons_animated
-description: Collection of 2970+ animations for your icons and buttons, including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, 40+ weather icons, 45+ AI chat icons, and 27+ 404 error icons. They are implemented by Lottie animation. Effective icon animation tells a clear story amplifying the intended UX.
+description: Collection of 500+ premium animated icons including 25+ cryptocurrency icons, 12+ beautiful flower icons, 96+ medical healthcare icons in 3 styles, 60+ fun emoji icons, 10+ communication icons, 89+ summer beach icons, 13+ superhero character icons, 100+ fitness and health icons, 40+ weather icons, 45+ AI chat icons, and 27+ 404 error icons. They are implemented by Lottie animation. Effective icon animation tells a clear story amplifying the intended UX. Large libraries (icons8, lottiefiles, etc.) available separately to keep package size optimized.
 homepage: https://github.com/hajisalam/flutter_icons_animated
 repository: https://github.com/hajisalam/flutter_icons_animated
 issue_tracker: https://github.com/hajisalam/flutter_icons_animated/issues
@@ -92,11 +92,7 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - assets/icons8.com/
-    - assets/lordicon.com/
-    - assets/useanimations.com/
-    - assets/lottiefiles.com/
-    - assets/lottieflow.com/
+    # Only include smaller, newer libraries to keep package size under 100MB
     - assets/new/
     - assets/flowers/
     - assets/medical/
