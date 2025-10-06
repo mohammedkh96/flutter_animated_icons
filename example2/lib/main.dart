@@ -7,33 +7,34 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Icons Animated - Complete Usage Examples',
+      title: 'Flutter Animated Icons Example',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const UsageExamplesPage(),
+      home: const MyHomePage(title: 'Flutter Animated Icons Demo'),
     );
   }
 }
 
-class UsageExamplesPage extends StatefulWidget {
-  const UsageExamplesPage({Key? key}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
 
   @override
-  State<UsageExamplesPage> createState() => _UsageExamplesPageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _UsageExamplesPageState extends State<UsageExamplesPage>
-    with TickerProviderStateMixin {
+class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   late AnimationController _icons8Controller;
-  late AnimationController _lottieFilesController;
   late AnimationController _useAnimationsController;
+  late AnimationController _lottieFilesController;
   late AnimationController _lordiconController;
   late AnimationController _lottieFlowController;
 
@@ -44,11 +45,11 @@ class _UsageExamplesPageState extends State<UsageExamplesPage>
       duration: const Duration(seconds: 2),
       vsync: this,
     );
-    _lottieFilesController = AnimationController(
+    _useAnimationsController = AnimationController(
       duration: const Duration(seconds: 2),
       vsync: this,
     );
-    _useAnimationsController = AnimationController(
+    _lottieFilesController = AnimationController(
       duration: const Duration(seconds: 2),
       vsync: this,
     );
@@ -65,57 +66,224 @@ class _UsageExamplesPageState extends State<UsageExamplesPage>
   @override
   void dispose() {
     _icons8Controller.dispose();
-    _lottieFilesController.dispose();
     _useAnimationsController.dispose();
+    _lottieFilesController.dispose();
     _lordiconController.dispose();
     _lottieFlowController.dispose();
     super.dispose();
+  }
+
+  void _animateIcon(AnimationController controller) {
+    if (controller.isCompleted) {
+      controller.reverse();
+    } else {
+      controller.forward();
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Complete Usage Examples'),
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            onPressed: () {
+              _showInfoDialog();
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildSectionTitle('📦 Package Information'),
-            _buildInfoCard(),
+          children: <Widget>[
+            // Header
+            Center(
+              child: Column(
+                children: [
+                  const Text(
+                    '2,454+ Animated Icons from 5 Premium Libraries',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'Tap any icon to animate it!',
+                    style: TextStyle(fontSize: 16, color: Colors.grey),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 24),
+
+            // Icons8 Section
+            _buildLibrarySection(
+              'Icons8 Library',
+              '1,187+ Professional Icons',
+              Colors.blue,
+              [
+                _buildIconExample(
+                  'Beating Hearts',
+                  Icons8.beating_hearts,
+                  _icons8Controller,
+                  'Perfect for like buttons',
+                ),
+                _buildIconExample(
+                  'Settings',
+                  Icons8.settings,
+                  _icons8Controller,
+                  'Animated settings gear',
+                ),
+                _buildIconExample(
+                  'Bookmark',
+                  Icons8.bookmark,
+                  _icons8Controller,
+                  'Save/bookmark animation',
+                ),
+                _buildIconExample(
+                  'Trash',
+                  Icons8.icons8_trash_1_,
+                  _icons8Controller,
+                  'Delete confirmation',
+                ),
+              ],
+            ),
 
             const SizedBox(height: 24),
 
-            _buildSectionTitle('🎯 Icons8 Library Examples'),
-            _buildIcons8Examples(),
+            // UseAnimations Section
+            _buildLibrarySection(
+              'UseAnimations Library',
+              '80+ Clean & Modern Icons',
+              Colors.green,
+              [
+                _buildIconExample(
+                  'Menu',
+                  Useanimations.menu,
+                  _useAnimationsController,
+                  'Hamburger menu animation',
+                ),
+                _buildIconExample(
+                  'Menu V2',
+                  Useanimations.menuV2,
+                  _useAnimationsController,
+                  'Alternative menu style',
+                ),
+                _buildIconExample(
+                  'Activity',
+                  Useanimations.activity,
+                  _useAnimationsController,
+                  'Activity indicator',
+                ),
+                _buildIconExample(
+                  'Airplay',
+                  Useanimations.airplay,
+                  _useAnimationsController,
+                  'Screen sharing icon',
+                ),
+              ],
+            ),
 
             const SizedBox(height: 24),
 
-            _buildSectionTitle('🎨 LottieFiles Library Examples'),
-            _buildLottieFilesExamples(),
+            // LottieFiles Section
+            _buildLibrarySection(
+              'LottieFiles Library',
+              '756+ High-Quality Animations',
+              Colors.orange,
+              [
+                _buildIconExample(
+                  'Bell Notification',
+                  LottieFiles.$33262_icons_bell_notification,
+                  _lottieFilesController,
+                  'Notification bell',
+                ),
+                _buildIconExample(
+                  'Bell Icon',
+                  LottieFiles.$40048_bell_icon_notification,
+                  _lottieFilesController,
+                  'Alternative bell style',
+                ),
+              ],
+            ),
 
             const SizedBox(height: 24),
 
-            _buildSectionTitle('✨ UseAnimations Library Examples'),
-            _buildUseAnimationsExamples(),
+            // Lordicon Section
+            _buildLibrarySection(
+              'Lordicon Library',
+              '154+ Premium Icons',
+              Colors.purple,
+              [
+                _buildIconExample(
+                  'Share Outline',
+                  Lordicon.$1_share_outline,
+                  _lordiconController,
+                  'Share button outline',
+                ),
+                _buildIconExample(
+                  'Share Solid',
+                  Lordicon.$1_share_solid,
+                  _lordiconController,
+                  'Share button solid',
+                ),
+                _buildIconExample(
+                  'Heart Outline',
+                  Lordicon.$48_favorite_heart_outline,
+                  _lordiconController,
+                  'Heart outline style',
+                ),
+                _buildIconExample(
+                  'Heart Solid',
+                  Lordicon.$48_favorite_heart_solid,
+                  _lordiconController,
+                  'Heart solid style',
+                ),
+              ],
+            ),
 
             const SizedBox(height: 24),
 
-            _buildSectionTitle('👑 Lordicon Library Examples'),
-            _buildLordiconExamples(),
+            // LottieFlow Section
+            _buildLibrarySection(
+              'LottieFlow Library',
+              '277+ Creative Animations',
+              Colors.teal,
+              [
+                _buildIconExample(
+                  '404 Error 1',
+                  LottieFlow.lottieflow_404_12_1_000000_easey,
+                  _lottieFlowController,
+                  '404 error animation',
+                ),
+                _buildIconExample(
+                  '404 Error 2',
+                  LottieFlow.lottieflow_404_12_2_000000_easey,
+                  _lottieFlowController,
+                  'Alternative 404 style',
+                ),
+                _buildIconExample(
+                  'Arrow 03',
+                  LottieFlow.lottieflow_arrow_03_1_000000_easey,
+                  _lottieFlowController,
+                  'Directional arrow',
+                ),
+                _buildIconExample(
+                  'Arrow 05',
+                  LottieFlow.lottieflow_arrow_05_2_000000_easey,
+                  _lottieFlowController,
+                  'Alternative arrow style',
+                ),
+              ],
+            ),
 
             const SizedBox(height: 24),
 
-            _buildSectionTitle('🌊 LottieFlow Library Examples'),
-            _buildLottieFlowExamples(),
-
-            const SizedBox(height: 24),
-
-            _buildSectionTitle('💡 Usage Tips & Best Practices'),
+            // Usage Tips
             _buildUsageTips(),
 
             const SizedBox(height: 100), // Bottom padding
@@ -125,21 +293,124 @@ class _UsageExamplesPageState extends State<UsageExamplesPage>
     );
   }
 
-  Widget _buildSectionTitle(String title) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: Text(
-        title,
-        style: const TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-          color: Colors.blue,
+  Widget _buildLibrarySection(
+    String title,
+    String subtitle,
+    Color color,
+    List<Widget> icons,
+  ) {
+    return Card(
+      elevation: 4,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 4,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    color: color,
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        subtitle,
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            GridView.count(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              crossAxisCount: 2,
+              childAspectRatio: 1.5,
+              crossAxisSpacing: 8,
+              mainAxisSpacing: 8,
+              children: icons,
+            ),
+          ],
         ),
       ),
     );
   }
 
-  Widget _buildInfoCard() {
+  Widget _buildIconExample(
+    String name,
+    String assetPath,
+    AnimationController controller,
+    String description,
+  ) {
+    return Card(
+      elevation: 2,
+      child: InkWell(
+        onTap: () => _animateIcon(controller),
+        borderRadius: BorderRadius.circular(8),
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Lottie.asset(
+                  assetPath,
+                  controller: controller,
+                  width: 50,
+                  height: 50,
+                  fit: BoxFit.contain,
+                  errorBuilder: (context, error, stackTrace) {
+                    return const Icon(
+                      Icons.error_outline,
+                      color: Colors.grey,
+                      size: 30,
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                name,
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                ),
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              Text(
+                description,
+                style: TextStyle(fontSize: 10, color: Colors.grey[600]),
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildUsageTips() {
     return Card(
       elevation: 4,
       child: Padding(
@@ -148,408 +419,8 @@ class _UsageExamplesPageState extends State<UsageExamplesPage>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Flutter Icons Animated',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 8),
-            const Text(
-              'A comprehensive collection of 2,454+ animated icons from 5 premium libraries.',
-              style: TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 12),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                _buildInfoChip('Icons8', '1,187 icons', Colors.blue),
-                _buildInfoChip('LottieFiles', '756 icons', Colors.green),
-                _buildInfoChip('UseAnimations', '80 icons', Colors.orange),
-                _buildInfoChip('Lordicon', '154 icons', Colors.purple),
-                _buildInfoChip('LottieFlow', '277 icons', Colors.teal),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: Colors.red.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: Colors.red.withOpacity(0.3)),
-              ),
-              child: const Row(
-                children: [
-                  Icon(Icons.fork_right, color: Colors.red, size: 16),
-                  SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      'Forked & Updated Package - Enhanced with modern features and comprehensive examples',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.red,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildInfoChip(String label, String count, Color color) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: color.withOpacity(0.3)),
-      ),
-      child: Text(
-        '$label: $count',
-        style: TextStyle(
-          color: color,
-          fontWeight: FontWeight.w600,
-          fontSize: 12,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildIcons8Examples() {
-    return Card(
-      elevation: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Icons8 - Professional icon library with 1,187+ icons',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 16),
-            _buildCodeExample('''
-// Basic usage
-Lottie.asset(Icons8.beating_hearts)
-
-// With animation controller
-Lottie.asset(
-  Icons8.beating_hearts,
-  controller: _controller,
-  width: 50,
-  height: 50,
-)
-
-// Tap to animate
-IconButton(
-  onPressed: () {
-    _controller.reset();
-    _controller.forward();
-  },
-  icon: Lottie.asset(Icons8.beating_hearts, controller: _controller),
-)'''),
-            const SizedBox(height: 16),
-            _buildIconGrid([
-              {'path': Icons8.beating_hearts, 'name': 'beating_hearts'},
-              {'path': Icons8.icons8_trash_1_, 'name': 'trash'},
-              {'path': Icons8.settings, 'name': 'settings'},
-              {'path': Icons8.bookmark, 'name': 'bookmark'},
-            ], _icons8Controller),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildLottieFilesExamples() {
-    return Card(
-      elevation: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'LottieFiles - High-quality animations with 756+ icons',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 16),
-            _buildCodeExample('''
-// Basic usage
-Lottie.asset(LottieFiles.\$33262_icons_bell_notification)
-
-// With repeat animation
-Lottie.asset(
-  LottieFiles.\$33262_icons_bell_notification,
-  controller: _controller,
-  repeat: true,
-)
-
-// Custom styling
-Lottie.asset(
-  LottieFiles.\$33262_icons_bell_notification,
-  controller: _controller,
-  width: 100,
-  height: 100,
-  fit: BoxFit.contain,
-)'''),
-            const SizedBox(height: 16),
-            _buildIconGrid([
-              {
-                'path': LottieFiles.$33262_icons_bell_notification,
-                'name': 'bell_notification'
-              },
-              {
-                'path': LottieFiles.$40048_bell_icon_notification,
-                'name': 'bell_icon'
-              },
-              {
-                'path': LottieFiles.$33262_icons_bell_notification,
-                'name': 'notification'
-              },
-              {
-                'path': LottieFiles.$40048_bell_icon_notification,
-                'name': 'bell'
-              },
-            ], _lottieFilesController),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildUseAnimationsExamples() {
-    return Card(
-      elevation: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'UseAnimations - Clean and modern animations with 80+ icons',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 16),
-            _buildCodeExample('''
-// Basic usage
-Lottie.asset(Useanimations.menu)
-
-// Toggle animation
-Lottie.asset(
-  Useanimations.menu,
-  controller: _controller,
-  animate: true,
-)
-
-// Different versions
-Lottie.asset(Useanimations.menuV2)  // Version 2
-Lottie.asset(Useanimations.menu)    // Default version'''),
-            const SizedBox(height: 16),
-            _buildIconGrid([
-              {'path': Useanimations.menu, 'name': 'menu'},
-              {'path': Useanimations.menuV2, 'name': 'menuV2'},
-              {'path': Useanimations.activity, 'name': 'activity'},
-              {'path': Useanimations.airplay, 'name': 'airplay'},
-            ], _useAnimationsController),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildLordiconExamples() {
-    return Card(
-      elevation: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Lordicon - Premium animated icons with 154+ icons',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 16),
-            _buildCodeExample('''
-// Basic usage
-Lottie.asset(Lordicon.\$1_share_outline)
-
-// With error handling
-Lottie.asset(
-  Lordicon.\$1_share_outline,
-  controller: _controller,
-  errorBuilder: (context, error, stackTrace) {
-    return Icon(Icons.error);
-  },
-)
-
-// Different styles
-Lottie.asset(Lordicon.\$1_share_solid)   // Solid version
-Lottie.asset(Lordicon.\$1_share_outline) // Outline version'''),
-            const SizedBox(height: 16),
-            _buildIconGrid([
-              {'path': Lordicon.$1_share_outline, 'name': 'share_outline'},
-              {'path': Lordicon.$1_share_solid, 'name': 'share_solid'},
-              {
-                'path': Lordicon.$48_favorite_heart_outline,
-                'name': 'heart_outline'
-              },
-              {
-                'path': Lordicon.$48_favorite_heart_solid,
-                'name': 'heart_solid'
-              },
-            ], _lordiconController),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildLottieFlowExamples() {
-    return Card(
-      elevation: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'LottieFlow - Creative animations with 277+ icons',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 16),
-            _buildCodeExample('''
-// Basic usage
-Lottie.asset(LottieFlow.lottieflow_404_12_1_000000_easey)
-
-// With custom duration
-Lottie.asset(
-  LottieFlow.lottieflow_404_12_1_000000_easey,
-  controller: _controller,
-  frameRate: FrameRate(60),
-)
-
-// Background animations
-Lottie.asset(LottieFlow.lottieflow_background_13_000000_easey)'''),
-            const SizedBox(height: 16),
-            _buildIconGrid([
-              {
-                'path': LottieFlow.lottieflow_404_12_1_000000_easey,
-                'name': '404_1'
-              },
-              {
-                'path': LottieFlow.lottieflow_404_12_2_000000_easey,
-                'name': '404_2'
-              },
-              {
-                'path': LottieFlow.lottieflow_arrow_03_1_000000_easey,
-                'name': 'arrow_03'
-              },
-              {
-                'path': LottieFlow.lottieflow_arrow_05_2_000000_easey,
-                'name': 'arrow_05'
-              },
-            ], _lottieFlowController),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildIconGrid(
-      List<Map<String, String>> icons, AnimationController controller) {
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
-        childAspectRatio: 1,
-        crossAxisSpacing: 8,
-        mainAxisSpacing: 8,
-      ),
-      itemCount: icons.length,
-      itemBuilder: (context, index) {
-        final icon = icons[index];
-        return Card(
-          elevation: 2,
-          child: InkWell(
-            onTap: () {
-              controller.reset();
-              controller.forward();
-            },
-            child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: Lottie.asset(
-                      icon['path']!,
-                      controller: controller,
-                      width: 40,
-                      height: 40,
-                      fit: BoxFit.contain,
-                      errorBuilder: (context, error, stackTrace) {
-                        return const Icon(Icons.error_outline,
-                            color: Colors.grey);
-                      },
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    icon['name']!,
-                    style: const TextStyle(fontSize: 10),
-                    textAlign: TextAlign.center,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
-            ),
-          ),
-        );
-      },
-    );
-  }
-
-  Widget _buildCodeExample(String code) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: Colors.grey[100],
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Colors.grey[300]!),
-      ),
-      child: Text(
-        code,
-        style: const TextStyle(
-          fontFamily: 'monospace',
-          fontSize: 12,
-          color: Colors.black87,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildUsageTips() {
-    return Card(
-      elevation: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              '💡 Best Practices & Tips',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              '💡 Usage Tips & Best Practices',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
             _buildTip(
@@ -601,15 +472,61 @@ Lottie.asset(LottieFlow.lottieflow_background_13_000000_easey)'''),
                   ),
                 ),
                 const SizedBox(height: 4),
-                Text(
-                  description,
-                  style: const TextStyle(fontSize: 14),
-                ),
+                Text(description, style: const TextStyle(fontSize: 14)),
               ],
             ),
           ),
         ],
       ),
+    );
+  }
+
+  void _showInfoDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('About This Example'),
+          content: const SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'This example demonstrates how to use the flutter_icons_animated package with 2,454+ animated icons from 5 premium libraries.',
+                  style: TextStyle(fontSize: 16),
+                ),
+                SizedBox(height: 16),
+                Text(
+                  'Features:',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text('• Interactive tap-to-animate functionality'),
+                Text('• Proper animation controller management'),
+                Text('• Error handling for failed animations'),
+                Text('• Responsive design principles'),
+                Text('• Code examples and best practices'),
+                SizedBox(height: 16),
+                Text(
+                  'Libraries included:',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                Text('• Icons8: 1,187+ icons'),
+                Text('• LottieFiles: 756+ icons'),
+                Text('• UseAnimations: 80+ icons'),
+                Text('• Lordicon: 154+ icons'),
+                Text('• LottieFlow: 277+ icons'),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Close'),
+            ),
+          ],
+        );
+      },
     );
   }
 }

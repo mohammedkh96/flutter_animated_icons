@@ -1,17 +1,14 @@
 name: example2
-description: Complete usage examples for flutter_icons_animated package
+description: "Flutter Animated Icons Example"
 publish_to: 'none'
-
-version: 1.0.0+1
+version: 0.1.0
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ^3.9.2
 
 dependencies:
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.8
   flutter_icons_animated:
     path: ../
   lottie: ^3.3.2
@@ -19,8 +16,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  flutter_lints: ^6.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
