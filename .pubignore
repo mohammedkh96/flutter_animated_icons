@@ -63,9 +63,18 @@ assets/lottiefiles.com/82759-icon-b-server.json
 assets/lottiefiles.com/71802-phone-calling-icon-button.json
 assets/lottiefiles.com/71806-gear-modern-white-icon.json
 assets/lottiefiles.com/77228-qco-icon-2.json
+assets/lottiefiles.com/68701-fly-smart-icon-animation.json
+assets/lottiefiles.com/66443-congratulations-icon.json
+assets/lottiefiles.com/77227-qco-icon-1.json
+assets/lottiefiles.com/82757-icon-c-server.json
+assets/lottiefiles.com/77230-qco-icon-4.json
+assets/lottiefiles.com/81543-icon-animation.json
+assets/lottiefiles.com/93152-ui-app-icon.json
+assets/lottiefiles.com/82760-icon-a-server.json
 
-# Exclude example app to reduce size
+# Exclude example apps to reduce size
 example/
+example2/
 
 # Exclude documentation files (but keep README.md and CHANGELOG.md for pub.dev)
 GITHUB_PAGES_SETUP.md
@@ -75,3 +84,15 @@ GITHUB_PAGES_SETUP.md
 
 # Exclude development files
 analysis_options.yaml
+
+# Exclude platform-specific folders
+android/
+ios/
+linux/
+macos/
+windows/
+web/
+
+# Exclude other development files
+generate_catalog.dart
+index.html
