@@ -17,7 +17,7 @@ issue_tracker: https://github.com/hajisalam/flutter_icons_animated/issues
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.9.3
+version: 1.3.0
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

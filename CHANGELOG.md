@@ -29,14 +29,14 @@
 - 📚 Updated documentation with comprehensive weather usage examples
 - 🔧 Enhanced weather library with detailed categorization
 
-## 1.8.0
+## 1.3.0
 
-- 🌤️ **NEW**: Added weather condition animated icons library
-- 🌦️ Added 10+ weather condition icons for weather apps and environmental interfaces
-- 🌤️ Added weather icon categories: Weather Conditions (thunder, snowfall, rain, normal weather, mist)
-- 🎨 Updated example app to showcase weather icons
-- 📚 Updated documentation with weather usage examples
-- 🔧 Enhanced package structure with new Weather library
+- 🗑️ **REMOVED**: Fitness and health icons library (100+ icons) to reduce package size
+- 📦 **OPTIMIZED**: Package size reduced from 106MB to 40MB for pub.dev compatibility
+- 🚫 **EXCLUDED**: Large animation files (>100KB) to meet pub.dev size limits
+- 🎨 Updated example app to remove fitness icon references
+- 📚 Updated documentation to reflect new icon count (2,650+ icons)
+- 🔧 Enhanced package structure with optimized asset management
 
 ## 1.7.0
 

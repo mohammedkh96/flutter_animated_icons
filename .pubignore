@@ -49,13 +49,25 @@ assets/weather-pack/Cloudy Full Moon.json
 assets/weather-pack/Cloudy Half Moon.json
 assets/weather-pack/Snow.json
 
+# Lottiefiles - Remove largest files (keep smaller ones)
+assets/lottiefiles.com/84710-map-icon.json
+assets/lottiefiles.com/45757-earth-globe-looped-icon.json
+assets/lottiefiles.com/45756-earth-globe-looped-icon.json
+assets/lottiefiles.com/45755-earth-globe-looped-icon.json
+assets/lottiefiles.com/66734-music-icon.json
+assets/lottiefiles.com/49116-music-burst-icon.json
+assets/lottiefiles.com/88792-synergy-icono-destacado.json
+assets/lottiefiles.com/82801-icon.json
+assets/lottiefiles.com/72999-bag-icon.json
+assets/lottiefiles.com/82759-icon-b-server.json
+assets/lottiefiles.com/71802-phone-calling-icon-button.json
+assets/lottiefiles.com/71806-gear-modern-white-icon.json
+assets/lottiefiles.com/77228-qco-icon-2.json
+
 # Exclude example app to reduce size
 example/
 
-# Exclude documentation files
-*.md
-CHANGELOG.md
-README.md
+# Exclude documentation files (but keep README.md and CHANGELOG.md for pub.dev)
 GITHUB_PAGES_SETUP.md
 
 # Exclude CI/CD files
