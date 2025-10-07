@@ -31,15 +31,12 @@
 
 ## 1.8.0
 
-- 💪 **NEW**: Added fitness and health animated icons library
-- 🏋️ Added 100+ fitness and health icons for workout apps, health tracking, and fitness interfaces
-- 💪 Added fitness icon categories: Body Parts (Women/Men), Equipment & Machines, Cardio Equipment, Swimming, Running & Activities, Tracking & Monitoring, Timers & Clocks, Nutrition & Hydration, Sleep & Recovery, Measurements & Progress, Performance & Analytics, Achievements & Recognition
 - 🌤️ **NEW**: Added weather condition animated icons library
 - 🌦️ Added 10+ weather condition icons for weather apps and environmental interfaces
 - 🌤️ Added weather icon categories: Weather Conditions (thunder, snowfall, rain, normal weather, mist)
-- 🎨 Updated example app to showcase fitness and weather icons
-- 📚 Updated documentation with fitness and weather usage examples
-- 🔧 Enhanced package structure with new Fitness and Weather libraries
+- 🎨 Updated example app to showcase weather icons
+- 📚 Updated documentation with weather usage examples
+- 🔧 Enhanced package structure with new Weather library
 
 ## 1.7.0
 

@@ -310,7 +310,6 @@ String categorizeIcon(String fileName, String libraryName) {
         name.contains('nurse') ||
         name.contains('medicine') ||
         name.contains('health') ||
-        name.contains('fitness') ||
         name.contains('gym')) {
       return 'Health & Medical';
     }

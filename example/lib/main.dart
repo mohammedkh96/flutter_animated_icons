@@ -427,8 +427,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       folderName = 'Summer Lottie Icons';
     } else if (folderName == 'superhero') {
       folderName = 'superhero-character';
-    } else if (folderName == 'fitness') {
-      folderName = 'fitnesandhealthlottiepack';
     } else if (folderName == 'weather') {
       folderName = 'weather-pack';
     } else if (folderName == 'ai chat') {
